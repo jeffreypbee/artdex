@@ -22,3 +22,7 @@ Route::get('/', function () {
 Route::get('/art', [ArtController::class, 'index']);
 
 Route::get('/dex', [PokemonController::class, 'dex']);
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
