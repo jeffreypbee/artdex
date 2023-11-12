@@ -14,7 +14,12 @@ class ArtSeeder extends Seeder
     public function run(): void
     {
         Art::create([
-            'pokemon_id' => 1,
+            'pokemon_id' => 3,
+            'file' => 'abcdefg'
+        ]);
+
+        Art::create([
+            'pokemon_id' => 4,
             'file' => 'abcdefg'
         ]);
     }
