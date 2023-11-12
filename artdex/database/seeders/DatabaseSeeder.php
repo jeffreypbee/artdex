@@ -24,5 +24,8 @@ class DatabaseSeeder extends Seeder
 
         $pokemonSeeder = new PokemonSeeder();
         $pokemonSeeder->run();
+
+        $artSeeder = new ArtSeeder();
+        $artSeeder->run();
     }
 }
