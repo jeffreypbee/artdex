@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Artdex</h1>
-        <a href="/art">Art</a>
+        <a href="/dex">Dex</a>
     </header>
 
     <main>

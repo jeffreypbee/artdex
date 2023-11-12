@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtController;
+use App\Http\Controllers\PokemonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/art', [ArtController::class, 'index']);
+
+Route::get('/dex', [PokemonController::class, 'dex']);
