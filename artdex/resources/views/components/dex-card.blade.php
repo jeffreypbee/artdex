@@ -1,5 +1,9 @@
 @props(['pkmn'])
 
+@php
+    $dexNo = sprintf('%04s', $pkmn->number);
+@endphp
+
 <div class="dex-card">
     <div class="art-container">
         @if (count($pkmn->types) === 1)
@@ -18,7 +22,7 @@
                 $type1 = $pkmn->types[0];
                 $type2 = $pkmn->types[1];
             @endphp
-            <div style="display: flex; width: 100%; height: 100%">
+            <div style="display: flex; gap: 5px; width: 100%; height: 100%">
                 <div style="
                     width: 50%;
                     height: 100%;
@@ -38,13 +42,19 @@
         <img class="pkmn-art" src="{{$pkmn->art->file}}" alt="">
         @endunless
     </div>
-    {{$pkmn->name}}
+    #{{$dexNo}}
+    <div style="font-weight: bold">{{$pkmn->name}}</div>
+    <div>{{$pkmn->form}}</div>
 </div>
 
 <style>
 
 .dex-card {
     width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    background: var(--gray);
+    padding: 5px;
 }
 
 .dex-card .art-container {

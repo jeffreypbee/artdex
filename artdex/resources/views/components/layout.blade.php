@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Artdex</h1>
+        <h1>jeffreypbee's Artdex</h1>
         <a href="/dex">Dex</a>
     </header>
 
@@ -24,7 +24,20 @@
 
 <style>
 
+:root {
+    --darkergray: #111;
+    --darkgray: #222;
+    --gray: #333;
+    --white: #eee;
+    --lightblue: #66aaff;
+}
+
 body {
+    background: linear-gradient(var(--darkgray), var(--darkergray));
+    color: var(--white);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
@@ -35,14 +48,34 @@ body {
 
 header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
 }
 
 main {
     grid-area: main;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: var(--lightblue);
+    text-decoration: none;
 }
 
 </style>
