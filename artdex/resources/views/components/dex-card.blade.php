@@ -35,7 +35,7 @@
             
         @endif
         @unless ($pkmn->art === null)
-        <img class="pkmn-art" src="" alt="">
+        <img class="pkmn-art" src="{{$pkmn->art->file}}" alt="">
         @endunless
     </div>
     {{$pkmn->name}}
@@ -55,6 +55,10 @@
 
 .dex-card .art-container .pkmn-art {
     position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 </style>

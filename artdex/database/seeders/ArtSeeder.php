@@ -15,12 +15,12 @@ class ArtSeeder extends Seeder
     {
         Art::create([
             'pokemon_id' => 3,
-            'file' => 'abcdefg'
+            'file' => '/images/my-art/3.png'
         ]);
 
         Art::create([
             'pokemon_id' => 4,
-            'file' => 'abcdefg'
+            'file' => '/images/my-art/4.png'
         ]);
     }
 }
