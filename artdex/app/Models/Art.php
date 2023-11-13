@@ -10,6 +10,10 @@ class Art extends Model
 {
     use HasFactory;
 
+    protected $fillable =[
+        'file'
+    ];
+
     public function pokemon(): BelongsTo {
         return $this->belongsTo(Pokemon::class);
     }
