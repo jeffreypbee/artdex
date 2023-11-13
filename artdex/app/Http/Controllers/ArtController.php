@@ -22,10 +22,11 @@ class ArtController extends Controller
 
     public function store(Request $request) {
         $formFields = $request->validate([
-            'file' => 'required',
-            'pokemon' => 'required'
+            'pokemon' => 'required',
+            'date' => 'required'
         ]);
 
+        $formFields['file'] = $request->file('file')->store('art', 'public');
         $pkmn = Pokemon::find($formFields['pokemon']);
         $pkmn->art()->create($formFields);
 

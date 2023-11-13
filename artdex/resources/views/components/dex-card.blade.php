@@ -39,7 +39,7 @@
             
         @endif
         @unless ($pkmn->art === null)
-        <img class="pkmn-art" src="{{$pkmn->art->file}}" alt="">
+        <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
         @endunless
     </div>
     #{{$dexNo}}

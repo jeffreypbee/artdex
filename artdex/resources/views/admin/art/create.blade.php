@@ -2,7 +2,7 @@
 
 <h2>Add Art</h2>
 
-<form action="/admin/art" method="POST">
+<form action="/admin/art" method="POST" enctype="multipart/form-data">
 @csrf
 
     <div>
@@ -31,7 +31,7 @@
 
     <div>
         <label for="date">Date</label>
-        <input type="date" value="{{old('date')}}" required />
+        <input type="date" name="date" value="{{old('date')}}" required />
         @error('date')
             {{$message}}
         @enderror

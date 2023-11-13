@@ -11,7 +11,8 @@ class Art extends Model
     use HasFactory;
 
     protected $fillable =[
-        'file'
+        'file',
+        'date'
     ];
 
     public function pokemon(): BelongsTo {
