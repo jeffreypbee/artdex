@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pokemon;
+use App\Models\PokemonType;
 use Illuminate\Http\Request;
 
 class PokemonController extends Controller
@@ -11,5 +12,29 @@ class PokemonController extends Controller
         return view('dex.index', [
             'dex' => Pokemon::orderBy('number', 'ASC')->get()
         ]);
+    }
+
+    public function create() {
+        return view('admin.pkmn.create', [
+            'types' => PokemonType::orderBy('name')->get()
+        ]);
+    }
+
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'number' => 'required',
+            'name' => 'required',
+            'form' => '',
+            'type1' => 'required',
+            'type2' => ''
+        ]);
+
+        $pkmn = Pokemon::create($formFields);
+        $pkmn->types()->attach($formFields['type1']);
+        if ($formFields['type2'] !== null) {
+            $pkmn->types()->attach($formFields['type2']);
+        }
+
+        return redirect('/admin')->with('message', 'Pokemon successfully added');
     }
 }

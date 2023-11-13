@@ -11,6 +11,12 @@ class Pokemon extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'number',
+        'name',
+        'form'
+    ];
+
     public function types(): BelongsToMany {
         return $this->belongsToMany(PokemonType::class)->orderByPivot('id', 'ASC');
     }

@@ -26,3 +26,7 @@ Route::get('/dex', [PokemonController::class, 'dex']);
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/admin/pkmn/create', [PokemonController::class, 'create']);
+
+Route::post('/admin/pkmn', [PokemonController::class, 'store']);
