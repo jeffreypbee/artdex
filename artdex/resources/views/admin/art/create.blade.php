@@ -7,7 +7,7 @@
 
     <div>
         <label for="file">File</label>
-        <input type="text" name="file" value="{{old('file')}}" required />
+        <input type="file" name="file" value="{{old('file')}}" required />
         @error('file')
             {{$message}}
         @enderror
@@ -27,6 +27,14 @@
                 </option>
             @endforeach
         </select>
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input type="date" value="{{old('date')}}" required />
+        @error('date')
+            {{$message}}
+        @enderror
     </div>
 
     <button>Submit</button>
