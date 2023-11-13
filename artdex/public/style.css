@@ -37,7 +37,8 @@ header h1 {
 main {
     grid-area: main;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
 }
 
@@ -51,4 +52,10 @@ footer {
 a {
     color: var(--lightblue);
     text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
