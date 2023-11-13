@@ -55,7 +55,13 @@ a {
 }
 
 form {
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
 }

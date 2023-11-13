@@ -1,16 +1,19 @@
 <x-layout>
 
-<div class="admin-panel">
-    <div class="art">
-        <a href="/admin/art/create"><button>Add Art</button></a>
-        <a href="/admin/art/modify"><button>Mange Art</button></a>
+<x-admin-panel>
+    <div class="admin-panel">
+        <div class="art">
+            <a href="/admin/art/create"><button>Add Art</button></a>
+            <a href="/admin/art/modify"><button>Mange Art</button></a>
+        </div>
+    
+        <div class="pkmn">
+            <a href="/admin/pkmn/create"><button>Add Pokemon</button></a>
+            <a href="/admin/pkmn/manage"><button>Manage Pokemon</button></a>
+        </div>
     </div>
+</x-admin-panel>
 
-    <div class="pkmn">
-        <a href="/admin/pkmn/create"><button>Add Pokemon</button></a>
-        <a href="/admin/pkmn/manage"><button>Manage Pokemon</button></a>
-    </div>
-</div>
 
 </x-layout>
 
