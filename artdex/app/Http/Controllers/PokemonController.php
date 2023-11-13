@@ -14,6 +14,12 @@ class PokemonController extends Controller
         ]);
     }
 
+    public function index() {
+        return view('admin.pkmn.index', [
+            'pokemon' => Pokemon::orderBy('number', 'ASC')->get()
+        ]);
+    }
+
     public function create() {
         return view('admin.pkmn.create', [
             'types' => PokemonType::orderBy('name')->get()
