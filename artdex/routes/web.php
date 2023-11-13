@@ -29,6 +29,8 @@ Route::get('/admin', function () {
 
 Route::get('/admin/pkmn/create', [PokemonController::class, 'create']);
 
+Route::get('/admin/art', [ArtController::class, 'index']);
+
 Route::post('/admin/pkmn', [PokemonController::class, 'store']);
 
 Route::get('/admin/art/create', [ArtController::class, 'create']);
