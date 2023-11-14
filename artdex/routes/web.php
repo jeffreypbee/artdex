@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Art;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtController;
 use App\Http\Controllers\PokemonController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'latest' => Art::latest(),
+        'recent' => Art::recent()
+    ]);
 });
 
 Route::get('/art', [ArtController::class, 'index']);

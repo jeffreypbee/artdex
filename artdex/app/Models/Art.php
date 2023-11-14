@@ -18,4 +18,14 @@ class Art extends Model
     public function pokemon(): BelongsTo {
         return $this->belongsTo(Pokemon::class);
     }
+
+    public static function latest() {
+        $today = date('Y-m-d');
+        return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->first();
+    }
+
+    public static function recent() {
+        $today = date('Y-m-d');
+        return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->limit('6')->get();
+    }
 }
