@@ -44,6 +44,11 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'poison')->first()->id
         ]);
 
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-01'
+        ]);
+
         $pkmn = Pokemon::create([
             'number' => 4,
             'name' => 'Charmander'
@@ -60,6 +65,11 @@ class PokemonSeeder extends Seeder
 
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'fire')->first()->id
+        ]);
+
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-02'
         ]);
 
         $pkmn = Pokemon::create([
@@ -80,6 +90,11 @@ class PokemonSeeder extends Seeder
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'bug')->first()->id,
             PokemonType::where('name', '=', 'poison')->first()->id
+        ]);
+
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-03'
         ]);
 
         $pkmn = Pokemon::create([
@@ -112,6 +127,11 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'electric')->first()->id
         ]);
 
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-04'
+        ]);
+
         $pkmn = Pokemon::create([
             'number' => 287,
             'name' => 'Slakoth'    
@@ -131,6 +151,10 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'normal')->first()->id
         ]);
 
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-10'
+        ]);
         
         $pkmn = Pokemon::create([
             'number' => 289,
@@ -152,6 +176,11 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'ghost')->first()->id
         ]);
 
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-09'
+        ]);
+
         $pkmn = Pokemon::create([
             'number' => 307,
             'name' => 'Meditite'    
@@ -160,6 +189,11 @@ class PokemonSeeder extends Seeder
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'fighting')->first()->id,
             PokemonType::where('name', '=', 'psychic')->first()->id
+        ]);
+
+        $pkmn->art()->create([
+            'file' => 'alsdfh',
+            'date' => '2023-11-11'
         ]);
 
         $pkmn = Pokemon::create([
