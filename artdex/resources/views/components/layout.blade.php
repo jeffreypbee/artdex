@@ -10,7 +10,10 @@
 <body>
     <header>
         <h1>jeffreypbee's Artdex</h1>
-        <a href="/dex">Dex</a>
+        <nav>
+            <a href="/">Home</a> |&nbsp;
+            <a href="/dex">Dex</a>
+        </nav>
     </header>
 
     <main>
