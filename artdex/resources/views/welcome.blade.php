@@ -1,6 +1,6 @@
 <x-layout>
     <h2>Latest Art</h2>
-    <x-dex-card :pkmn="$latest->pokemon" />
+    <x-dex-card-large :pkmn="$latest->pokemon" />
 
     <h2>Recent Art</h2>
     @foreach ($recent as $art)

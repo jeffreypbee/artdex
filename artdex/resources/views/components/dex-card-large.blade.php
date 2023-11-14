@@ -4,7 +4,8 @@
     $dexNo = sprintf('%04s', $pkmn->number);
 @endphp
 
-<div class="dex-card">
+<div class="dex-card-large">
+    
     <div class="art-container">
         @if (count($pkmn->types) === 1)
             @php
@@ -42,31 +43,35 @@
         <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
         @endunless
     </div>
-    #{{$dexNo}}
-    <div style="font-weight: bold">{{$pkmn->name}}</div>
-    <div>{{$pkmn->form}}</div>
+    <div>
+        #{{$dexNo}}
+        <span style="font-weight: bold">{{$pkmn->name}}</span>
+        @unless ($pkmn->form === null)
+            <span>({{$pkmn->form}})</span>
+        @endunless
+    </div>
 </div>
 
 <style>
 
-.dex-card {
-    width: 100px;
-    height: 100px;
+.dex-card-large {
+    width: 300px;
+    height: 170px;
     border-radius: 10px;
     background: var(--gray);
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
-.dex-card .art-container {
+.dex-card-large .art-container {
     width: 100%;
-    height: 50px;
+    height: 150px;
     position: relative;
 }
 
-.dex-card .art-container .pkmn-art {
+.dex-card-large .art-container .pkmn-art {
     position: absolute;
-    width: 120px;
-    top: -50px;
+    width: 500px;
+    top: -250px;
     left: 50%;
     transform: translateX(-50%);
 }
