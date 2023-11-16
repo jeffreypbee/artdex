@@ -45,7 +45,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art\w2H4JGnVEvNOEKKIW1lN9uAR5Ka3J9TySxXlioub.png',
             'date' => '2023-11-01'
         ]);
 
@@ -56,6 +56,11 @@ class PokemonSeeder extends Seeder
 
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'fire')->first()->id
+        ]);
+
+        $pkmn->art()->create([
+            'file' => 'art\2OSFDLovuHZSbaZgOn0GZdAHYtWbKFO6bFM2SOMr.png',
+            'date' => '2023-10-01'
         ]);
 
         $pkmn = Pokemon::create([
@@ -348,6 +353,11 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'fairy')->first()->id
         ]);
 
+        $pkmn->art()->create([
+            'file' => 'art\2plEwZ3Cm13FlIRCqYZF12II9NefS0I8Su46ZJD3.png',
+            'date' => '2023-11-15'
+        ]);
+
         $pkmn = Pokemon::create([
             'number' => 739,
             'name' => 'Crabrawler'    
@@ -459,6 +469,15 @@ class PokemonSeeder extends Seeder
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'ground')->first()->id,
             PokemonType::where('name', '=', 'grass')->first()->id
+        ]);
+
+        $pkmn = Pokemon::create([
+            'number' => 950,
+            'name' => 'Klawf'    
+        ]);
+
+        $pkmn->types()->attach([
+            PokemonType::where('name', '=', 'rock')->first()->id
         ]);
     
     }
