@@ -19,6 +19,11 @@ class Art extends Model
         return $this->belongsTo(Pokemon::class);
     }
 
+    public static function posted() {
+        $today = date('Y-m-d');
+        return Art::where('date', '<=', $today)->get();
+    }
+
     public static function latest() {
         $today = date('Y-m-d');
         return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->first();

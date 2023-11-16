@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Art;
+use App\Models\Pokemon;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtController;
 use App\Http\Controllers\PokemonController;
@@ -23,9 +24,14 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/art', [ArtController::class, 'index']);
+Route::get('/dex', function () {
+    return view('dex.index', [
+        'dex' => Pokemon::pokedex() ,
+        'art' => Art::posted()
+    ]);
+});
 
-Route::get('/dex', [PokemonController::class, 'dex']);
+Route::get('/art', [ArtController::class, 'index']);
 
 Route::get('/admin', function () {
     return view('admin.index');

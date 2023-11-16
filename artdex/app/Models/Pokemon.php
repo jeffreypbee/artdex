@@ -24,4 +24,8 @@ class Pokemon extends Model
     public function art(): HasOne {
         return $this->hasOne(Art::class);
     }
+
+    public static function pokedex() {
+        return Pokemon::orderBy('number', 'ASC')->get();
+    }
 }
