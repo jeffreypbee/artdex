@@ -11,12 +11,13 @@
             @php
                 $type = $pkmn->types[0];
             @endphp
-            <div style="
+            <div class="type1" style="
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
                 background: linear-gradient({{$type->color1}}, {{$type->color2}});
                 ">
+                <i class="fa-solid fa-{{$type->icon}}"></i>
             </div>
         @else
             @php
@@ -24,18 +25,18 @@
                 $type2 = $pkmn->types[1];
             @endphp
             <div style="display: flex; gap: 5px; width: 100%; height: 100%">
-                <div style="
+                <div class="type1" style="
                     width: 50%;
                     height: 100%;
                     border-radius: 10px 0 0 10px;
                     background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
-                    "></div>
-                <div style="
+                    "><i class="fa-solid fa-{{$type1->icon}}"></i></div>
+                <div class="type2" style="
                     width: 50%;
                     height: 100%;
                     border-radius: 0 10px 10px 0;
                     background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
-                    "></div>
+                    "><i class="fa-solid fa-{{$type2->icon}}"></i></div>
             </div>
             
         @endif
@@ -60,6 +61,16 @@
     border-radius: 10px;
     background: var(--gray);
     margin-top: 200px;
+}
+
+.dex-card-large i {
+    color: var(--darkgray);
+    padding: 5px;
+}
+
+.dex-card-large .type1, .dex-card-large .type2 {
+    display: flex;
+    align-items: flex-end;
 }
 
 .dex-card-large .art-container {
