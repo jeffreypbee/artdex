@@ -43,7 +43,7 @@
         <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
         @endunless
     </div>
-    <div>
+    <div class="info">
         #{{$dexNo}}
         <span style="font-weight: bold">{{$pkmn->name}}</span>
         @unless ($pkmn->form === null)
@@ -56,7 +56,7 @@
 
 .dex-card-large {
     width: 300px;
-    height: 170px;
+    height: 180px;
     border-radius: 10px;
     background: var(--gray);
     margin-top: 200px;
@@ -74,6 +74,10 @@
     top: -250px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.dex-card-large .info {
+    padding: 5px;
 }
 
 </style>

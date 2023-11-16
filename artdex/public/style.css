@@ -1,14 +1,16 @@
 
 :root {
     --darkergray: #111;
-    --darkgray: #222;
-    --gray: #333;
+    --darkgray: #112;
+    --gray: #223;
     --white: #eee;
     --lightblue: #66aaff;
 }
 
 body {
-    background: linear-gradient(var(--darkgray), var(--darkergray));
+    background: linear-gradient(var(--gray), var(--darkgray));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--white);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -64,4 +66,21 @@ form {
 form > div {
     display: flex;
     justify-content: space-between;
+}
+
+button {
+    background-color: var(--darkergray);
+    color: var(--lightblue);
+    border: none;
+    padding: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.dex-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
