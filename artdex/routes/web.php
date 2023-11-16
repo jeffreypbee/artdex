@@ -5,6 +5,7 @@ use App\Models\Pokemon;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtController;
 use App\Http\Controllers\PokemonController;
+use App\Models\PokemonType;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +27,16 @@ Route::get('/', function () {
 
 Route::get('/dex', function () {
     return view('dex.index', [
-        'dex' => Pokemon::pokedex() ,
+        'dex' => Pokemon::pokedex(),
         'art' => Art::posted()
+    ]);
+});
+
+Route::get('/stats', function () {
+    return view('dex.stats', [
+        'dex' => Pokemon::pokedex(),
+        'art' => Art::posted(),
+        'types' => PokemonType::all()
     ]);
 });
 
