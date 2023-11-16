@@ -12,7 +12,8 @@
         <h1>jeffreypbee's Artdex</h1>
         <nav>
             <a href="/">Home</a> |&nbsp;
-            <a href="/dex">Dex</a>
+            <a href="/dex">Dex</a> |&nbsp;
+            <a href="/stats">Stats</a>
         </nav>
     </header>
 
