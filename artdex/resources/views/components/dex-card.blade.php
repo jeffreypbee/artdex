@@ -42,33 +42,41 @@
         <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
         @endunless
     </div>
-    #{{$dexNo}}
-    <div style="font-weight: bold">{{$pkmn->name}}</div>
-    <div>{{$pkmn->form}}</div>
+    <div class="info">
+        #{{$dexNo}}
+        <div style="font-weight: bold">{{$pkmn->name}}</div>
+        <div>{{$pkmn->form}}</div>
+    </div>    
 </div>
 
 <style>
 
 .dex-card {
     width: 100px;
-    height: 100px;
+    height: 80px;
     border-radius: 10px;
     background: var(--gray);
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .dex-card .art-container {
     width: 100%;
-    height: 50px;
+    height: 20px;
     position: relative;
 }
 
 .dex-card .art-container .pkmn-art {
     position: absolute;
     width: 120px;
-    top: -50px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.dex-card .info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
 }
 
 </style>
