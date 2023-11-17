@@ -1,6 +1,6 @@
 <x-layout>
 
-   {{count($art)}} / {{count($dex)}} Pokemon Drawn
+<x-progress-widget text="Pokemon Drawn" :number="count($art)" :total="count($dex)" color="#ffffff" icon="circle" />
 
 <div class="dex-card-container">
     @foreach ($dex as $pkmn)
