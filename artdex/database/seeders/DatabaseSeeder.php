@@ -22,6 +22,9 @@ class DatabaseSeeder extends Seeder
         $pokemonTypeSeeder = new PokemonTypeSeeder();
         $pokemonTypeSeeder->run();
 
+        $generationSeeder = new GenerationSeeder();
+        $generationSeeder->run();
+
         $pokemonSeeder = new PokemonSeeder();
         $pokemonSeeder->run();
 

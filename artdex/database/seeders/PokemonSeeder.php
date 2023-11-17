@@ -16,7 +16,8 @@ class PokemonSeeder extends Seeder
     {
         $pkmn = Pokemon::create([
             'number' => 1,
-            'name' => 'Bulbasaur'
+            'name' => 'Bulbasaur',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -26,7 +27,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 2,
-            'name' => 'Ivysaur'
+            'name' => 'Ivysaur',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -36,7 +38,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 3,
-            'name' => 'Venusaur'
+            'name' => 'Venusaur',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -51,7 +54,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 4,
-            'name' => 'Charmander'
+            'name' => 'Charmander',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -65,7 +69,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 5,
-            'name' => 'Charmeleon'
+            'name' => 'Charmeleon',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -79,7 +84,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 6,
-            'name' => 'Charizard'
+            'name' => 'Charizard',
+            'generation_id' => 1
         ]);
 
         $pkmn->types()->attach([
@@ -89,7 +95,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 167,
-            'name' => 'Spinarak'    
+            'name' => 'Spinarak',
+            'generation_id' => 2  
         ]);
 
         $pkmn->types()->attach([
@@ -104,7 +111,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 168,
-            'name' => 'Ariados'    
+            'name' => 'Ariados',
+            'generation_id' => 2  
         ]);
 
         $pkmn->types()->attach([
@@ -114,7 +122,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 170,
-            'name' => 'Chinchou'    
+            'name' => 'Chinchou',
+            'generation_id' => 2    
         ]);
 
         $pkmn->types()->attach([
@@ -124,7 +133,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 171,
-            'name' => 'Lanturn'    
+            'name' => 'Lanturn',
+            'generation_id' => 2    
         ]);
 
         $pkmn->types()->attach([
@@ -139,7 +149,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 287,
-            'name' => 'Slakoth'    
+            'name' => 'Slakoth',
+            'generation_id' => 3    
         ]);
 
         $pkmn->types()->attach([
@@ -149,7 +160,8 @@ class PokemonSeeder extends Seeder
         
         $pkmn = Pokemon::create([
             'number' => 288,
-            'name' => 'Vigoroth'    
+            'name' => 'Vigoroth',
+            'generation_id' => 3    
         ]);
 
         $pkmn->types()->attach([
@@ -163,7 +175,8 @@ class PokemonSeeder extends Seeder
         
         $pkmn = Pokemon::create([
             'number' => 289,
-            'name' => 'Slaking'    
+            'name' => 'Slaking',
+            'generation_id' => 3   
         ]);
 
         $pkmn->types()->attach([
@@ -173,7 +186,8 @@ class PokemonSeeder extends Seeder
         
         $pkmn = Pokemon::create([
             'number' => 302,
-            'name' => 'Sableye'    
+            'name' => 'Sableye',
+            'generation_id' => 3   
         ]);
 
         $pkmn->types()->attach([
@@ -188,7 +202,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 307,
-            'name' => 'Meditite'    
+            'name' => 'Meditite',
+            'generation_id' => 3    
         ]);
 
         $pkmn->types()->attach([
@@ -203,7 +218,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 308,
-            'name' => 'Medicham'    
+            'name' => 'Medicham',
+            'generation_id' => 3  
         ]);
 
         $pkmn->types()->attach([
@@ -213,7 +229,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 441,
-            'name' => 'Chatot'    
+            'name' => 'Chatot',
+            'generation_id' => 4 
         ]);
 
         $pkmn->types()->attach([
@@ -223,7 +240,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 443,
-            'name' => 'Gible'    
+            'name' => 'Gible',
+            'generation_id' => 4 
         ]);
 
         $pkmn->types()->attach([
@@ -233,7 +251,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 444,
-            'name' => 'Gabite'    
+            'name' => 'Gabite',
+            'generation_id' => 4   
         ]);
 
         $pkmn->types()->attach([
@@ -243,7 +262,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 445,
-            'name' => 'Garchomp'    
+            'name' => 'Garchomp',
+            'generation_id' => 4  
         ]);
 
         $pkmn->types()->attach([
@@ -253,7 +273,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 582,
-            'name' => 'Vanillite'    
+            'name' => 'Vanillite',
+            'generation_id' => 5   
         ]);
 
         $pkmn->types()->attach([
@@ -262,7 +283,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 583,
-            'name' => 'Vanillish'    
+            'name' => 'Vanillish',
+            'generation_id' => 5     
         ]);
 
         $pkmn->types()->attach([
@@ -271,7 +293,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 584,
-            'name' => 'Vanilluxe'    
+            'name' => 'Vanilluxe',
+            'generation_id' => 5    
         ]);
 
         $pkmn->types()->attach([
@@ -280,7 +303,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 599,
-            'name' => 'Klink'    
+            'name' => 'Klink',
+            'generation_id' => 5    
         ]);
 
         $pkmn->types()->attach([
@@ -289,7 +313,8 @@ class PokemonSeeder extends Seeder
     
         $pkmn = Pokemon::create([
             'number' => 600,
-            'name' => 'Klang'    
+            'name' => 'Klang',
+            'generation_id' => 5     
         ]);
 
         $pkmn->types()->attach([
@@ -298,7 +323,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 601,
-            'name' => 'Klinkang'    
+            'name' => 'Klinkang',
+            'generation_id' => 5     
         ]);
 
         $pkmn->types()->attach([
@@ -307,7 +333,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 679,
-            'name' => 'Honedge'    
+            'name' => 'Honedge',
+            'generation_id' => 6   
         ]);
 
         $pkmn->types()->attach([
@@ -317,7 +344,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 680,
-            'name' => 'Doublade'    
+            'name' => 'Doublade',
+            'generation_id' => 6    
         ]);
 
         $pkmn->types()->attach([
@@ -327,7 +355,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 681,
-            'name' => 'Aegislash'    
+            'name' => 'Aegislash',
+            'generation_id' => 6   
         ]);
 
         $pkmn->types()->attach([
@@ -337,7 +366,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 682,
-            'name' => 'Spritzee'    
+            'name' => 'Spritzee',
+            'generation_id' => 6   
         ]);
 
         $pkmn->types()->attach([
@@ -346,7 +376,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 683,
-            'name' => 'Aromatisse'    
+            'name' => 'Aromatisse',
+            'generation_id' => 6    
         ]);
 
         $pkmn->types()->attach([
@@ -360,7 +391,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 739,
-            'name' => 'Crabrawler'    
+            'name' => 'Crabrawler',
+            'generation_id' => 7   
         ]);
 
         $pkmn->types()->attach([
@@ -369,7 +401,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 740,
-            'name' => 'Crabominable'    
+            'name' => 'Crabominable',
+            'generation_id' => 7      
         ]);
 
         $pkmn->types()->attach([
@@ -379,7 +412,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 742,
-            'name' => 'Cutiefly'    
+            'name' => 'Cutiefly',
+            'generation_id' => 7       
         ]);
 
         $pkmn->types()->attach([
@@ -389,7 +423,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 743,
-            'name' => 'Ribombee'    
+            'name' => 'Ribombee',
+            'generation_id' => 7       
         ]);
 
         $pkmn->types()->attach([
@@ -399,7 +434,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 827,
-            'name' => 'Nickit'    
+            'name' => 'Nickit',
+            'generation_id' => 8    
         ]);
 
         $pkmn->types()->attach([
@@ -408,7 +444,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 828,
-            'name' => 'Thievul'    
+            'name' => 'Thievul',
+            'generation_id' => 8  
         ]);
 
         $pkmn->types()->attach([
@@ -417,7 +454,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 852,
-            'name' => 'Clobbopus'    
+            'name' => 'Clobbopus',
+            'generation_id' => 8    
         ]);
 
         $pkmn->types()->attach([
@@ -426,7 +464,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 853,
-            'name' => 'Grapploct'    
+            'name' => 'Grapploct',
+            'generation_id' => 8    
         ]);
 
         $pkmn->types()->attach([
@@ -435,7 +474,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 938,
-            'name' => 'Tadbulb'    
+            'name' => 'Tadbulb',
+            'generation_id' => 9    
         ]);
 
         $pkmn->types()->attach([
@@ -444,7 +484,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 939,
-            'name' => 'Bellibolt'    
+            'name' => 'Bellibolt',
+            'generation_id' => 9    
         ]);
 
         $pkmn->types()->attach([
@@ -453,7 +494,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 948,
-            'name' => 'Toedscool'    
+            'name' => 'Toedscool',
+            'generation_id' => 9    
         ]);
 
         $pkmn->types()->attach([
@@ -463,7 +505,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 949,
-            'name' => 'Toedscruel'    
+            'name' => 'Toedscruel',
+            'generation_id' => 9    
         ]);
 
         $pkmn->types()->attach([
@@ -473,7 +516,8 @@ class PokemonSeeder extends Seeder
 
         $pkmn = Pokemon::create([
             'number' => 950,
-            'name' => 'Klawf'    
+            'name' => 'Klawf',
+            'generation_id' => 9    
         ]);
 
         $pkmn->types()->attach([

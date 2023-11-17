@@ -24,7 +24,18 @@
 
         <section class="generation-progress-bars">
             <h3>Generations</h3>
-            <x-progress-widget text="Generation 1 Pokemon Drawn" number="3" total="151" color="#ff0000" icon="1" />
+            @foreach ($gens as $gen)
+            @php
+                $artCount = 0;
+                foreach($gen->pokemon as $pkmn) {
+                    if ($pkmn->art !== null) {
+                        $artCount++;
+                    }
+                }
+            @endphp
+            <x-progress-widget text="Generation {{$gen->id}} Pokemon Drawn" :number="$artCount" :total="count($gen->pokemon)" :color="$gen->color" :icon="$gen->id" />
+            @endforeach
+            
         </section>
     </div>
     

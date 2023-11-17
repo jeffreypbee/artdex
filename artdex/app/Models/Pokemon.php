@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -19,6 +20,10 @@ class Pokemon extends Model
 
     public function types(): BelongsToMany {
         return $this->belongsToMany(PokemonType::class)->orderByPivot('id', 'ASC');
+    }
+
+    public function generation(): BelongsTo {
+        return $this->belongsTo(Generation::class);
     }
 
     public function art(): HasOne {
