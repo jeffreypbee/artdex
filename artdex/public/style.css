@@ -28,12 +28,28 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid var(--gray);
 }
 
 header h1 {
     margin: 0;
     padding: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+}
+
+nav a {
+    background-color: var(--darkgray);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--gray);
 }
 
 main {
@@ -49,6 +65,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 a {

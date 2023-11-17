@@ -36,7 +36,7 @@
     background-color: var(--gray);
     padding: 10px;
     width: 250px;
-    border-radius: 10px;
+    border-radius: 20px;
     gap: 5px;
 }
 

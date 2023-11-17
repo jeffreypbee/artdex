@@ -1,6 +1,7 @@
 <x-layout>
 
-<x-progress-widget text="Pokemon Drawn" :number="count($art)" :total="count($dex)" color="#ffffff" icon="circle" />
+<h1>The Dex</h1>
+<x-progress-widget text="Pokemon Drawn" :number="count($art)" :total="count($dex)" color="#ffffff" icon="pencil" />
 
 <div class="dex-card-container">
     @foreach ($dex as $pkmn)
