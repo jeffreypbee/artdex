@@ -10,12 +10,13 @@
 </head>
 <body>
     <header>
-        <h1>jeffreypbee's Artdex</h1>
+        <h1>the ARTDEX</h1>
         <nav> 
             <a href="/"><i class="fa-solid fa-house"></i> Home</a>
             <a href="/dex"><i class="fa-solid fa-book"></i> Dex</a>
             <a href="/stats"><i class="fa-solid fa-chart-simple"></i> Stats</a>
         </nav>
+        
     </header>
 
     <main>
