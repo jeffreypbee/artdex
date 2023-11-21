@@ -77,11 +77,6 @@ class PokemonSeeder extends Seeder
             PokemonType::where('name', '=', 'fire')->first()->id
         ]);
 
-        $pkmn->art()->create([
-            'file' => 'alsdfh',
-            'date' => '2023-11-02'
-        ]);
-
         $pkmn = Pokemon::create([
             'number' => 6,
             'name' => 'Charizard',
@@ -105,7 +100,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art/167.png',
             'date' => '2023-11-03'
         ]);
 
@@ -143,7 +138,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art/171.png',
             'date' => '2023-11-04'
         ]);
 
@@ -169,7 +164,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art/288.png',
             'date' => '2023-11-10'
         ]);
         
@@ -196,7 +191,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art/302.png',
             'date' => '2023-11-09'
         ]);
 
@@ -212,7 +207,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'alsdfh',
+            'file' => 'art/307.png',
             'date' => '2023-11-11'
         ]);
 
@@ -236,6 +231,11 @@ class PokemonSeeder extends Seeder
         $pkmn->types()->attach([
             PokemonType::where('name', '=', 'normal')->first()->id,
             PokemonType::where('name', '=', 'flying')->first()->id
+        ]);
+
+        $pkmn->art()->create([
+            'file' => 'art/441.png',
+            'date' => '2024-01-01'
         ]);
 
         $pkmn = Pokemon::create([

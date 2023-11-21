@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('pokemon_id')->constrained('pokemon')->onDelete('cascade');
             $table->string('file');
-            $table->date('date');
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }
