@@ -1,12 +1,16 @@
 <div class="admin">
     <div class="admin-nav">
-        <a href="/admin">Home</a>
-        <hr>
-        <a href="/admin/art">Art</a>
-        <a href="/admin/art/create">Add New</a>
-        <hr>
-        <a href="/admin/pkmn">Pokemon</a>
-        <a href="/admin/pkmn/create">Add New</a>
+        <section>
+            <a href="/admin">Home</a>
+        </section>
+        <section>
+            <a href="/admin/art">Art</a>
+            <a href="/admin/art/create">Add New</a>
+        </section>
+        <section>
+            <a href="/admin/pkmn">Pokemon</a>
+            <a href="/admin/pkmn/create">Add New</a>
+        </section>        
     </div>
 
     <div class="admin-main">
@@ -26,12 +30,18 @@
 
 .admin-nav {
     grid-area: admin-nav;
+    background: var(--gray);
+    border-radius: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.admin-nav hr {
-    width: 100%;
+.admin-nav section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+    padding-block: 10px;
 }
 
 .admin-main {
