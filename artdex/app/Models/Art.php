@@ -33,4 +33,13 @@ class Art extends Model
         $today = date('Y-m-d');
         return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->limit('12')->get();
     }
+
+    public static function upcoming() {
+        $today = date('Y-m-d');
+        return Art::where('date', '>', $today)->orderBy('date', 'ASC')->get();
+    }
+
+    public static function unscheduled() {
+        return Art::where('date', '=', 'null')->get();
+    }
 }

@@ -45,7 +45,10 @@ Route::get('/stats', function () {
 Route::get('/art', [ArtController::class, 'index']);
 
 Route::get('/admin', function () {
-    return view('admin.index');
+    return view('admin.index', [
+        'upcoming' => Art::upcoming(),
+        'unscheduled' => Art::unscheduled()
+    ]);
 });
 
 Route::get('/admin/pkmn/create', [PokemonController::class, 'create']);
