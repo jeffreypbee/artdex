@@ -1,19 +1,21 @@
 <x-layout>
 
 <x-admin-panel>
-    <h2>Add New Stuff</h2>
-    <section class="add-panel">
-        <div class="art">
-            <a href="/admin/art/create"><button>Add Art</button></a>
-        </div>
     
-        <div class="pkmn">
-            <a href="/admin/pkmn/create"><button>Add Pokemon</button></a>
-        </div>
-
-        <div class="gen">
-            <a href=""><button>Add Generation</button></a>
-        </div>
+    <section class="add-panel">
+        <x-widget title="Add New Stuff">
+            <div class="art">
+                <a href="/admin/art/create"><button>Add Art</button></a>
+            </div>
+        
+            <div class="pkmn">
+                <a href="/admin/pkmn/create"><button>Add Pokemon</button></a>
+            </div>
+    
+            <div class="gen">
+                <a href=""><button>Add Generation</button></a>
+            </div>
+        </x-widget>
     </section>
 
     <h2>Upcoming Art</h2>
