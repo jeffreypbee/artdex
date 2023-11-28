@@ -98,8 +98,13 @@ button:hover {
 
 .columns {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 90%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.columns > section {
+    width: 70%;
 }
 
 .dex-card-container {
