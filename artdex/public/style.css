@@ -96,6 +96,12 @@ button:hover {
     cursor: pointer;
 }
 
+.columns {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 .dex-card-container {
     display: flex;
     flex-wrap: wrap;
