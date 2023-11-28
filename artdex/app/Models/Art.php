@@ -40,6 +40,6 @@ class Art extends Model
     }
 
     public static function unscheduled() {
-        return Art::where('date', '=', 'null')->get();
+        return Art::where('date', null)->get();
     }
 }
