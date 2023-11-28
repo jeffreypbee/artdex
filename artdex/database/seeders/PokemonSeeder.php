@@ -146,7 +146,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'art\17.png'
+            'file' => 'art\017.png'
         ]);
 
         $pkmn = Pokemon::create([
@@ -160,7 +160,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'art\19.png'
+            'file' => 'art\019.png'
         ]);
 
         $pkmn = Pokemon::create([
@@ -175,7 +175,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'art\21.png'
+            'file' => 'art\021.png'
         ]);
 
         $pkmn = Pokemon::create([
@@ -189,7 +189,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'art\23.png'
+            'file' => 'art\023.png'
         ]);
 
         $pkmn = Pokemon::create([
@@ -203,7 +203,7 @@ class PokemonSeeder extends Seeder
         ]);
 
         $pkmn->art()->create([
-            'file' => 'art\25.png'
+            'file' => 'art\025.png'
         ]);
 
         $pkmn = Pokemon::create([
