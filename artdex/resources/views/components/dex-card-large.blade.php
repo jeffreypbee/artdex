@@ -4,6 +4,7 @@
     $dexNo = sprintf('%04s', $pkmn->number);
 @endphp
 
+<a href="/dex/{{$pkmn->id}}">
 <div class="dex-card-large">
     
     <div class="art-container">
@@ -15,7 +16,7 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
-                background: linear-gradient({{$type->color1}}, {{$type->color2}});
+                background: linear-gradient(transparent 30%, {{$type->color1}}, {{$type->color2}});
                 ">
                 <i class="fa-solid fa-{{$type->icon}}"></i>
             </div>
@@ -29,13 +30,13 @@
                     width: 50%;
                     height: 100%;
                     border-radius: 10px 0 0 10px;
-                    background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
+                    background: linear-gradient(transparent 30%, {{$type1->color1}}, {{$type1->color2}});
                     "><i class="fa-solid fa-{{$type1->icon}}"></i></div>
                 <div class="type2" style="
                     width: 50%;
                     height: 100%;
                     border-radius: 0 10px 10px 0;
-                    background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
+                    background: linear-gradient(transparent 30%, {{$type2->color1}}, {{$type2->color2}});
                     "><i class="fa-solid fa-{{$type2->icon}}"></i></div>
             </div>
             
@@ -52,6 +53,7 @@
         @endunless
     </div>
 </div>
+</a>
 
 <style>
 
@@ -59,8 +61,7 @@
     width: 300px;
     height: 180px;
     border-radius: 10px;
-    background: var(--gray);
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .dex-card-large i {
@@ -75,7 +76,7 @@
 
 .dex-card-large .art-container {
     width: 100%;
-    height: 150px;
+    height: 180px;
     position: relative;
 }
 
