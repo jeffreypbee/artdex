@@ -44,6 +44,10 @@
         @endif
         @if ($hasArt)
             <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
+        @else
+            <div class="not-found">
+                <i class="fa-solid fa-question" style="font-size: 2rem; color: white; text-shadow: 2px 2px 2px black;"></i>
+            </div>            
         @endif
     </div>
     <div class="info">
@@ -91,6 +95,16 @@
     top: -80px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.dex-card .art-container .not-found {
+    position: absolute;
+    width: 120px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray);
+    text-align: center;
 }
 
 .dex-card .info {
