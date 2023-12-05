@@ -36,7 +36,13 @@
             
         @endif
         @unless ($pkmn->art === null)
-        <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
+            @php
+                $today = date('Y-m-d');
+            @endphp
+            @unless (($pkmn->art->date === null) || ($pkmn->art->date > $today))
+                <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
+            @endunless
+        
         @endunless
     </div>
     <div class="info">
