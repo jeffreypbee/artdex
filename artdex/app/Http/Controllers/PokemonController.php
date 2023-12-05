@@ -14,6 +14,12 @@ class PokemonController extends Controller
         ]);
     }
 
+    public function show(Pokemon $pokemon) {
+        return view('dex.show', [
+            'pkmn' => $pokemon
+        ]);
+    }
+
     public function create() {
         return view('admin.pkmn.create', [
             'types' => PokemonType::orderBy('name')->get()

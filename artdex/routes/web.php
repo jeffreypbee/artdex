@@ -33,6 +33,8 @@ Route::get('/dex', function () {
     ]);
 });
 
+Route::get('/dex/{pokemon}', [PokemonController::class, 'show']);
+
 Route::get('/stats', function () {
     return view('dex.stats', [
         'dex' => Pokemon::pokedex(),

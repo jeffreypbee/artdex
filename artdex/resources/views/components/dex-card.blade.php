@@ -11,6 +11,7 @@
     }
 @endphp
 
+<a href="/dex/{{$pkmn->id}}">
 <div class="dex-card">
     <div class="art-container">
         @if (count($pkmn->types) === 1)
@@ -56,6 +57,7 @@
         <div>{{$pkmn->form}}</div>
     </div>    
 </div>
+</a>
 
 <style>
 
