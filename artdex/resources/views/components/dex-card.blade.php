@@ -2,6 +2,13 @@
 
 @php
     $dexNo = sprintf('%04s', $pkmn->number);
+    $hasArt = false;
+    if ($pkmn->art !== null) {
+        $today = date('Y-m-d');
+        if (($pkmn->art->date !== null) && ($pkmn->art->date <= $today)) {
+            $hasArt = true;
+        }
+    }
 @endphp
 
 <div class="dex-card">
@@ -35,15 +42,9 @@
             </div>
             
         @endif
-        @unless ($pkmn->art === null)
-            @php
-                $today = date('Y-m-d');
-            @endphp
-            @unless (($pkmn->art->date === null) || ($pkmn->art->date > $today))
-                <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
-            @endunless
-        
-        @endunless
+        @if ($hasArt)
+            <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
+        @endif
     </div>
     <div class="info">
         #{{$dexNo}}
