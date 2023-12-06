@@ -4,92 +4,81 @@
     $dexNo = sprintf('%04s', $pkmn->number);
 @endphp
 
-<a href="/dex/{{$pkmn->id}}">
-<div class="dex-card-large">
-    
-    <div class="art-container">
-        @if (count($pkmn->types) === 1)
-            @php
-                $type = $pkmn->types[0];
-            @endphp
-            <div class="type1" style="
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                background: linear-gradient(transparent 30%, {{$type->color1}}, {{$type->color2}});
-                ">
-                <i class="fa-solid fa-{{$type->icon}}"></i>
-            </div>
-        @else
-            @php
-                $type1 = $pkmn->types[0];
-                $type2 = $pkmn->types[1];
-            @endphp
-            <div style="display: flex; gap: 5px; width: 100%; height: 100%">
-                <div class="type1" style="
-                    width: 50%;
-                    height: 100%;
-                    border-radius: 10px 0 0 10px;
-                    background: linear-gradient(transparent 30%, {{$type1->color1}}, {{$type1->color2}});
-                    "><i class="fa-solid fa-{{$type1->icon}}"></i></div>
-                <div class="type2" style="
-                    width: 50%;
-                    height: 100%;
-                    border-radius: 0 10px 10px 0;
-                    background: linear-gradient(transparent 30%, {{$type2->color1}}, {{$type2->color2}});
-                    "><i class="fa-solid fa-{{$type2->icon}}"></i></div>
-            </div>
-            
-        @endif
-        @unless ($pkmn->art === null)
-        <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
-        @endunless
-    </div>
+
+<div class="pkmn-page">
+   
     <div class="info">
-        #{{$dexNo}}
-        <span style="font-weight: bold">{{$pkmn->name}}</span>
-        @unless ($pkmn->form === null)
-            <span>({{$pkmn->form}})</span>
+        <h2>
+            <span class="number">#{{$pkmn->number}}</span> 
+            <span class="name">{{$pkmn->name}}</span>
+            @unless ($pkmn->form === null)
+                <span class="form">({{$pkmn->form}})</span>
+            @endunless
+        </h2>      
+        <div class="types">
+            @if (count($pkmn->types) === 1)
+                @php
+                    $type = $pkmn->types[0];
+                @endphp
+                <div class="type1" style="                
+                    background: linear-gradient({{$type->color1}}, {{$type->color2}});
+                    ">
+                    <i class="fa-solid fa-{{$type->icon}}"></i> {{$type->name}}
+                </div>
+            @else
+                @php
+                    $type1 = $pkmn->types[0];
+                    $type2 = $pkmn->types[1];
+                @endphp
+                <div style="display: flex; gap: 5px; width: 100%; height: 100%">
+                    <div class="type1" style="
+                        width: 50%;
+                        border-radius: 20px 0 0 20px;
+                        background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
+                        "><i class="fa-solid fa-{{$type1->icon}}"></i> {{$type1->name}}</div>
+                    <div class="type2" style="
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 0 20px 20px 0;
+                        background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
+                        "><i class="fa-solid fa-{{$type2->icon}}"></i> {{$type2->name}}</div>
+                </div>
+                
+            @endif
+        </div>
+    </div>
+
+    <div class="image">
+        @unless ($pkmn->art === null)
+            <img src="{{asset('storage/' . $pkmn->art->file)}}" />
         @endunless
     </div>
 </div>
-</a>
 
 <style>
 
-.dex-card-large {
-    width: 300px;
-    height: 180px;
-    border-radius: 10px;
-    margin-top: 150px;
-}
+    .pkmn-page {
+        background: linear-gradient(transparent, var(--gray));
+        border-radius: 20px;
+        padding: 10px;
+        min-width: 300px;
+    }
 
-.dex-card-large i {
-    color: var(--darkgray);
-    padding: 5px;
-}
-
-.dex-card-large .type1, .dex-card-large .type2 {
-    display: flex;
-    align-items: flex-end;
-}
-
-.dex-card-large .art-container {
-    width: 100%;
-    height: 180px;
-    position: relative;
-}
-
-.dex-card-large .art-container .pkmn-art {
-    position: absolute;
-    width: 500px;
-    top: -250px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dex-card-large .info {
-    padding: 5px;
-}
-
-</style>
+    .pkmn-page .info h2 {
+        margin-bottom: 0;
+    }
+    
+    .pkmn-page .info h2 .number {
+        font-weight: normal;
+    }
+    
+    .pkmn-page .info .types .type1, .pkmn-page .info .type2 {
+        padding: 5px;
+        height: 20px;
+        border-radius: 20px;
+        color: var(--darkgray);
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    </style>
