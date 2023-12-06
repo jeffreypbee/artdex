@@ -21,8 +21,7 @@ use App\Http\Controllers\PokemonController;
 
 Route::get('/', function () {
     return view('welcome', [
-        'latest' => Art::latest(),
-        'recent' => Art::recent()
+        'latest' => Art::latest()
     ]);
 });
 

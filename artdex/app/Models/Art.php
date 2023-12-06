@@ -26,11 +26,6 @@ class Art extends Model
 
     public static function latest() {
         $today = date('Y-m-d');
-        return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->first();
-    }
-
-    public static function recent() {
-        $today = date('Y-m-d');
         return Art::where('date', '<=', $today)->orderBy('date', 'DESC')->limit('12')->get();
     }
 

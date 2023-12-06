@@ -1,3 +1,4 @@
+
 <x-layout>
     <div class="landing-page">
 
@@ -8,14 +9,9 @@
 
         <h2>Latest</h2>
         <section class="latest">            
-            <x-dex-card-large :pkmn="$latest->pokemon" />
-
-            <div class="dex-card-container">
-            @foreach ($recent as $art)
-                @if ($loop->first) @continue @endif
+            @foreach ($latest as $art)
                 <x-dex-card :pkmn="$art->pokemon" />
             @endforeach
-            </div>
         </section>
         
     </div>
