@@ -1,6 +1,20 @@
 @props(['pkmn'])
 
-<div class="pkmn-page">
+@php
+    $bgColor = "red";
+    if (count($pkmn->types) === 1) {
+        $bgColor = "linear-gradient(to right, " . $pkmn->types[0]->color1 . ", " . $pkmn->types[0]->color1 . ");";
+    } else {
+        $bgColor = "linear-gradient(to right, " . $pkmn->types[0]->color1 . ", " . $pkmn->types[1]->color1 . ");";
+    }
+@endphp
+
+<div class="pkmn-page"
+    style="
+    background: linear-gradient(to bottom, var(--darkgray), transparent),
+    {{$bgColor}}
+    "
+    >
    
     <div class="info">
         <h2>
@@ -9,7 +23,7 @@
             @unless ($pkmn->form === null)
                 <span class="form">({{$pkmn->form}})</span>
             @endunless
-        </h2>      
+        </h2>
         <div class="types">
             @if (count($pkmn->types) === 1)
                 @php
@@ -41,6 +55,7 @@
                 
             @endif
         </div>
+           
     </div>
 
     <div class="image">
@@ -55,25 +70,41 @@
     .pkmn-page {
         background: linear-gradient(transparent, var(--gray));
         border-radius: 20px;
-        padding: 10px;
         min-width: 300px;
+        position: relative;
     }
 
     .pkmn-page .info h2 {
-        margin-bottom: 0;
+        margin-block: 0;
+        padding-inline: 10px;
     }
     
     .pkmn-page .info h2 .number {
         font-weight: normal;
     }
+
+    .pkmn-page .info {
+        position: relative;
+        z-index: 1;
+        border-radius: 20px;
+    }
     
-    .pkmn-page .info .types .type1, .pkmn-page .info .type2 {
+    .pkmn-page .info .types .type1, .pkmn-page .info .types .type2 {
         padding: 5px;
         height: 20px;
         border-radius: 20px;
         color: var(--darkgray);
         font-weight: bold;
         text-align: center;
+    }
+
+    .pkmn-page .image {
+        margin-block: -50px;
+    }
+
+    .pkmn-page .image img {
+        position: relative;
+        z-index: 3;
     }
     
     </style>
