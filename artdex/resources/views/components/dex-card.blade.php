@@ -1,16 +1,5 @@
 @props(['pkmn'])
 
-@php
-    $dexNo = sprintf('%04s', $pkmn->number);
-    $hasArt = false;
-    if ($pkmn->art !== null) {
-        $today = date('Y-m-d');
-        if (($pkmn->art->date !== null) && ($pkmn->art->date <= $today)) {
-            $hasArt = true;
-        }
-    }
-@endphp
-
 <a href="/dex/{{$pkmn->id}}">
 <div class="dex-card">
     <div class="art-container">
@@ -43,7 +32,7 @@
             </div>
             
         @endif
-        @if ($hasArt)
+        @if ($pkmn->hasArt())
             <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
         @else
             <div class="not-found">
@@ -52,7 +41,7 @@
         @endif
     </div>
     <div class="info">
-        #{{$dexNo}}
+        #{{$pkmn->formattedNumber()}}
         <div style="font-weight: bold">{{$pkmn->name}}</div>
         <div>{{$pkmn->form}}</div>
     </div>    

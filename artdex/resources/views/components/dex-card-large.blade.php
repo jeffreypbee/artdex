@@ -1,15 +1,10 @@
 @props(['pkmn'])
 
-@php
-    $dexNo = sprintf('%04s', $pkmn->number);
-@endphp
-
-
 <div class="pkmn-page">
    
     <div class="info">
         <h2>
-            <span class="number">#{{$pkmn->number}}</span> 
+            <span class="number">#{{$pkmn->formattedNumber()}}</span> 
             <span class="name">{{$pkmn->name}}</span>
             @unless ($pkmn->form === null)
                 <span class="form">({{$pkmn->form}})</span>

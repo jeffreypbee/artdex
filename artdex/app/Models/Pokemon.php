@@ -37,7 +37,7 @@ class Pokemon extends Model
     public function hasArt(): bool {
         if ($this->art != null) {
             $today = date('Y-m-d');
-            if ($this->art->date >= $today) {
+            if ($this->art->date <= $today) {
                 return true;
             }
         }
