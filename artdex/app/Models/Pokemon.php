@@ -30,6 +30,20 @@ class Pokemon extends Model
         return $this->hasOne(Art::class);
     }
 
+    public function formattedNumber(): string {
+        return sprintf('%04s', $this->number);
+    }
+
+    public function hasArt(): bool {
+        if ($this->art != null) {
+            $today = date('Y-m-d');
+            if ($this->art->date >= $today) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static function pokedex() {
         return Pokemon::orderBy('number', 'ASC')->get();
     }
