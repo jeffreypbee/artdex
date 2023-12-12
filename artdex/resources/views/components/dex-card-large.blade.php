@@ -32,7 +32,7 @@
                 <div class="type1" style="                
                     background: linear-gradient({{$type->color1}}, {{$type->color2}});
                     ">
-                    <i class="fa-solid fa-{{$type->icon}}"></i> {{$type->name}}
+                    <i class="fa-solid fa-{{$type->icon}}"></i> {{$type->formattedName()}}
                 </div>
             @else
                 @php
@@ -44,13 +44,13 @@
                         width: 50%;
                         border-radius: 20px 0 0 20px;
                         background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
-                        "><i class="fa-solid fa-{{$type1->icon}}"></i> {{$type1->name}}</div>
+                        "><i class="fa-solid fa-{{$type1->icon}}"></i> {{$type1->formattedName()}}</div>
                     <div class="type2" style="
                         width: 50%;
                         height: 100%;
                         border-radius: 0 20px 20px 0;
                         background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
-                        "><i class="fa-solid fa-{{$type2->icon}}"></i> {{$type2->name}}</div>
+                        "><i class="fa-solid fa-{{$type2->icon}}"></i> {{$type2->formattedName()}}</div>
                 </div>
                 
             @endif

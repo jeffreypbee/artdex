@@ -11,6 +11,10 @@ class PokemonType extends Model
 {
     use HasFactory;
 
+    public function formattedName(): string {
+        return ucfirst($this->name);
+    }
+
     public function pokemon(): BelongsToMany {
         return $this->belongsToMany(Pokemon::class);
     }
