@@ -59,9 +59,9 @@
     </div>
 
     <div class="image">
-        @unless ($pkmn->art === null)
+        @if ($pkmn->hasArt())
             <img src="{{asset('storage/' . $pkmn->art->file)}}" />
-        @endunless
+        @endif
     </div>
 </div>
 
@@ -71,6 +71,7 @@
         background: linear-gradient(transparent, var(--gray));
         border-radius: 20px;
         min-width: 300px;
+        min-height: 300px;
         position: relative;
         color: white;
     }
