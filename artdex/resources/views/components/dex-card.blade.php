@@ -1,108 +1,121 @@
 @props(['pkmn'])
 
+@php
+    $bgColor = "red";
+    if ($pkmn->hasArt()) {
+        if (count($pkmn->types) === 1) {
+        $bgColor = "linear-gradient(to right, " . $pkmn->types[0]->color1 . ", " . $pkmn->types[0]->color1 . ");";
+        } else {
+            $bgColor = "linear-gradient(to right, " . $pkmn->types[0]->color1 . ", " . $pkmn->types[1]->color1 . ");";
+        }
+    } else {
+        $bgColor = "var(--gray);";
+    }
+    
+@endphp
+
 <a href="/dex/{{$pkmn->id}}">
-<div class="dex-card">
-    <div class="art-container">
-        @if (count($pkmn->types) === 1)
-            @php
-                $type = $pkmn->types[0];
-            @endphp
-            <div class="type1" style="                
-                background: linear-gradient({{$type->color1}}, {{$type->color2}});
-                ">
-                <i class="fa-solid fa-{{$type->icon}}"></i>
-            </div>
-        @else
-            @php
-                $type1 = $pkmn->types[0];
-                $type2 = $pkmn->types[1];
-            @endphp
-            <div style="display: flex; gap: 5px; width: 100%; height: 100%">
-                <div class="type1" style="
-                    width: 50%;
-                    border-radius: 10px 0 0 10px;
-                    background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
-                    "><i class="fa-solid fa-{{$type1->icon}}"></i></div>
-                <div class="type2" style="
-                    width: 50%;
-                    height: 100%;
-                    border-radius: 0 10px 10px 0;
-                    background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
-                    "><i class="fa-solid fa-{{$type2->icon}}"></i></div>
-            </div>
-            
-        @endif
+<div class="dex-card"
+    style="
+    background: linear-gradient(to bottom, transparent, var(--darkgray)),
+    {{$bgColor}}
+    ">
+    <div class="image">
         @if ($pkmn->hasArt())
-            <img class="pkmn-art" src="{{asset('storage/' . $pkmn->art->file)}}" alt="">
-        @else
-            <div class="not-found">
-                <i class="fa-solid fa-question" style="font-size: 2rem; color: white; text-shadow: 2px 2px 2px black;"></i>
-            </div>            
+            <img src="{{asset('storage/' . $pkmn->art->file)}}" />
         @endif
     </div>
+
     <div class="info">
-        #{{$pkmn->formattedNumber()}}
-        <div style="font-weight: bold">{{$pkmn->name}}</div>
-        <div>{{$pkmn->form}}</div>
-    </div>    
+
+        <div class="types">
+            @if (count($pkmn->types) === 1)
+                @php
+                    $type = $pkmn->types[0];
+                @endphp
+                <div class="type1" style="                
+                    background: linear-gradient({{$type->color1}}, {{$type->color2}});
+                    border-radius: 20px;
+                    ">
+                    <i class="fa-solid fa-{{$type->icon}}"></i>
+                </div>
+            @else
+                @php
+                    $type1 = $pkmn->types[0];
+                    $type2 = $pkmn->types[1];
+                @endphp
+                <div style="display: flex; gap: 5px; width: 100%; height: 100%">
+                    <div class="type1" style="
+                        width: 50%;
+                        border-radius: 20px 0 0 20px;
+                        background: linear-gradient({{$type1->color1}}, {{$type1->color2}});
+                        "><i class="fa-solid fa-{{$type1->icon}}"></i></div>
+                    <div class="type2" style="
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 0 20px 20px 0;
+                        text-align: right;
+                        background: linear-gradient({{$type2->color1}}, {{$type2->color2}});
+                        "><i class="fa-solid fa-{{$type2->icon}}"></i></div>
+                </div>
+                
+            @endif
+        </div>
+
+        <div class="number">
+            #{{$pkmn->formattedNumber()}}
+        </div>
+        <div class="name">
+            {{$pkmn->name}}
+        </div>
+        <div class="form">
+            @if ($pkmn->form === null)
+                &nbsp;
+            @else
+                {{$pkmn->form}}
+            @endif
+        </div>
+    </div>
 </div>
 </a>
 
 <style>
 
 .dex-card {
-    width: 120px;
-    height: 80px;
+    width: 150px;
+    height: 200px;
     border-radius: 10px;
     background: var(--gray);
-    margin-top: 70px;
     color: white;
-}
-
-.dex-card .type1 {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.dex-card i {
-    padding-inline: 5px;
-    padding-top: 2px; 
-    color: var(--darkgray);
-}
-
-.dex-card .type2 {
-    text-align: right;
-}
-
-.dex-card .art-container {
-    width: 100%;
-    height: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.dex-card .art-container .pkmn-art {
-    position: absolute;
-    width: 120px;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.dex-card .art-container .not-found {
-    position: absolute;
-    width: 120px;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--gray);
-    text-align: center;
+.dex-card .image img {
+    position: relative;
+    margin-block: -20px;
+    z-index: 2;
+    width: 150px;
 }
 
 .dex-card .info {
-    display: flex;
-    flex-direction: column;
     padding: 5px;
 }
 
+.dex-card .info .name {
+    font-weight: bold;
+}
+
+.dex-card .info .types {
+    color: var(--darkgray);
+    padding: 0;
+    margin: 0;
+}
+
+.dex-card .types .type1, .dex-card .types .type2 {
+    padding-inline: 10px;
+    padding-block: 3px;
+}
 </style>
