@@ -20,6 +20,13 @@ class ArtController extends Controller
         ]);
     }
 
+    public function edit(Art $art) {
+        return view('admin.art.edit', [
+            'art' => $art,
+            'pkmn' => Pokemon::orderBy('number', 'ASC')->get()
+        ]);
+    }
+
     public function store(Request $request) {
         $formFields = $request->validate([
             'pokemon' => 'required',

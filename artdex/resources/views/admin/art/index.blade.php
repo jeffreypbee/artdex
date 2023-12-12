@@ -15,7 +15,7 @@
                 <td>{{$piece->pokemon->name}}</td>
                 <td>{{$piece->pokemon->form}}</td>
                 <td>{{$piece->date}}</td>
-                <td><button>Edit</button></td>
+                <td><a href="/admin/art/{{$piece->id}}/edit"><button>Edit</button></a></td>
             </tr>
         @endforeach
         </table>        
