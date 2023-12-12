@@ -56,6 +56,7 @@
     border-radius: 10px;
     background: var(--gray);
     margin-top: 70px;
+    color: white;
 }
 
 .dex-card .type1 {

@@ -72,6 +72,7 @@
         border-radius: 20px;
         min-width: 300px;
         position: relative;
+        color: white;
     }
 
     .pkmn-page .info h2 {
