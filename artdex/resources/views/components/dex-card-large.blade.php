@@ -76,7 +76,6 @@
 
     .pkmn-page .info h2 {
         margin-block: 0;
-        padding-inline: 10px;
     }
     
     .pkmn-page .info h2 .number {
@@ -87,6 +86,7 @@
         position: relative;
         z-index: 1;
         border-radius: 20px;
+        padding: 10px;
     }
     
     .pkmn-page .info .types .type1, .pkmn-page .info .types .type2 {
