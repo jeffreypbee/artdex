@@ -113,3 +113,16 @@ button:hover {
     flex-wrap: wrap;
     gap: 20px;
 }
+
+table.table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.table th {
+    text-align: left;
+}
+
+table.table tr:nth-child(odd) {
+    background-color: var(--darkgray);
+}
