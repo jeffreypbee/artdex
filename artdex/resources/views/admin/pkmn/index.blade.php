@@ -2,10 +2,17 @@
     <x-admin-panel>
         <h2>Pokemon</h2>
 
-        <table class="content">
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Form</th>
+                <th>Types</th>
+                <th>Admin</th>
+            </tr>
             @foreach ($pokemon as $pkmn)
                 <tr>
-                    <td>#{{sprintf('%04s', $pkmn->number)}}</td>
+                    <td>#{{$pkmn->formattedNumber()}}</td>
                     <td>{{$pkmn->name}}</td>
                     <td>{{$pkmn->form}}</td>
                     <td>
