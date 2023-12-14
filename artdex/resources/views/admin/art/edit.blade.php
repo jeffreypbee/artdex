@@ -7,6 +7,14 @@
         @csrf
 
         <div>
+            <form action="/admin/art/{{$art->id}}" method="POST">
+            @method('DELETE')
+            @csrf
+                <button>Delete</button>
+            </form>
+        </div>
+
+        <div>
             <img src="{{asset('storage/' . $art->file)}}" />
             {{-- <label for="file">File</label>
             <input type="file" name="file" value="{{$art->file}}" required />
@@ -43,7 +51,6 @@
         </div>
     
         <div>
-            <button>Delete</button>
             <button type="submit">Submit</button>            
         </div>
         

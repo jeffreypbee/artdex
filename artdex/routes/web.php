@@ -58,6 +58,10 @@ Route::get('/admin/art', [ArtController::class, 'index']);
 
 Route::get('/admin/art/{art}/edit', [ArtController::class, 'edit']);
 
+Route::put('/admin/art/{art}', [ArtController::class, 'update']);
+
+Route::delete('admin/art/{art}', [ArtController::class, 'destroy']);
+
 Route::get('/admin/pkmn', [PokemonController::class, 'index']);
 
 Route::post('/admin/pkmn', [PokemonController::class, 'store']);
