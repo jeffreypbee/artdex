@@ -15,9 +15,9 @@
                     <td>#{{$pkmn->formattedNumber()}}</td>
                     <td>{{$pkmn->name}}</td>
                     <td>{{$pkmn->form}}</td>
-                    <td>
+                    <td style="display: flex;">
                         @foreach ($pkmn->types as $type)
-                            {{$type->name}}&nbsp;
+                            <x-type-tag :type="$type" />
                         @endforeach
                     </td>
                     <td>
