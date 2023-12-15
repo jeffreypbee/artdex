@@ -26,6 +26,13 @@ class PokemonController extends Controller
         ]);
     }
 
+    public function edit(Pokemon $pokemon) {
+        return view('admin.pkmn.edit', [
+            'pokemon' => $pokemon,
+            'types' => PokemonType::orderBy('name')->get()
+        ]);
+    }
+
     public function store(Request $request) {
         $formFields = $request->validate([
             'number' => 'required',
