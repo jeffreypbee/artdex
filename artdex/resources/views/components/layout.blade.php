@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>the ARTDEX</h1>        
+        <a href="/"><h1>the ARTDEX</h1></a>    
     </header>
 
     <nav> 
