@@ -10,14 +10,14 @@
 </head>
 <body>
     <header>
-        <h1>the ARTDEX</h1>
-        <nav> 
-            <a href="/"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="/dex"><i class="fa-solid fa-book"></i> Dex</a>
-            <a href="/stats"><i class="fa-solid fa-chart-simple"></i> Stats</a>
-        </nav>
-        
+        <h1>the ARTDEX</h1>        
     </header>
+
+    <nav> 
+        <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/dex"><i class="fa-solid fa-book"></i> Dex</a>
+        <a href="/stats"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+    </nav>
 
     <main>
         {{$slot}}
