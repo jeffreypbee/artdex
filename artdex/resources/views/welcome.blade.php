@@ -2,19 +2,24 @@
 <x-layout>
     <div class="landing-page">
 
-        <h2>Latest</h2>
         <section class="latest">            
             @foreach ($latest as $art)
                 @if ($loop->first)
                     <div class="newest">
+                        <h2>Latest</h2>
                         <a href="/dex/{{$art->pokemon->id}}"><x-dex-card-large :pkmn="$art->pokemon" /></a>                        
-                    </div>                    
-                    <div class="more-latest">
+                    </div>
+                    <div>
+                        <h3>Recent</h3>
+                        <div class="more-latest">
+                                      
+                    
                 @else
                     <x-dex-card :pkmn="$art->pokemon" />
                 @endif
                     
             @endforeach
+        </div>
         </div>
         </section>
         
