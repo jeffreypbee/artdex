@@ -68,6 +68,8 @@ Route::post('/admin/pkmn', [PokemonController::class, 'store']);
 
 Route::get('/admin/pkmn/{pokemon}/edit', [PokemonController::class, 'edit']);
 
+Route::put('/admin/pkmn/{pokemon}', [PokemonController::class, 'update']);
+
 Route::get('/admin/art/create', [ArtController::class, 'create']);
 
 Route::post('/admin/art', [ArtController::class, 'store']);

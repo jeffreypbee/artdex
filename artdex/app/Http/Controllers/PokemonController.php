@@ -50,4 +50,23 @@ class PokemonController extends Controller
 
         return redirect('/admin')->with('message', 'Pokemon successfully added');
     }
+
+    public function update(Request $request, Pokemon $pokemon) {
+        $formFields = $request->validate([
+            'number' => 'required',
+            'name' => 'required',
+            'form' => '',
+            'type1' => 'required',
+            'type2' => ''
+        ]);
+
+        $pokemon->update($formFields);
+        $pokemon->types()->detach();
+        $pokemon->types()->attach($formFields['type1']);
+        if ($formFields['type2'] !== null) {
+            $pokemon->types()->attach($formFields['type2']);
+        }
+
+        return redirect('/admin/pkmn')->with('message', 'Pokemon updated!');
+    }
 }
