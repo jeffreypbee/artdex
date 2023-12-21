@@ -23,7 +23,8 @@ class PokemonController extends Controller
 
     public function create() {
         return view('admin.pkmn.create', [
-            'types' => PokemonType::orderBy('name')->get()
+            'types' => PokemonType::orderBy('name')->get(),
+            'generations' => Generation::orderBy('id')->get()
         ]);
     }
 
@@ -41,10 +42,14 @@ class PokemonController extends Controller
             'name' => 'required',
             'form' => '',
             'type1' => 'required',
-            'type2' => ''
+            'type2' => '',
+            'generation' => 'required'
         ]);
 
-        $pkmn = Pokemon::create($formFields);
+        $generation = Generation::find($formFields['generation']);
+        $pkmn = $generation->pokemon()->create($formFields);
+
+        //$pkmn = Pokemon::create($formFields);
         $pkmn->types()->attach($formFields['type1']);
         if ($formFields['type2'] !== null) {
             $pkmn->types()->attach($formFields['type2']);
