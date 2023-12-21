@@ -62,6 +62,18 @@
                 </select>
             </div>
 
+            <div>
+                <label for="generation">Generation</label>
+                <select name="generation" id="">
+                    @foreach ($generations as $gen)
+                        <option value="{{$gen->id}}"
+                            @if ($pokemon->generation->id === $gen->id)
+                                selected
+                            @endif>{{$gen->id}}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <button>Submit</button>
         
         </form>
