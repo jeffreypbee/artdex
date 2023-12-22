@@ -4,6 +4,7 @@
 
         <table class="table">
             <tr>
+                <th>Gen.</th>
                 <th>#</th>
                 <th>Name</th>
                 <th>Form</th>
@@ -12,6 +13,7 @@
             </tr>
             @foreach ($pokemon as $pkmn)
                 <tr>
+                    <td style="text-align: center;"><i class="fa-solid fa-{{$pkmn->generation->id}}" style="color: {{$pkmn->generation->color}};"></i></td>
                     <td>#{{$pkmn->formattedNumber()}}</td>
                     <td>{{$pkmn->name}}</td>
                     <td>{{$pkmn->form}}</td>
