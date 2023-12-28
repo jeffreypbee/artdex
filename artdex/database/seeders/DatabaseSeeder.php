@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Illuminate\Cache\TagSet;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,7 +30,7 @@ class DatabaseSeeder extends Seeder
         $pokemonSeeder = new PokemonSeeder();
         $pokemonSeeder->run();
 
-        // $artSeeder = new ArtSeeder();
-        // $artSeeder->run();
+        $tagSeeder = new TagSeeder();
+        $tagSeeder->run();
     }
 }
