@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('art', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pokemon_id')->constrained('pokemon')->onDelete('cascade');
+            $table->morphs('artable');
             $table->date('publish_date')->nullable();
             $table->string('image');
             $table->timestamps();
