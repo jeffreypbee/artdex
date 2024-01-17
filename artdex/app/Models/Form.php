@@ -12,7 +12,7 @@ class Form extends Model
 {
     use HasFactory;
 
-    public function Pokemon(): BelongsTo {
+    public function pokemon(): BelongsTo {
         return $this->belongsTo(Pokemon::class);
     }
 
