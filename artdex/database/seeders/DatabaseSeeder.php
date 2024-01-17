@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
-use Illuminate\Cache\TagSet;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,16 +19,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $pokemonTypeSeeder = new PokemonTypeSeeder();
-        $pokemonTypeSeeder->run();
-
         $generationSeeder = new GenerationSeeder();
         $generationSeeder->run();
 
         $pokemonSeeder = new PokemonSeeder();
         $pokemonSeeder->run();
-
-        $tagSeeder = new TagSeeder();
-        $tagSeeder->run();
     }
 }
