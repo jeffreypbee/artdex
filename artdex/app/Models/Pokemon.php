@@ -18,7 +18,7 @@ class Pokemon extends Model
     }
 
     public function forms(): HasMany {
-        return $this->hasMany(Form::class);
+        return $this->hasMany(PokemonForm::class);
     }
 
     public function types(): MorphToMany {
