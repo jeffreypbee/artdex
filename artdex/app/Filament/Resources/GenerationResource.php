@@ -2,16 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GenerationResource\Pages;
-use App\Filament\Resources\GenerationResource\RelationManagers;
-use App\Models\Generation;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\Generation;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\GenerationResource\Pages;
+use App\Filament\Resources\GenerationResource\RelationManagers;
 
 class GenerationResource extends Resource
 {
@@ -23,7 +25,7 @@ class GenerationResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('generation')->required()
             ]);
     }
 
@@ -31,7 +33,7 @@ class GenerationResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('generation')
             ])
             ->filters([
                 //
