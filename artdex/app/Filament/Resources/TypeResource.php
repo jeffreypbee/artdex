@@ -40,7 +40,7 @@ class TypeResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 ColorColumn::make('color'),
-                IconColumn::make('icon')
+                TextColumn::make('icon')
             ])
             ->filters([
                 //
