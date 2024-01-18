@@ -2,16 +2,19 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PokemonResource\Pages;
-use App\Filament\Resources\PokemonResource\RelationManagers;
-use App\Models\Pokemon;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Pokemon;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\PokemonResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\PokemonResource\RelationManagers;
 
 class PokemonResource extends Resource
 {
@@ -23,7 +26,9 @@ class PokemonResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('number')->required(),
+                TextInput::make('name')->required()->maxLength(255),
+                Select::make('generation_id')->relationship('generation', 'generation')->required()
             ]);
     }
 
@@ -31,7 +36,9 @@ class PokemonResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('number'),
+                TextColumn::make('name'),
+                TextColumn::make('generation.generation')
             ])
             ->filters([
                 //
