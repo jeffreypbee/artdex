@@ -10,11 +10,13 @@ use App\Models\PokemonForm;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PokemonFormResource\Pages;
 use App\Filament\Resources\PokemonFormResource\RelationManagers;
+use Filament\Tables\Columns\ToggleColumn;
 
 class PokemonFormResource extends Resource
 {
@@ -26,7 +28,7 @@ class PokemonFormResource extends Resource
 
     protected static ?string $navigationParentItem = 'Pokemon';
 
-    protected static ?string $modelLabel = 'Forms';
+    protected static ?string $modelLabel = 'Form';
 
     public static function form(Form $form): Form
     {
@@ -42,7 +44,9 @@ class PokemonFormResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('pokemon.name'),
+                ToggleColumn::make('default')
             ])
             ->filters([
                 //
