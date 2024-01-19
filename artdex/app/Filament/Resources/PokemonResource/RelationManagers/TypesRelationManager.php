@@ -48,8 +48,9 @@ class TypesRelationManager extends RelationManager
             ->headerActions([
                 // Tables\Actions\CreateAction::make(),
                 AttachAction::make()
+                    ->preloadRecordSelect()
                     ->form(fn (AttachAction $action): array => [
-                        $action->getRecordSelect(),
+                        $action->getRecordSelect()->preload(),
                         Radio::make('order')
                             ->options([
                                 1 => 'Type 1',
