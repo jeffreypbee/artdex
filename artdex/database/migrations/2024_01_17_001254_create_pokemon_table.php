@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
-            $table->integer('number');
-            $table->string('name');
+            $table->integer('number')->unique();
+            $table->string('name')->unique();
             $table->foreignId('generation_id')->constrained('generations')->onDelete('cascade');
             $table->timestamps();
         });

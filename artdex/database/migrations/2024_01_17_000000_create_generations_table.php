@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('generations', function (Blueprint $table) {
             $table->id();
             $table->integer('generation');
+            $table->string('color')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }
