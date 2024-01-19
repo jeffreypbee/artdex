@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('pokemon_id')->constrained('pokemon')->onDelete('cascade');
             $table->string('name');
             $table->boolean('default')->default(false);
+            $table->foreignId('type1_id')->nullable()->constrained('types')->onDelete('cascade');
+            $table->foreignId('type2_id')->nullable()->constrained('types')->onDelete('cascade');
             $table->timestamps();
         });
     }

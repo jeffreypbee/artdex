@@ -16,8 +16,12 @@ class PokemonForm extends Model
         return $this->belongsTo(Pokemon::class);
     }
 
-    public function types(): MorphToMany {
-        return $this->morphToMany(Type::class, 'typeable')->withPivot('typeables')->orderBy('order', 'DESC');
+    public function type1(): BelongsTo {
+        return $this->belongsTo(Type::class, 'type1_id');
+    }
+
+    public function type2(): BelongsTo {
+        return $this->belongsTo(Type::class, 'type2_id');
     }
 
     public function art(): MorphMany {

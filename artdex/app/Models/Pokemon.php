@@ -29,10 +29,6 @@ class Pokemon extends Model
         return $this->belongsTo(Type::class, 'type2_id');
     }
 
-    public function types(): MorphToMany {
-        return $this->morphToMany(Type::class, 'typeable')->withPivot(['order'])->orderBy('order', 'ASC');
-    }
-
     public function art(): MorphMany {
         return $this->morphMany(Art::class, 'artable');
     }
