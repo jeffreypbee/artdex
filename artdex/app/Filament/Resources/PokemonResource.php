@@ -27,10 +27,10 @@ class PokemonResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('number')->required(),
-                TextInput::make('name')->required()->maxLength(255),
                 Select::make('generation_id')->relationship('generation', 'generation')->required(),
-            ]);
+                TextInput::make('number')->numeric()->minValue(0)->unique(ignoreRecord:true)->required(),
+                TextInput::make('name')->required()->maxLength(255)->unique(ignoreRecord:true)->columnSpan(2),
+            ])->columns(4);
     }
 
     public static function table(Table $table): Table
