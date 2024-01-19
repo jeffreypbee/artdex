@@ -22,6 +22,12 @@ class PokemonFormResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Pokedex';
+
+    protected static ?string $navigationParentItem = 'Pokemon';
+
+    protected static ?string $modelLabel = 'Forms';
+
     public static function form(Form $form): Form
     {
         return $form

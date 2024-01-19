@@ -24,6 +24,8 @@ class TypeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Pokedex';
+
     public static function form(Form $form): Form
     {
         return $form
