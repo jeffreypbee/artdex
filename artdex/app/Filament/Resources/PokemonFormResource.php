@@ -2,16 +2,19 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PokemonFormResource\Pages;
-use App\Filament\Resources\PokemonFormResource\RelationManagers;
-use App\Models\PokemonForm;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\PokemonForm;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\PokemonFormResource\Pages;
+use App\Filament\Resources\PokemonFormResource\RelationManagers;
 
 class PokemonFormResource extends Resource
 {
@@ -23,7 +26,9 @@ class PokemonFormResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Select::make('pokemon_id')->relationship('pokemon', 'name')->required()->searchable(),
+                TextInput::make('name')->required(),
+                Toggle::make('default')
             ]);
     }
 
