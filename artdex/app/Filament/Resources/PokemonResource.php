@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Fieldset;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
@@ -28,7 +29,7 @@ class PokemonResource extends Resource
             ->schema([
                 TextInput::make('number')->required(),
                 TextInput::make('name')->required()->maxLength(255),
-                Select::make('generation_id')->relationship('generation', 'generation')->required()
+                Select::make('generation_id')->relationship('generation', 'generation')->required(),
             ]);
     }
 

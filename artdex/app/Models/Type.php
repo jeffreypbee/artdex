@@ -15,6 +15,6 @@ class Type extends Model
     }
 
     public function forms(): MorphToMany {
-        return $this->morphedByMany(Form::class, 'typeable');
+        return $this->morphedByMany(PokemonForm::class, 'typeable');
     }
 }
