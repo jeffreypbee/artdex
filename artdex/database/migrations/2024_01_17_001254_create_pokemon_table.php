@@ -16,6 +16,8 @@ return new class extends Migration
             $table->integer('number')->unique();
             $table->string('name')->unique();
             $table->foreignId('generation_id')->constrained('generations')->onDelete('cascade');
+            $table->foreignId('type1_id')->nullable()->constrained('types')->onDelete('cascade');
+            $table->foreignId('type2_id')->nullable()->constrained('types')->onDelete('cascade');
             $table->timestamps();
         });
     }

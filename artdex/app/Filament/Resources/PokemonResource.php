@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PokemonResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PokemonResource\RelationManagers;
+use Filament\Forms\Components\Section;
 
 class PokemonResource extends Resource
 {
@@ -31,10 +32,20 @@ class PokemonResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('generation_id')->relationship('generation', 'generation')->required(),
-                TextInput::make('number')->numeric()->minValue(0)->unique(ignoreRecord:true)->required(),
-                TextInput::make('name')->required()->maxLength(255)->unique(ignoreRecord:true)->columnSpan(2),
-            ])->columns(4);
+                Section::make('Basic Info')->schema([
+                    TextInput::make('name')->required()->maxLength(255)->unique(ignoreRecord:true)->columnSpan(2),
+                    Select::make('generation_id')->relationship('generation', 'generation')->required(),
+                    TextInput::make('number')->numeric()->minValue(0)->unique(ignoreRecord:true)->required(),
+                ])->columnSpan(1)->columns(2),
+                Section::make('Types')->schema([
+                    Select::make('type1_id')
+                        ->label('Type 1')
+                        ->relationship('type1', 'name'),
+                    Select::make('type2_id')
+                        ->label('Type 2')
+                        ->relationship('type2', 'name')
+                ])->columnSpan(1)->columns(2)
+            ])->columns(2);
     }
 
     public static function table(Table $table): Table
@@ -44,7 +55,8 @@ class PokemonResource extends Resource
                 TextColumn::make('number'),
                 TextColumn::make('name'),
                 TextColumn::make('generation.generation'),
-                TextColumn::make('types.name')
+                TextColumn::make('type1.name')->label('Type 1'),
+                TextColumn::make('type2.name')->label('Type 2'),
             ])
             ->filters([
                 //
@@ -62,8 +74,7 @@ class PokemonResource extends Resource
     public static function getRelations(): array
     {
         return [
-            PokemonResource\RelationManagers\FormsRelationManager::class,
-            PokemonResource\RelationManagers\TypesRelationManager::class
+            PokemonResource\RelationManagers\FormsRelationManager::class
         ];
     }
 
