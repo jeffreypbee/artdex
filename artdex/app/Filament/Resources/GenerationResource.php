@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\GenerationResource\Pages;
 use App\Filament\Resources\GenerationResource\RelationManagers;
+use Filament\Forms\Components\ColorPicker;
+use Filament\Tables\Columns\ColorColumn;
 
 class GenerationResource extends Resource
 {
@@ -25,15 +27,19 @@ class GenerationResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('generation')->required()
-            ]);
+                TextInput::make('generation')->required(),
+                TextInput::make('icon'),
+                ColorPicker::make('color')
+            ])->columns(3);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('generation')
+                TextColumn::make('generation'),
+                TextColumn::make('icon'),
+                ColorColumn::make('color')
             ])
             ->filters([
                 //
