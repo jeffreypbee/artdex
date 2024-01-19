@@ -43,7 +43,8 @@ class PokemonResource extends Resource
             ->columns([
                 TextColumn::make('number'),
                 TextColumn::make('name'),
-                TextColumn::make('generation.generation')
+                TextColumn::make('generation.generation'),
+                TextColumn::make('types.name')
             ])
             ->filters([
                 //

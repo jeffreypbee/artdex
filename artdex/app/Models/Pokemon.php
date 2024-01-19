@@ -22,7 +22,7 @@ class Pokemon extends Model
     }
 
     public function types(): MorphToMany {
-        return $this->morphToMany(Type::class, 'typeable')->withPivot(['order'])->orderBy('order', 'DESC');
+        return $this->morphToMany(Type::class, 'typeable')->withPivot(['order'])->orderBy('order', 'ASC');
     }
 
     public function art(): MorphMany {
