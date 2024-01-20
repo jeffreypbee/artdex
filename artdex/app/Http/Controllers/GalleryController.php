@@ -12,8 +12,6 @@ class GalleryController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('gallery', [
-            'art' => Art::orderBy('publish_date', 'DESC')->get()
-        ]);
+        return view('gallery');
     }
 }
