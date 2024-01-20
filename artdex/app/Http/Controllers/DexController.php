@@ -12,8 +12,6 @@ class DexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('dex', [
-            'pokedex' => Pokemon::orderBy('number', 'ASC')->get()
-        ]);
+        return view('dex');
     }
 }
