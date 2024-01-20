@@ -11,14 +11,15 @@ use Filament\Tables\Table;
 use App\Models\PokemonForm;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\MorphToSelect;
 use App\Filament\Resources\ArtResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ArtResource\RelationManagers;
-use Filament\Forms\Components\FileUpload;
-use Filament\Tables\Columns\ImageColumn;
 
 class ArtResource extends Resource
 {
@@ -55,7 +56,8 @@ class ArtResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')
+                ImageColumn::make('image'),
+                TextColumn::make('publish_date')->label('Publish Date')
             ])
             ->filters([
                 //
