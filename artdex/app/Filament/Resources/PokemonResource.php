@@ -74,7 +74,8 @@ class PokemonResource extends Resource
     public static function getRelations(): array
     {
         return [
-            PokemonResource\RelationManagers\FormsRelationManager::class
+            PokemonResource\RelationManagers\FormsRelationManager::class,
+            PokemonResource\RelationManagers\ArtRelationManager::class
         ];
     }
 
