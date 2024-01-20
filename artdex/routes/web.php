@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DexController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::get('/gallery', GalleryController::class)->name('gallery');
+
+Route::get('/dex', DexController::class)->name('dex');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
