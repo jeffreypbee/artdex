@@ -18,14 +18,30 @@
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             {{-- <livewire:layout.navigation /> --}}
 
-            <!-- Page Heading -->
+            {{-- <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
-            @endif
+            @endif --}}
+
+            <header class="flex">
+                {{config('app.name')}}
+                <nav>
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
+                        {{ __('Gallery') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
+                        {{ __('Dex') }}
+                    </x-nav-link>
+                </nav>
+            </header>
+
 
             <!-- Page Content -->
             <main>
