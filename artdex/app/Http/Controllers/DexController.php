@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Art;
+use App\Models\Pokemon;
 use Illuminate\Http\Request;
 
 class DexController extends Controller
@@ -12,8 +12,8 @@ class DexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('gallery', [
-            'art' => Art::orderBy('publish_date', 'DESC')->get()
+        return view('dex', [
+            'pokedex' => Pokemon::orderBy('number', 'ASC')->get()
         ]);
     }
 }
