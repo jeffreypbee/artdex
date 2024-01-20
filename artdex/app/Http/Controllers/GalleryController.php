@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Art;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -11,6 +12,8 @@ class GalleryController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        return view('gallery', [
+            'art' => Art::orderBy('publish_date', 'DESC')->get()
+        ]);
     }
 }
