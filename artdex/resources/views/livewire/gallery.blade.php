@@ -1,6 +1,7 @@
-<div>
-    Gallery
+<div class="flex">
     @foreach ($gallery as $art)
-        <div wire:key='{{$art->id}}'>{{$art->artable->name}}</div>
+        <div>
+            <img src="/storage/{{$art->image}}" alt="" style="width: 100px">
+        </div>
     @endforeach
 </div>
