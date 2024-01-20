@@ -1,4 +1,6 @@
 <x-app-layout>
     Pokedex
-    <livewire:pokedex />
+    <div class="flex justify-center">
+        <livewire:pokedex />
+    </div>
 </x-app-layout>

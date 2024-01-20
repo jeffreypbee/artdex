@@ -1,5 +1,5 @@
 <div>
-    <div class="flex flex-wrap gap-10">
+    <div class="flex flex-wrap gap-5">
         @foreach ($pokedex as $pokemon)
             <livewire:pokedex-entry :pokemon="$pokemon" />
             @foreach ($pokemon->forms as $form)
