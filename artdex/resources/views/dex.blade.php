@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="flex flex-wrap gap-10">
-        @foreach ($pokemon as $pkmn)
+        @foreach ($pokedex as $pkmn)
             <div class="w-50 bg-white">
                 {{$pkmn->name}}
                 @unless (count($pkmn->art) === 0)
