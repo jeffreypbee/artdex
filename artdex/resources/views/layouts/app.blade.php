@@ -16,7 +16,7 @@
         <script src="https://kit.fontawesome.com/1b886f8acb.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased bg-slate-900 text-white">
-        <div class="min-h-screen flex">
+        <div class="min-h-screen flex flex-col">
             {{-- <livewire:layout.navigation /> --}}
 
             {{-- <!-- Page Heading -->
@@ -28,12 +28,14 @@
                 </header>
             @endif --}}
 
-            <header class="flex flex-col shrink-0"
-                style="width: 200px">
-                <div class="font-bold text-lg">
-                    <a href="/">{{config('app.name')}}</a>
-                </div>
-                <nav class="flex flex-col">
+
+            <header class="w-full">
+                <livewire:head-banner />
+            </header>
+
+            <div class="flex">
+                <nav class="flex flex-col shrink-0"
+                    style="width: 200px">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
 
                         {{ __('HOME') }}
@@ -50,13 +52,12 @@
 
                     </x-nav-link>
                 </nav>
-            </header>
 
-            <!-- Page Content -->
-            <main class="p-5">
-                <livewire:completion-widget />
-                {{ $slot }}
-            </main>
+                <!-- Page Content -->
+                <main class="p-5">
+                    {{ $slot }}
+                </main>
+            </div>
         </div>
     </body>
 </html>
