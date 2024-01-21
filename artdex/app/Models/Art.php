@@ -18,4 +18,8 @@ class Art extends Model
     public function scopePublished($query) {
         return $query->where('publish_date', '<', Carbon::now());
     }
+
+    public function isPublished(): bool {
+        return $this->publishDate < Carbon::now();
+    }
 }

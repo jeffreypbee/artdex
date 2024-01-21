@@ -38,6 +38,14 @@ class Pokemon extends Model
     }
 
     public function hasArt(): bool {
-        return count($this->art) > 0;
+        if ($this->art == null) {
+            return false;
+        }
+        foreach ($this->art as $art) {
+            if ($art->isPublished()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
