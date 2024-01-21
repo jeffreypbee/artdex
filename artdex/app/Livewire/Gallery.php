@@ -10,7 +10,7 @@ class Gallery extends Component
     public function render()
     {
         return view('livewire.gallery', [
-            'gallery' => Art::published()->latest()->get()
+            'gallery' => Art::published()->latest('publish_date')->get()
         ]);
     }
 }
