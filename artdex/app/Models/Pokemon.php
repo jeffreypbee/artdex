@@ -36,4 +36,8 @@ class Pokemon extends Model
     public function getNumber(): string {
         return sprintf('%04d', $this->number);
     }
+
+    public function hasArt(): bool {
+        return count($this->art) > 0;
+    }
 }
