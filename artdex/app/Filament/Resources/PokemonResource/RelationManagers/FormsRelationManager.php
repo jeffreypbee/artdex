@@ -6,11 +6,13 @@ use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Section;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Tables\Columns\ToggleColumn;
 
 class FormsRelationManager extends RelationManager
 {
@@ -21,9 +23,19 @@ class FormsRelationManager extends RelationManager
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('Form Name')
                     ->required()
                     ->maxLength(255),
-                Toggle::make('default')
+                Toggle::make('default'),
+                Section::make('Types')->schema([
+                    Select::make('type1_id')
+                        ->label('Type 1')
+                        ->relationship('type1', 'name')
+                        ->required(),
+                    Select::make('type2_id')
+                        ->label('Type 2')
+                        ->relationship('type2', 'name')
+                ])
             ]);
     }
 

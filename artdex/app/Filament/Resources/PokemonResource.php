@@ -40,7 +40,8 @@ class PokemonResource extends Resource
                 Section::make('Types')->schema([
                     Select::make('type1_id')
                         ->label('Type 1')
-                        ->relationship('type1', 'name'),
+                        ->relationship('type1', 'name')
+                        ->required(),
                     Select::make('type2_id')
                         ->label('Type 2')
                         ->relationship('type2', 'name')

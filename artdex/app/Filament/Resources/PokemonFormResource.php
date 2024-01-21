@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PokemonFormResource\Pages;
 use App\Filament\Resources\PokemonFormResource\RelationManagers;
+use Filament\Forms\Components\Section;
 use Filament\Tables\Columns\ToggleColumn;
 
 class PokemonFormResource extends Resource
@@ -34,10 +35,21 @@ class PokemonFormResource extends Resource
     {
         return $form
             ->schema([
-                Select::make('pokemon_id')->relationship('pokemon', 'name')->required()->searchable(),
-                TextInput::make('name')->required(),
-                Toggle::make('default')
-            ]);
+                Section::make('Basic Info')->schema([
+                    Select::make('pokemon_id')->relationship('pokemon', 'name')->required()->searchable(),
+                    TextInput::make('name')->label('Form Name')->required(),
+                    Toggle::make('default')
+                ])->columnSpan(1)->columns(2),
+                Section::make('Types')->schema([
+                    Select::make('type1_id')
+                        ->label('Type 1')
+                        ->relationship('type1', 'name')
+                        ->required(),
+                    Select::make('type2_id')
+                        ->label('Type 2')
+                        ->relationship('type2', 'name')
+                ])->columnSpan(1)->columns(2)
+            ])->columns(2);
     }
 
     public static function table(Table $table): Table
