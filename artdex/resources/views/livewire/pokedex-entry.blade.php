@@ -5,7 +5,7 @@
     <img src="/storage/{{$image}}" alt="" class="absolute top-1/2 -left-5 transform -translate-y-1/2" style="width: 150px">
     <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
         <div class="text-sm">
-            {{$pokemon->getNumber()}}
+            <span class="text-gray-400">#</span>{{$pokemon->getNumber()}}
         </div>
         <div class="flex flex-col items-end">
             <div class="text-sm -mb-1">
