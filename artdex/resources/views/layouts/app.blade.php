@@ -28,7 +28,7 @@
                 </header>
             @endif --}}
 
-            <header class="flex flex-col"
+            <header class="flex flex-col shrink-0"
                 style="width: 200px">
                 <div class="font-bold text-lg">
                     <a href="/">{{config('app.name')}}</a>
