@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Art extends Model
 {
@@ -12,5 +13,9 @@ class Art extends Model
 
     public function artable(): MorphTo {
         return $this->morphTo();
+    }
+
+    public function scopePublished($query) {
+        return $query->where('publish_date', '>', Carbon::now());
     }
 }
