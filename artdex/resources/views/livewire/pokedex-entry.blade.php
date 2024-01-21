@@ -10,10 +10,12 @@
         @endunless
         <div class="h-1/2 flex flex-col justify-end">
 
-            @if ($isForm)
-                <div>{{$form->name}}</div>
-            @endif
-            <div class="pl-1">{{$pokemon->name}}</div>
+            <div class="pl-1 flex flex-col gap-0 leading-none">
+                @if ($isForm)
+                    <div class="font-normal text-sm text-gray-300">{{$form->name}}</div>
+                @endif
+                <div class="font-bold">{{$pokemon->name}}</div>
+            </div>
             <div class="flex justify-center pb-1">
                 @foreach ($types as $type)
                     <i class="fa-solid {{$type->icon}} p-1" style="color: {{$type->color}}"></i>
