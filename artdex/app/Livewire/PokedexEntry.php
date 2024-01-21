@@ -46,7 +46,7 @@ class PokedexEntry extends Component
     }
 
     protected function getBackground() {
-        if(count($this->types) === 1) {
+        if (count($this->types) === 1) {
             return $this->types[0]->color;
         } else {
             return 'linear-gradient(to right, ' . $this->types[0]->color . ', ' . $this->types[1]->color . ');';
