@@ -32,12 +32,15 @@
                 {{config('app.name')}}
                 <nav>
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
+                        <i class="fa-solid fa-home"></i>
                         {{ __('Home') }}
                     </x-nav-link>
                     <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
+                        <i class="fa-solid fa-palette"></i>
                         {{ __('Gallery') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
+                        <i class="fa-solid fa-book"></i>
                         {{ __('Dex') }}
                     </x-nav-link>
                 </nav>
