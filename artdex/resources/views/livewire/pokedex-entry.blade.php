@@ -13,13 +13,10 @@
             @if ($isForm)
                 <div>{{$form->name}}</div>
             @endif
-            <div class="p-1">{{$pokemon->name}}</div>
-            <div class="flex justify-center">
+            <div class="pl-1">{{$pokemon->name}}</div>
+            <div class="flex justify-center pb-1">
                 @foreach ($types as $type)
-                    <div>
-                        {{-- <i class="fa-solid {{$type->icon}}"></i> --}}
-                        <span style="color: {{$type->color}}">X</span>
-                    </div>
+                    <i class="fa-solid {{$type->icon}} p-1" style="color: {{$type->color}}"></i>
                 @endforeach
             </div>
         </div>

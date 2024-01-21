@@ -13,6 +13,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://kit.fontawesome.com/1b886f8acb.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased bg-slate-900 text-white">
         <div class="min-h-screen">
