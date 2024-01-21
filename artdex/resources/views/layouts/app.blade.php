@@ -52,9 +52,9 @@
                 </nav>
             </header>
 
-
             <!-- Page Content -->
             <main class="p-5">
+                <livewire:completion-widget />
                 {{ $slot }}
             </main>
         </div>
