@@ -28,23 +28,26 @@
                 </header>
             @endif --}}
 
-            <header class="flex flex-col border-r-2 border-indigo-400"
+            <header class="flex flex-col"
                 style="width: 200px">
                 <div class="font-bold text-lg">
                     <a href="/">{{config('app.name')}}</a>
                 </div>
                 <nav class="flex flex-col">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
-                        <i class="fa-solid fa-home"></i>
+
                         {{ __('HOME') }}
+                        <i class="fa-solid fa-home"></i>
                     </x-nav-link>
                     <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
-                        <i class="fa-solid fa-palette"></i>
                         {{ __('GALLERY') }}
+                        <i class="fa-solid fa-palette"></i>
+
                     </x-nav-link>
                     <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
-                        <i class="fa-solid fa-book"></i>
                         {{ __('DEX') }}
+                        <i class="fa-solid fa-book"></i>
+
                     </x-nav-link>
                 </nav>
             </header>
