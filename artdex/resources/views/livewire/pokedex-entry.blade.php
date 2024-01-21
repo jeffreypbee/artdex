@@ -2,7 +2,13 @@
     <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{$background}}">
 
     </div>
-    <img src="/storage/{{$image}}" alt="" class="absolute top-1/2 -left-5 transform -translate-y-1/2" style="width: 150px">
+    <div class="absolute top-1/2 -left-5 transform -translate-y-1/2">
+        @if ($image == null)
+            <i class="fa-solid fa-question fa-2xl absolute left-12 text-gray-500"></i>
+        @else
+            <img src="/storage/{{$image}}" alt="" style="width: 150px">
+        @endif
+    </div>
     <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
         <div class="text-sm">
             <span class="text-gray-400">#</span>{{$pokemon->getNumber()}}
