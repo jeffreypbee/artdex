@@ -23,7 +23,7 @@ class PokedexEntry extends Component
     }
 
     protected function getImage() {
-        if (!$this->isForm && count($this->pokemon->art) > 0) {
+        if (!$this->isForm && $this->pokemon->hasArt()) {
             return $this->pokemon->art[0]->image;
         } else if ($this->isForm && count($this->form->art) > 0) {
             return $this->form->art[0]->image;
