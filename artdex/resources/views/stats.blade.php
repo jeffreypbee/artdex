@@ -1,9 +1,8 @@
 <x-app-layout>
     <x-page-title>Stats</x-page-title>
 
-    <div class="flex justify-around">
-        <div>
-            <div class="text-lg">Types</div>
+    <div class="flex justify-around gap-10">
+        <x-collapsible-widget title="Type Breakdown">
             <div>
                 @foreach ($types as $type)
                     @php
@@ -18,10 +17,9 @@
                     <x-completion-bar :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
                 @endforeach
             </div>
-        </div>
+        </x-collapsible-widget>
 
-        <div>
-            <div class="text-lg">Generations</div>
+        <x-collapsible-widget title="Generation Breakdown">
             <div>
                 @foreach ($generations as $generation)
                     @php
@@ -36,8 +34,7 @@
                     <x-completion-bar :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
                 @endforeach
             </div>
-        </div>
-
+        </x-collapsible-widget>
     </div>
 
 
