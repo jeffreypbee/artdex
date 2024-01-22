@@ -15,17 +15,7 @@
                         }
                         $fraction = $artCount / count($type->getPokemon())
                     @endphp
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid {{$type->icon}}" style="color: {{$type->color}}"></i>
-                        <div class="rounded h-2 bg-black"
-                            style="width: 200px">
-                            <div class="rounded h-2"
-                                style="width: {{floor(200 * $fraction)}}px; background: {{$type->color}}"></div>
-                        </div>
-                        <div>
-                            {{floor($fraction * 100)}}% Pokemon Drawn
-                        </div>
-                    </div>
+                    <x-completion-bar :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
                 @endforeach
             </div>
         </div>
@@ -43,17 +33,7 @@
                         }
                         $fraction = $artCount / count($generation->pokemon)
                     @endphp
-                    <div class="flex items-center gap-2">
-                        <div>{{$generation->generation}}</div>
-                        <div class="rounded h-2 bg-black"
-                            style="width: 200px">
-                            <div class="rounded h-2"
-                                style="width: {{floor(200 * $fraction)}}px; background: white"></div>
-                        </div>
-                        <div>
-                            {{floor($fraction * 100)}}% Pokemon Drawn
-                        </div>
-                    </div>
+                    <x-completion-bar :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
                 @endforeach
             </div>
         </div>
