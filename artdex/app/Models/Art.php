@@ -20,6 +20,6 @@ class Art extends Model
     }
 
     public function isPublished(): bool {
-        return $this->publishDate < Carbon::now();
+        return $this->publish_date < Carbon::now();
     }
 }
