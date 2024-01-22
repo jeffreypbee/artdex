@@ -1,6 +1,6 @@
 @props(['title'])
 
-<div x-data="{collapsed: false}" style="min-width: 200px">
+<div x-data="{collapsed: false}" class="w-full">
     <div class="p-1 flex justify-between rounded-t-lg border-b-2 border-gray-500" style="background: linear-gradient(to right, transparent, rgb(40, 52, 90))">
         <div class="text-lg">{{$title}}</div>
         <div class="p-1">
