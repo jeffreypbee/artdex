@@ -14,7 +14,7 @@
                         }
                         $fraction = $artCount / count($type->getPokemon())
                     @endphp
-                    <x-completion-bar :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
+                    <x-completion-bar :title="$type->name" :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
                 @endforeach
             </div>
         </x-collapsible-widget>
