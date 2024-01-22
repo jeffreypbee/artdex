@@ -1,4 +1,5 @@
 <x-app-layout>
-    Gallery
+    <x-page-title>Gallery</x-page-title>
+
     <livewire:gallery />
 </x-app-layout>
