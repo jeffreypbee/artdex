@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\DexController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DexController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StatsController;
 use App\Http\Controllers\GalleryController;
 
 /*
@@ -21,6 +22,8 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/gallery', GalleryController::class)->name('gallery');
 
 Route::get('/dex', DexController::class)->name('dex');
+
+Route::get('/stats', StatsController::class)->name('stats');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

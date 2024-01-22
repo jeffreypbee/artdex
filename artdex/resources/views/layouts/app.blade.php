@@ -51,10 +51,15 @@
                         <i class="fa-solid fa-book"></i>
 
                     </x-nav-link>
+                    <x-nav-link :href="route('stats')" :active="request()->routeIs('stats')" wire:navigate>
+                        {{ __('STATS') }}
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </x-nav-link>
                 </nav>
 
                 <!-- Page Content -->
-                <main class="p-5">
+                <main class="p-5 w-full">
                     {{ $slot }}
                 </main>
             </div>
