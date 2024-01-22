@@ -27,4 +27,8 @@ class PokemonForm extends Model
     public function art(): MorphMany {
         return $this->morphMany(Art::class, 'artable');
     }
+
+    public function getNumber(): string {
+        return sprintf('%04d', $this->pokemon->number);
+    }
 }
