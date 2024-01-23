@@ -30,6 +30,9 @@
 
 
     <div class="flex flex-wrap gap-5">
+        @if (count($pokedex) === 0)
+            <div class="text-xl">No Pokemon Found</div>
+        @endif
         @foreach ($pokedex as $pokemon)
             <livewire:pokedex-entry wire:key='{{$pokemon->id}}' :pokemon="$pokemon" />
             @foreach ($pokemon->forms as $form)
