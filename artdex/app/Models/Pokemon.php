@@ -33,6 +33,11 @@ class Pokemon extends Model
         return $this->morphMany(Art::class, 'artable');
     }
 
+    public function scopeHasType($query, $typeName) {
+        $type = Type::where('name', '=', $typeName)->first();
+        return $query->where('type1_id', '=', $type->id)->orWhere('type2_id', '=', $type->id);
+    }
+
     public function getNumber(): string {
         return sprintf('%04d', $this->number);
     }
