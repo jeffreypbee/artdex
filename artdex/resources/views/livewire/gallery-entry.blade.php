@@ -1,3 +1,4 @@
+<a href="/pokemon/{{$path}}">
 <div x-data="{showInfo: false}"
     @mouseenter="showInfo = true"
     @mouseleave="showInfo = false"
@@ -17,3 +18,4 @@
         </div>
     </div>
 </div>
+</a>

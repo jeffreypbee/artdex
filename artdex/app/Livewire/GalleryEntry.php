@@ -24,11 +24,19 @@ class GalleryEntry extends Component
         return $this->art->artable->name;
     }
 
+    public function getPath() {
+        if ($this->isForm) {
+            return $this->art->artable->pokemon->id;
+        }
+        return $this->art->artable->id;
+    }
+
     public function render()
     {
         return view('livewire.gallery-entry', [
             'number' => $this->art->artable->getNumber(),
-            'title' => $this->getTitle()
+            'title' => $this->getTitle(),
+            'path' => $this->getPath()
         ]);
     }
 }
