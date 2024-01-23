@@ -53,8 +53,8 @@ class PokemonResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('number'),
-                TextColumn::make('name'),
+                TextColumn::make('number')->sortable()->searchable(),
+                TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('generation.generation'),
                 TextColumn::make('type1.name')->label('Type 1'),
                 TextColumn::make('type2.name')->label('Type 2'),
