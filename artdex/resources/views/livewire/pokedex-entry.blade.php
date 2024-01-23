@@ -1,3 +1,6 @@
+<a href="/pokemon/{{$pokemon->id}}">
+
+
 <div x-data="{hovering: false}"
     @mouseenter="hovering=true"
     @mouseleave="hovering=false"
@@ -36,3 +39,4 @@
 
     </div>
 </div>
+</a>

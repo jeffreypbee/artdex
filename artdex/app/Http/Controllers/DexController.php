@@ -14,4 +14,10 @@ class DexController extends Controller
     {
         return view('dex');
     }
+
+    public function show(Pokemon $pokemon) {
+        return view('pokemon', [
+            'pokemon' => $pokemon
+        ]);
+    }
 }

@@ -25,6 +25,8 @@ Route::get('/dex', DexController::class)->name('dex');
 
 Route::get('/stats', StatsController::class)->name('stats');
 
+Route::get('/pokemon/{pokemon}', [DexController::class, 'show']);
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
