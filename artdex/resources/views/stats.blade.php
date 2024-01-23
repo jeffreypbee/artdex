@@ -31,7 +31,7 @@
                         }
                         $fraction = $artCount / count($generation->pokemon)
                     @endphp
-                    <x-completion-bar :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
+                    <x-completion-bar :title="'Generation ' . $generation->generation" :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
                 @endforeach
             </div>
         </x-collapsible-widget>
