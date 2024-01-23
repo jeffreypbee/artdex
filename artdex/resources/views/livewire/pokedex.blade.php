@@ -21,7 +21,7 @@
         @foreach ($pokedex as $pokemon)
             <livewire:pokedex-entry :pokemon="$pokemon" />
             @foreach ($pokemon->forms as $form)
-                <livewire:pokedex-entry :pokemon="$pokemon" :form="$form" />
+                <livewire:pokedex-entry :pokemon="$pokemon" :form="$form" wire:click='showPokemon($pokemon->number)' />
             @endforeach
         @endforeach
     </div>
