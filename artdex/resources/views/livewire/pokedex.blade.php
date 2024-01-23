@@ -26,6 +26,12 @@
                 </button>
             @endforeach
         </div>
+
+        <button
+            class="m-2 p-2 leading-none rounded-2xl flex justify-center items-center bg-blue-gray border-2 border-transparent hover:border-gray-600"
+            wire:click='resetFilters'>
+                Reset Filters
+            </button>
     </div>
 
 

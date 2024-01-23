@@ -28,6 +28,12 @@ class Pokedex extends Component
 
     }
 
+    public function resetFilters() {
+        $this->reset('type');
+        $this->reset('gen');
+        $this->filterPokedex();
+    }
+
     public function filterType($typeName) {
 
         if ($this->type === $typeName) {
