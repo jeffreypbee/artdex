@@ -1,7 +1,7 @@
 <div x-data="{showInfo: false}"
     @mouseenter="showInfo = true"
     @mouseleave="showInfo = false"
-    class="relative hover:cursor-pointer hover:bg-slate-600 rounded-lg">
+    class="relative hover:cursor-pointer hover:bg-blue-gray rounded-lg">
     <img src="/storage/{{$art->image}}" alt="" class="" style="width: 250px">
     <div
         x-show="showInfo"
