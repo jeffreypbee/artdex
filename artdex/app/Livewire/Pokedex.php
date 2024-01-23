@@ -13,6 +13,8 @@ class Pokedex extends Component
 {
 
     public $pokedex;
+    public $generations;
+    public $types;
 
     #[Url]
     public $type = '';
@@ -22,11 +24,14 @@ class Pokedex extends Component
 
     public function mount() {
 
+        $this->generations = Generation::orderBy('generation', 'ASC')->get();
+        $this->types = Type::orderBy('name', 'ASC')->get();
         $this->filterPokedex();
 
     }
 
     public function filterType($typeName) {
+
         if ($this->type === $typeName) {
             $this->reset('type');
         } else {
@@ -60,8 +65,8 @@ class Pokedex extends Component
     {
         return view('livewire.pokedex', [
             'pokedex' => $this->pokedex,
-            'generations' => Generation::orderBy('generation', 'ASC')->get(),
-            'types' => Type::orderBy('name', 'ASC')->get()
+            'generations' => $this->generations,
+            'types' => $this->types
         ]);
     }
 }
