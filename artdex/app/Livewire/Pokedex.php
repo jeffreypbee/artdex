@@ -7,6 +7,7 @@ use App\Models\Pokemon;
 use Livewire\Component;
 use App\Models\Generation;
 use Livewire\Attributes\Url;
+use Illuminate\Database\Eloquent\Builder;
 
 class Pokedex extends Component
 {
@@ -16,6 +17,9 @@ class Pokedex extends Component
     #[Url]
     public $type = '';
 
+    #[Url]
+    public $gen = '';
+
     public function mount() {
 
         $this->filterPokedex();
@@ -23,17 +27,33 @@ class Pokedex extends Component
     }
 
     public function filterType($typeName) {
-        $this->type = $typeName;
+        if ($this->type === $typeName) {
+            $this->reset('type');
+        } else {
+            $this->type = $typeName;
+        }
+        $this->filterPokedex();
+    }
+
+    public function filterGen($generation) {
+        if ($this->gen ==  $generation) {
+            $this->reset('gen');
+        } else {
+            $this->gen = $generation;
+        }
         $this->filterPokedex();
     }
 
     protected function filterPokedex() {
-
-        if ($this->type != '') {
-            $this->pokedex =  Pokemon::hasType($this->type)->orderBy('number', 'ASC')->get();
-        } else {
-            $this->pokedex = Pokemon::orderBy('number', 'ASC')->get();
-        }
+        $this->pokedex = Pokemon::
+            when($this->gen != '', function (Builder $query, $gen) {
+                $query->generation($this->gen);
+            })
+            ->when($this->type != '', function (Builder $query, $type) {
+                $query->hasType($this->type);
+            })
+            ->orderBy('number', 'ASC')
+            ->get();
     }
 
     public function render()

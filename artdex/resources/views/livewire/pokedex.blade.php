@@ -4,7 +4,7 @@
         Generations
         <div class="flex">
             @foreach ($generations as $generation)
-                <button wire:key='gen-{{$generation->id}}'
+                <button wire:key='gen-{{$generation->id}}' wire:click='filterGen({{$generation->generation}})'
                     class="m-1 w-8 h-8 rounded-2xl flex justify-center items-center bg-blue-gray border-2 border-transparent hover:border-white">
                     <i class="fa-solid {{$generation->icon}} fa-fw" style="color: {{$generation->color}}"></i>
                 </button>

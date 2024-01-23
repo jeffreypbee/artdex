@@ -38,6 +38,11 @@ class Pokemon extends Model
         return $query->where('type1_id', '=', $type->id)->orWhere('type2_id', '=', $type->id);
     }
 
+    public function scopeGeneration($query, $generation) {
+        $gen = Generation::where('generation', '=', $generation)->first();
+        return $query->where('generation_id', '=', $gen->id);
+    }
+
     public function getNumber(): string {
         return sprintf('%04d', $this->number);
     }
