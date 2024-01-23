@@ -14,7 +14,6 @@ class Pokedex extends Component
 
     public $pokedex;
     public $generations;
-    public $types;
 
     #[Url]
     public $type = '';
@@ -25,7 +24,6 @@ class Pokedex extends Component
     public function mount() {
 
         $this->generations = Generation::orderBy('generation', 'ASC')->get();
-        $this->types = Type::orderBy('name', 'ASC')->get();
         $this->filterPokedex();
 
     }
@@ -66,7 +64,7 @@ class Pokedex extends Component
         return view('livewire.pokedex', [
             'pokedex' => $this->pokedex,
             'generations' => $this->generations,
-            'types' => $this->types
+            'types' => Type::orderBy('name', 'ASC')->get()
         ]);
     }
 }
