@@ -1,6 +1,7 @@
 <div class="w-full flex flex-col items-center">
 
-    <div class="m-10 w-full flex flex-col items-center">
+    <x-collapsible-widget title="Filters">
+    <div class="w-full flex flex-col items-center">
         Generations
         <div class="flex">
             @foreach ($generations as $generation)
@@ -33,9 +34,9 @@
                 Reset Filters
             </button>
     </div>
+    </x-collapsible-widget>
 
-
-    <div class="flex flex-wrap gap-5">
+    <div class="m-2 flex flex-wrap justify-center gap-6">
         @if (count($pokedex) === 0)
             <div class="text-xl">No Pokemon Found</div>
         @endif

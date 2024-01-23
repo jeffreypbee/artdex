@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-page-title>Pokedex</x-page-title>
 
-    <div class="flex justify-center">
+    <div>
         <livewire:pokedex />
     </div>
 </x-app-layout>
