@@ -56,8 +56,8 @@ class PokemonResource extends Resource
                 TextColumn::make('number')->sortable()->searchable(),
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('generation.generation'),
-                TextColumn::make('type1.name')->label('Type 1'),
-                TextColumn::make('type2.name')->label('Type 2'),
+                TextColumn::make('type1.name')->label('Type 1')->sortable()->searchable(),
+                TextColumn::make('type2.name')->label('Type 2')->sortable()->searchable(),
             ])
             ->filters([
                 //
