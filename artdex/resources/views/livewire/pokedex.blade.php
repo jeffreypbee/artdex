@@ -4,14 +4,18 @@
         Generations
         <div class="flex">
             @foreach ($generations as $generation)
-                <button>{{$generation->generation}}</button>
+                <button wire:key='gen-{{$generation->id}}' class="m-1 w-8 h-8 rounded-2xl flex justify-center items-center bg-blue-gray">
+                    <i class="fa-solid {{$generation->icon}} fa-fw" style="color: {{$generation->color}}"></i>
+                </button>
             @endforeach
         </div>
 
         Types
         <div class="flex">
             @foreach ($types as $type)
-                <button wire:key='type-{{$type->id}}' wire:click='filterType("{{$type->name}}")'><i class="fa-solid {{$type->icon}}"></i></button>
+                <button wire:key='type-{{$type->id}}' wire:click='filterType("{{$type->name}}")' class="m-1 w-8 h-8 rounded-2xl flex justify-center items-center bg-blue-gray">
+                    <i class="fa-solid {{$type->icon}} fa-fw" style="color: {{$type->color}}"></i>
+                </button>
             @endforeach
         </div>
     </div>
