@@ -9,7 +9,9 @@
         </div>
 
         @foreach ($pokemon->art as $art)
-            <img src="/storage/{{$art->image}}" alt="">
+            @if ($art->isPublished())
+                <img src="/storage/{{$art->image}}" alt="">
+            @endif
         @endforeach
     </div>
 
