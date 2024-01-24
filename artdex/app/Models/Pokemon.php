@@ -58,4 +58,26 @@ class Pokemon extends Model
         }
         return false;
     }
+
+    public function next() {
+        $max = Pokemon::all()->max('number');
+        for ($n = $this->number + 1; $n <= $max; $n++) {
+            $pokemon = Pokemon::where('number', '=', $n)->first();
+            if ($pokemon != null) {
+                return $pokemon;
+            }
+        }
+        return null;
+    }
+
+    public function previous() {
+        $min = Pokemon::all()->min('number');
+        for ($n = $this->number - 1; $n >= $min; $n--) {
+            $pokemon = Pokemon::where('number', '=', $n)->first();
+            if ($pokemon != null) {
+                return $pokemon;
+            }
+        }
+        return null;
+    }
 }
