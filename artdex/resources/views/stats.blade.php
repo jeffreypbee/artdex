@@ -14,7 +14,9 @@
                         }
                         $fraction = $artCount / count($type->getPokemon())
                     @endphp
-                    <x-completion-bar :title="$type->name" :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
+                    <a href="/dex?type={{$type->name}}">
+                        <x-completion-bar :title="$type->name" :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
+                    </a>
                 @endforeach
             </div>
         </x-collapsible-widget>
@@ -31,7 +33,9 @@
                         }
                         $fraction = $artCount / count($generation->pokemon)
                     @endphp
-                    <x-completion-bar :title="'Generation ' . $generation->generation" :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
+                    <a href="/dex?gen={{$generation->generation}}">
+                        <x-completion-bar :title="'Generation ' . $generation->generation" :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
+                    </a>
                 @endforeach
             </div>
         </x-collapsible-widget>
