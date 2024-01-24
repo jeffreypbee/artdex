@@ -2,6 +2,15 @@
 
     <x-collapsible-widget title="Filters">
     <div class="w-full flex flex-col items-center">
+
+        <div wire:submit.prevent='filterPokedex()' class="m-2">
+            <form action="">
+                <input type="text" wire:model.live='search' class="bg-blue-gray h-4 rounded-xl border-2 border-transparent focus:border-white">
+                <button><i class="fa-solid fa-search fa-xl" class="text-gray-600"></i></button>
+            </form>
+        </div>
+
+
         Generations
         <div class="flex">
             @foreach ($generations as $generation)

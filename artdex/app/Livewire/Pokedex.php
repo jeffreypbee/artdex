@@ -21,6 +21,9 @@ class Pokedex extends Component
     #[Url]
     public $gen = '';
 
+    #[Url]
+    public $search = '';
+
     public function mount() {
 
         $this->generations = Generation::orderBy('generation', 'ASC')->get();
@@ -31,11 +34,11 @@ class Pokedex extends Component
     public function resetFilters() {
         $this->reset('type');
         $this->reset('gen');
+        $this->reset('search');
         $this->filterPokedex();
     }
 
     public function filterType($typeName) {
-
         if ($this->type === $typeName) {
             $this->reset('type');
         } else {
@@ -53,13 +56,16 @@ class Pokedex extends Component
         $this->filterPokedex();
     }
 
-    protected function filterPokedex() {
+    public function filterPokedex() {
         $this->pokedex = Pokemon::
             when($this->gen != '', function (Builder $query, $gen) {
                 $query->generation($this->gen);
             })
             ->when($this->type != '', function (Builder $query, $type) {
                 $query->hasType($this->type);
+            })
+            ->when($this->search != '', function (Builder $query, $search) {
+                $query->where('name', 'like', '%' . $this->search . '%');
             })
             ->orderBy('number', 'ASC')
             ->get();
