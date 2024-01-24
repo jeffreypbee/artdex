@@ -7,13 +7,13 @@
         @endphp
         @unless ($prev == null)
             <a href="/pokemon/{{$prev->id}}">
-                <button class="absolute left-0">< #{{$prev->getNumber()}} - {{$prev->name}}</button>
+                <button class="absolute left-10 p-2 rounded-xl hover:bg-blue-gray">< #{{$prev->getNumber()}} - {{$prev->name}}</button>
             </a>
         @endunless
 
         @unless ($next == null)
             <a href="/pokemon/{{$next->id}}">
-                <button class="absolute right-0">#{{$next->getNumber()}} - {{$next->name}} ></button>
+                <button class="absolute right-10 p-2 rounded-xl hover:bg-blue-gray">#{{$next->getNumber()}} - {{$next->name}} ></button>
             </a>
         @endunless
     </div>
