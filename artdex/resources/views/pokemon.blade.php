@@ -18,7 +18,10 @@
         @endunless
     </div>
     <div class="flex flex-col items-center">
-        <div class="flex gap-2">
+
+        <x-generation-pill :generation="$pokemon->generation" />
+
+        <div class="flex m-2 gap-2">
             <x-type-pill :type="$pokemon->type1" />
             @unless ($pokemon->type2 == null)
             <x-type-pill :type="$pokemon->type2" />
