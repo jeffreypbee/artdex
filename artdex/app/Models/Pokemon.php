@@ -47,6 +47,16 @@ class Pokemon extends Model
         return sprintf('%04d', $this->number);
     }
 
+    public function getTypes() {
+        if ($this->type2 == null) {
+            return ['type1' => $this->type1];
+        }
+        return [
+            'type1' => $this->type1,
+            'type2' => $this->type2
+        ];
+    }
+
     public function hasArt(): bool {
         if ($this->art == null) {
             return false;

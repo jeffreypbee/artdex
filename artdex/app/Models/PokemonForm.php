@@ -31,4 +31,14 @@ class PokemonForm extends Model
     public function getNumber(): string {
         return sprintf('%04d', $this->pokemon->number);
     }
+
+    public function getTypes() {
+        if ($this->type2 == null) {
+            return ['type1' => $this->type1];
+        }
+        return [
+            'type1' => $this->type1,
+            'type2' => $this->type2
+        ];
+    }
 }
