@@ -57,6 +57,10 @@ class Pokemon extends Model
         ];
     }
 
+    public function getDefaultForm() {
+        return PokemonForm::where('pokemon_id', $this->id)->where('default', true)->first();
+    }
+
     public function hasArt(): bool {
         if ($this->art == null) {
             return false;
