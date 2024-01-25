@@ -19,6 +19,10 @@ class Art extends Model
         return $query->where('publish_date', '<', Carbon::now());
     }
 
+    public function scopeUpcoming($query) {
+        return $query->where('publish_date', '>', Carbon::now());
+    }
+
     public function isPublished(): bool {
         return $this->publish_date < Carbon::now();
     }
