@@ -1,6 +1,15 @@
 <x-app-layout>
 
-    <section class="m-5 flex flex-col items-center">
+    <section class="flex flex-col justify-center items-center">
+        <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
+        <div class="text-gray-400">by Jeffrey Bee</div>
+        <div class="w-3/4 h-64"
+            style="background: center no-repeat url('/images/banner.png')">&nbsp;</div>
+        {{-- <img src="/images/banner.png" alt="" class="rounded-2xl"> --}}
+        <div>an attempt to draw every Pok&eacute;mon</div>
+    </section>
+
+    <section class="m-10 flex flex-col items-center">
         <x-page-title>
             Latest Art
         </x-page-title>
@@ -24,7 +33,7 @@
 
 
         </div>
-        <div class="flex m-5 gap-2">
+        <div class="flex items-center m-5 gap-2">
             @foreach ($latestArt as $art)
                 @php
                     $colors = $art->artable->getColors();
@@ -45,12 +54,21 @@
                 </div>
 
             @endforeach
+
         </div>
+        <a href="/gallery" class="w-3/4">
+            <div class="p-2 flex flex-col items-center rounded-lg bg-blue-gray">
+                <div>
+                    <i class="fa-solid fa-palette fa-xl"></i>
+                </div>
+                <div>More Art</div>
+            </div>
+        </a>
     </section>
 
 
     @unless (count($upcomingArt) === 0)
-        <section class="m-5 flex flex-col items-center">
+        <section class="m-10 flex flex-col items-center">
             <x-page-title>
                 Who's that Pok&eacute;mon?
             </x-page-title>
