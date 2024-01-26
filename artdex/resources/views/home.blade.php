@@ -1,12 +1,15 @@
 <x-app-layout>
 
     <section class="flex flex-col justify-center items-center">
-        <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
-        <div class="text-gray-400">by Jeffrey Bee</div>
-        <div class="w-3/4 h-64"
-            style="background: center no-repeat url('/images/banner.png')">&nbsp;</div>
-        {{-- <img src="/images/banner.png" alt="" class="rounded-2xl"> --}}
-        <div>an attempt to draw every Pok&eacute;mon</div>
+
+        <div class="w-3/4 h-64 flex flex-col justify-center items-center"
+            style="background: radial-gradient(transparent 10%, rgb(15 23 42) 70%), center no-repeat url('/images/banner.png')">
+            <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-transparent via-blue-gray">
+                <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
+                <div class="text-gray-400">by Jeffrey Bee</div>
+            </div>
+
+        </div>
     </section>
 
     <section class="m-10 flex flex-col items-center">
