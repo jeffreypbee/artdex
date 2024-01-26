@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-page-title>Pokedex</x-page-title>
+    <x-page-title>Pok&eacute;dex</x-page-title>
 
     <div>
         <livewire:pokedex />
