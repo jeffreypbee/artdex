@@ -3,13 +3,15 @@
     <section class="flex flex-col justify-center items-center">
 
         <div class="w-3/4 h-64 flex flex-col justify-center items-center"
-            style="background: radial-gradient(transparent 10%, rgb(15 23 42) 70%), center no-repeat url('/images/banner.png')">
+            style="background: linear-gradient(to right, rgb(15 23 42), transparent, rgb(15 23 42)), center no-repeat url('/images/banner.png')">
             <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-transparent via-blue-gray">
                 <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
                 <div class="text-gray-400">by Jeffrey Bee</div>
             </div>
 
         </div>
+
+        <livewire:completion-widget />
     </section>
 
     <section class="m-10 flex flex-col items-center">
