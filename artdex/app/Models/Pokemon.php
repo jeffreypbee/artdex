@@ -57,6 +57,16 @@ class Pokemon extends Model
         ];
     }
 
+    public function getColors() {
+        if ($this->type2 == null) {
+            return [$this->type1->color];
+        }
+        return [
+            $this->type1->color,
+            $this->type2->color
+        ];
+    }
+
     public function getDefaultForm() {
         return PokemonForm::where('pokemon_id', $this->id)->where('default', true)->first();
     }

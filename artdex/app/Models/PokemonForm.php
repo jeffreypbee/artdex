@@ -41,4 +41,14 @@ class PokemonForm extends Model
             'type2' => $this->type2
         ];
     }
+
+    public function getColors() {
+        if ($this->type2 == null) {
+            return [$this->type1->color];
+        }
+        return [
+            $this->type1->color,
+            $this->type2->color
+        ];
+    }
 }
