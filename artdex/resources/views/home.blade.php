@@ -4,6 +4,12 @@
         <x-page-title>
             Latest Art
         </x-page-title>
+        @php
+            $newestArt = $latestArt->shift();
+        @endphp
+        <div>
+            <img src="/storage/{{$newestArt->image}}" alt="">
+        </div>
         <div class="flex m-5 gap-2">
             @foreach ($latestArt as $art)
                 @php
