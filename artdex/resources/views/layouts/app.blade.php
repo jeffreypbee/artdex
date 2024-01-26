@@ -63,6 +63,8 @@
                     {{ $slot }}
                 </main>
             </div>
+
+            <footer class="w-full flex justify-end p-5 text-slate-600">Copyright &copy; {{date('Y')}} Jeffrey Bee</footer>
         </div>
     </body>
 </html>
