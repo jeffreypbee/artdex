@@ -51,4 +51,8 @@ class PokemonForm extends Model
             $this->type2->color
         ];
     }
+
+    public function getName() {
+        return $this->name . ' ' . $this->pokemon->name;
+    }
 }

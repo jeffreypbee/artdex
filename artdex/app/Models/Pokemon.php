@@ -67,6 +67,10 @@ class Pokemon extends Model
         ];
     }
 
+    public function getName() {
+        return $this->name;
+    }
+
     public function getDefaultForm() {
         return PokemonForm::where('pokemon_id', $this->id)->where('default', true)->first();
     }
