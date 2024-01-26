@@ -3,6 +3,6 @@
         <div class="rounded h-2 bg-white" style="width: {{floor(200 * $fraction)}}px"></div>
     </div>
     <div>
-        {{floor($fraction * 100)}}% Pokemon Drawn
+        {{floor($fraction * 100)}}% Pok&eacute;mon Drawn
     </div>
 </div>
