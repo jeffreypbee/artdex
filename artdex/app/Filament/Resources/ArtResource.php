@@ -57,7 +57,7 @@ class ArtResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('image'),
-                TextColumn::make('publish_date')->label('Publish Date')
+                TextColumn::make('publish_date')->label('Publish Date')->sortable()
             ])
             ->filters([
                 //
