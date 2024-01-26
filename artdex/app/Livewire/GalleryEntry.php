@@ -26,9 +26,9 @@ class GalleryEntry extends Component
 
     public function getPath() {
         if ($this->isForm) {
-            return $this->art->artable->pokemon->id;
+            return $this->art->artable->pokemon->name;
         }
-        return $this->art->artable->id;
+        return $this->art->artable->name;
     }
 
     public function render()

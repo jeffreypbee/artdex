@@ -1,4 +1,4 @@
-<a href="/pokemon/{{$pokemon->id}}">
+<a href="/pokemon/{{$pokemon->name}}">
 
 
 <div x-data="{hovering: false}"

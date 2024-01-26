@@ -6,13 +6,13 @@
             $next = $pokemon->next();
         @endphp
         @unless ($prev == null)
-            <a href="/pokemon/{{$prev->id}}">
+            <a href="/pokemon/{{$prev->name}}">
                 <button class="absolute left-10 p-2 rounded-xl hover:bg-blue-gray">< #{{$prev->getNumber()}} - {{$prev->name}}</button>
             </a>
         @endunless
 
         @unless ($next == null)
-            <a href="/pokemon/{{$next->id}}">
+            <a href="/pokemon/{{$next->name}}">
                 <button class="absolute right-10 p-2 rounded-xl hover:bg-blue-gray">#{{$next->getNumber()}} - {{$next->name}} ></button>
             </a>
         @endunless
