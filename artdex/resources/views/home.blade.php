@@ -7,11 +7,12 @@
             <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-transparent via-blue-gray">
                 <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
                 <div class="text-gray-400">by Jeffrey Bee</div>
+                <livewire:completion-widget />
             </div>
 
         </div>
 
-        <livewire:completion-widget />
+
     </section>
 
     <section class="m-10 flex flex-col items-center">
