@@ -22,7 +22,12 @@
         @php
             $newestArt = $latestArt->shift();
         @endphp
-        <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-b from-transparent to-blue-gray">
+
+        <a href="/pokemon/{{$newestArt->artable->name}}" class="flex flex-col items-center">
+        <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray">
+
+
+            <img src="/storage/{{$newestArt->image}}" alt="">
             <div class="text-lg">
                 #{{$newestArt->artable->getNumber()}} -
                 {{$newestArt->artable->getName()}}
@@ -35,10 +40,8 @@
             <div>
                 {{Carbon\Carbon::parse($newestArt->publish_date)->diffForHumans()}}
             </div>
-            <img src="/storage/{{$newestArt->image}}" alt="">
-
-
         </div>
+        </a>
         <div class="flex items-center m-5 gap-2">
             @foreach ($latestArt as $art)
                 @php
@@ -50,6 +53,7 @@
                         $background = 'linear-gradient(to right, ' . implode(', ', $colors) . ')';
                     }
                 @endphp
+                <a href="/pokemon/{{$art->artable->name}}">
                 <div class="flex flex-col items-center rounded-xl"
                     style="background: {{$background}};">
                     <img src="/storage/{{$art->image}}" alt="" class="transition ease-in-out hover:animate-bounce"
@@ -58,6 +62,7 @@
                         {{date('M d, Y', strtotime($art->publish_date))}}
                     </div>
                 </div>
+                </a>
 
             @endforeach
 
