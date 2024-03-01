@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\PokemonForm;
+use App\Services\ArtableService;
 use Livewire\Component;
 
 class GalleryEntry extends Component
@@ -18,10 +19,8 @@ class GalleryEntry extends Component
     }
 
     protected function getTitle(): string {
-        if ($this->isForm) {
-            return $this->art->artable->name . " " . $this->art->artable->pokemon->name;
-        }
-        return $this->art->artable->name;
+        $artableService = new ArtableService();
+        return $artableService->getTitle($this->art->artable);
     }
 
     public function getPath() {

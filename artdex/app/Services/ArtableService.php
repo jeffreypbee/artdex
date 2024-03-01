@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Services;
+
+use App\Services\PokemonService;
+
 class ArtableService
 {
 
