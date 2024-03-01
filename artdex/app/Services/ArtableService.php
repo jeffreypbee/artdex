@@ -8,12 +8,15 @@ class ArtableService
 {
 
     public function getTitle($pokemon): string {
-
-        $pokemonService = new PokemonService;
-        if ($pokemonService->isForm($pokemon)) {
+        if ($this->isForm($pokemon)) {
             return $pokemon->name . " " . $pokemon->pokemon->name;
         }
         return $pokemon->name;
+    }
+
+    public function isForm($pokemon): bool {
+        $pokemonService = new PokemonService;
+        return $pokemonService->isForm($pokemon);
     }
 
 }
