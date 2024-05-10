@@ -12,7 +12,7 @@
 
 
         Generations
-        <div class="flex">
+        <div class="flex flex-wrap">
             @foreach ($generations as $generation)
                 <button
                     wire:key='gen-{{$generation->id}}'
@@ -25,7 +25,7 @@
         </div>
 
         Types
-        <div class="flex">
+        <div class="flex flex-wrap">
             @foreach ($types as $type)
                 <button
                     wire:key='type-{{$type->id}}'

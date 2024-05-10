@@ -33,7 +33,7 @@
                 <livewire:head-banner />
             </header>
 
-            <div class="flex">
+            <div class="md:flex">
                 <div>
                     <nav class="sticky top-2 w-60 flex flex-col shrink-0">
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>

@@ -1,7 +1,7 @@
 @props(['title', 'icon', 'color', 'fraction'])
 
-<div class="m-2 flex justify-between items-center gap-2 border-b-2 border-transparent hover:border-gray-400 hover:cursor-pointer transition-all ease-in-out">
-    <div class="w-1/4">
+<div class="m-2 md:flex justify-between items-center gap-2 border-b-2 border-transparent hover:border-gray-400 hover:cursor-pointer transition-all ease-in-out">
+    <div class="md:w-1/4">
         <i class="fa-solid {{$icon ?? 'fa-circle'}} fa-fw" style="color: {{$color ?? 'white'}}"></i>
         {{$title ?? ''}}
     </div>

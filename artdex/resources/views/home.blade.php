@@ -42,7 +42,7 @@
             </div>
         </div>
         </a>
-        <div class="flex items-center m-5 gap-2">
+        <div class="flex flex-wrap items-center m-5 gap-2">
             @foreach ($latestArt as $art)
                 @php
                     $colors = $art->artable->getColors();

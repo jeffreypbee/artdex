@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-page-title>Stats</x-page-title>
 
-    <div class="flex justify-around gap-10">
+    <div class="md:flex justify-around gap-10">
         <x-collapsible-widget title="Type Breakdown">
             <div>
                 @foreach ($types as $type)
