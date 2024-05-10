@@ -34,29 +34,31 @@
             </header>
 
             <div class="flex">
-                <nav class="flex flex-col shrink-0"
-                    style="width: 200px">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
+                <div>
+                    <nav class="sticky top-2 w-60 flex flex-col shrink-0">
+                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
 
-                        {{ __('HOME') }}
-                        <i class="fa-solid fa-home"></i>
-                    </x-nav-link>
-                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
-                        {{ __('GALLERY') }}
-                        <i class="fa-solid fa-palette"></i>
+                            {{ __('HOME') }}
+                            <i class="fa-solid fa-home"></i>
+                        </x-nav-link>
+                        <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
+                            {{ __('GALLERY') }}
+                            <i class="fa-solid fa-palette"></i>
 
-                    </x-nav-link>
-                    <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
-                        {{ __('DEX') }}
-                        <i class="fa-solid fa-book"></i>
+                        </x-nav-link>
+                        <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
+                            {{ __('DEX') }}
+                            <i class="fa-solid fa-book"></i>
 
-                    </x-nav-link>
-                    <x-nav-link :href="route('stats')" :active="request()->routeIs('stats')" wire:navigate>
-                        {{ __('STATS') }}
-                        <i class="fa-solid fa-chart-pie"></i>
+                        </x-nav-link>
+                        <x-nav-link :href="route('stats')" :active="request()->routeIs('stats')" wire:navigate>
+                            {{ __('STATS') }}
+                            <i class="fa-solid fa-chart-pie"></i>
 
-                    </x-nav-link>
-                </nav>
+                        </x-nav-link>
+                    </nav>
+                </div>
+
 
                 <!-- Page Content -->
                 <main class="p-5 w-full">
