@@ -2,3 +2,12 @@ name: 'Jeffrey Bee'
 super: true
 id: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 password_hash: $2y$12$F9QNNAMn/7OmZoph7/NRreBefDS.9v.DqFzkLOhPgOc6hAwr29dOa
+preferences:
+  taxonomies:
+    types:
+      columns:
+        - title
+        - color
+        - icon
+        - slug
+      after_save: create_another
