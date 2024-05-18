@@ -12,13 +12,18 @@ tabs:
               required: true
               validate:
                 - required
-              width: 50
           -
             handle: color
             field:
               default: '#ffffff'
               type: color
               display: Color
+              width: 50
+          -
+            handle: icon
+            field:
+              type: text
+              display: Icon
               width: 50
           -
             handle: content
