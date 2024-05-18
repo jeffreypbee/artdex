@@ -9,7 +9,9 @@ export default {
     ],
 
     theme: {
-        extend: {},
+        extend: {
+            'dark-gray' : '#333333'
+        },
     },
 
     plugins: [
