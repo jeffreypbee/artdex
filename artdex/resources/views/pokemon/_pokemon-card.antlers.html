@@ -1,6 +1,13 @@
+{{ if type_2 }}
+    {{ background = "linear-gradient(to right, " + type_1:color + ", " + type_2:color + ")"}}
+{{ else }}
+    {{ background = type_1:color }}
+{{ /if }}
+
+
 <a href="{{ url }}">
     <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800">
-        <div class="h-1/4 rounded-t-lg border-b-2 border-white">
+        <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{ background }}">
 
         </div>
         <div>
