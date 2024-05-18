@@ -36,6 +36,13 @@ tabs:
               display: 'Type 2'
               width: 50
           -
+            handle: art
+            field:
+              collections:
+                - art
+              type: entries
+              display: Art
+          -
             handle: content
             field:
               type: markdown

@@ -4,14 +4,17 @@
     {{ background = type_1:color }}
 {{ /if }}
 
-
 <a href="{{ url }}">
     <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800">
         <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{ background }}">
 
         </div>
         <div>
-
+            {{ art }}
+                {{ unless no_results }}
+                    <img class="w-32 absolute -bottom-2 -left-5 transition-all" src="{{ art:0:image:url }}" alt="">
+                {{ /unless }}
+            {{ /art }}
         </div>
         <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
             <div>{{ number }}</div>
