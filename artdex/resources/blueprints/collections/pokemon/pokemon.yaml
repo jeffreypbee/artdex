@@ -38,6 +38,9 @@ tabs:
               type: terms
               display: 'Type 2'
               width: 50
+      -
+        display: Art
+        fields:
           -
             handle: art
             field:
@@ -45,12 +48,8 @@ tabs:
                 - art
               type: entries
               display: Art
-          -
-            handle: content
-            field:
-              type: markdown
-              display: Content
-              localizable: true
+      -
+        fields:
           -
             handle: author
             field:
@@ -59,6 +58,12 @@ tabs:
               default: current
               localizable: true
               max_items: 1
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
           -
             handle: template
             field:
