@@ -1,3 +1,18 @@
-<div>
-    {{ title }}
-</div>
+<a href="{{ url }}">
+    <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800">
+        <div class="h-1/4 rounded-t-lg border-b-2 border-white">
+
+        </div>
+        <div>
+
+        </div>
+        <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
+            <div>{{ number }}</div>
+            <div>{{ title }}</div>
+            <div>
+                {{ type_1:title }}
+                {{ if type_2 }} | {{ type_2:title }} {{ /if }}
+            </div>
+        </div>
+    </div>
+</a>
