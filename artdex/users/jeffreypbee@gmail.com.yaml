@@ -10,7 +10,6 @@ preferences:
         - color
         - icon
         - slug
-      after_save: create_another
   collections:
     pokemon:
       columns:

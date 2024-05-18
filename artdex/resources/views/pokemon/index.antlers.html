@@ -1,3 +1,9 @@
+<div class="w-full flex flex-wrap justify-center">
+    {{ taxonomy:types }}
+        <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
+    {{ /taxonomy:types }}
+</div>
+
 <div class="flex flex-wrap">
     {{ collection:pokemon sort="number" }}
         {{ partial:pokemon/pokemon-card }}
