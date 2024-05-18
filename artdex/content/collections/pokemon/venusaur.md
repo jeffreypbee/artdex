@@ -1,0 +1,11 @@
+---
+id: a06da41f-ea87-4441-912f-5afdd451be87
+blueprint: pokemon
+number: 3
+title: Venusaur
+type_1: grass
+type_2: poison
+author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
+updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
+updated_at: 1716061259
+---

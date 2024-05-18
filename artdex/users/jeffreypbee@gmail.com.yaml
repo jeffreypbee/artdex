@@ -11,3 +11,11 @@ preferences:
         - icon
         - slug
       after_save: create_another
+  collections:
+    pokemon:
+      columns:
+        - number
+        - title
+        - type_1
+        - type_2
+      after_save: create_another

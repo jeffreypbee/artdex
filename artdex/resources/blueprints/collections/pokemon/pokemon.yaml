@@ -18,6 +18,24 @@ tabs:
               validate:
                 - required
           -
+            handle: type_1
+            field:
+              max_items: 1
+              taxonomies:
+                - types
+              type: terms
+              display: 'Type 1'
+              width: 50
+          -
+            handle: type_2
+            field:
+              max_items: 1
+              taxonomies:
+                - types
+              type: terms
+              display: 'Type 2'
+              width: 50
+          -
             handle: content
             field:
               type: markdown
@@ -37,22 +55,6 @@ tabs:
               type: template
               display: Template
               localizable: true
-          -
-            handle: type_1
-            field:
-              max_items: 1
-              taxonomies:
-                - types
-              type: terms
-              display: 'Type 1'
-          -
-            handle: type_2
-            field:
-              max_items: 1
-              taxonomies:
-                - types
-              type: terms
-              display: 'Type 2'
   sidebar:
     display: Sidebar
     sections:
