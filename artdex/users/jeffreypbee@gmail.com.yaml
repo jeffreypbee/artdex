@@ -17,6 +17,7 @@ preferences:
         - title
         - type_1
         - type_2
+        - art
     art:
       columns:
         - image

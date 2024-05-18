@@ -10,6 +10,9 @@ tabs:
             field:
               type: integer
               display: Number
+              validate:
+                - required
+                - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'
           -
             handle: title
             field:
