@@ -5,14 +5,19 @@
 {{ /if }}
 
 <a href="{{ url }}">
-    <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800">
+    <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800"
+        x-data="{hovering: false}"
+        @mouseenter="hovering=true"
+        @mouseleave="hovering=false">
         <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{ background }}">
 
         </div>
         <div>
             {{ art }}
                 {{ unless no_results }}
-                    <img class="w-32 absolute -bottom-2 -left-5 transition-all" src="{{ art:0:image:url }}" alt="">
+                    <img class="w-32 absolute -bottom-2 -left-5 transition-all"
+                        :class="hovering ? 'animate-bounce' : ''"
+                        src="{{ art:0:image:url }}" alt="">
                 {{ /unless }}
             {{ /art }}
         </div>
