@@ -10,7 +10,9 @@ export default {
 
     theme: {
         extend: {
-            'dark-gray' : '#333333'
+            colors: {
+                darkgray : '#333333'
+            },
         },
     },
 
