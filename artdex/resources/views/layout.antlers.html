@@ -7,9 +7,12 @@
         <title>{{ title ?? site:name }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="bg-darkgray font-sans leading-normal text-white">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
-            {{ template_content }}
+    <body class="flex flex-col h-screen w-full bg-darkgray font-sans leading-normal text-white">
+        <header class="w-full h-24 bg-slate-700">Artdex</header>
+        <div class="flex flex-grow w-full h-full">
+            {{ partial:nav }}
+            <main>{{ template_content }}</main>
         </div>
+        <footer class="flex justify-center items-center self-end w-full h-12 bg-black">Footer</footer>
     </body>
 </html>
