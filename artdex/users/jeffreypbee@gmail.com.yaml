@@ -19,3 +19,9 @@ preferences:
         - type_1
         - type_2
       after_save: create_another
+    art:
+      columns:
+        - image
+        - pokemon
+        - title
+        - date
