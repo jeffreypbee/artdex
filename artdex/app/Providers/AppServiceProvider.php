@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Statamic\Statamic;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +20,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Model::unguard();
+        // Statamic::vite('app', [
+        //     'resources/js/cp.js',
+        //     'resources/css/cp.css',
+        // ]);
     }
 }
