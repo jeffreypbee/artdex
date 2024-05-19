@@ -1,15 +1,42 @@
-{{ taxonomy:types }}
+<div class="flex flex-wrap justify-evenly">
     <div>
-        {{ title }} -
-        {{ has_art = 0 }}
-        {{ collection:pokemon as="pokemon" :taxonomy:types="slug" }}
-            {{ pokemon }}
-                {{ if art }}
-                    {{ has_art += 1 }}
-                {{ /if }}
-            {{ /pokemon }}
-            {{ has_art }} /
-            {{ pokemon | count}}
-        {{ /collection:pokemon }}
+        <span class="font-bold text-lg">Types</span>
+        {{ taxonomy:types }}
+            <div>
+                {{ title }} -
+                {{ has_art = 0 }}
+                {{ collection:pokemon as="pokemon" :taxonomy:types="slug" }}
+                    {{ pokemon }}
+                        {{ if art }}
+                            {{ has_art += 1 }}
+                        {{ /if }}
+                    {{ /pokemon }}
+                    {{ has_art }} /
+                    {{ pokemon | count}}
+                {{ /collection:pokemon }}
+            </div>
+        {{ /taxonomy:types }}
     </div>
-{{ /taxonomy:types }}
+
+    <div>
+        <span class="font-bold text-lg">Tags</span>
+        {{ taxonomy:tags }}
+            <div>
+                {{ title }} -
+                {{ has_art = 0 }}
+                {{ collection:pokemon as="pokemon" :taxonomy:tags="slug" }}
+                    {{ pokemon }}
+                        {{ if art }}
+                            {{ has_art += 1 }}
+                        {{ /if }}
+                    {{ /pokemon }}
+                    {{ has_art }} /
+                    {{ pokemon | count}}
+                {{ /collection:pokemon }}
+            </div>
+        {{ /taxonomy:tags }}
+    </div>
+</div>
+
+
+
