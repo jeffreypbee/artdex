@@ -5,5 +5,8 @@
 /* This is all you. */
 input {
     background: black;
-    padding: 0.25;
+    border: 1px solid #1e293b;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    text-align: center;
 }
