@@ -6,7 +6,9 @@ title: Arbok
 type_1: poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716081183
+updated_at: 1716138097
 types:
   - poison
+tags:
+  - stage-1
 ---

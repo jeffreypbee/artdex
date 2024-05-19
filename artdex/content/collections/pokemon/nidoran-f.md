@@ -6,7 +6,9 @@ title: Nidoran♀
 type_1: poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716082408
+updated_at: 1716139710
 types:
   - poison
+tags:
+  - basic
 ---

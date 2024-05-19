@@ -10,6 +10,13 @@ preferences:
         - color
         - icon
         - slug
+    tags:
+      after_save: create_another
+      columns:
+        - title
+        - slug
+        - color
+        - icon
   collections:
     pokemon:
       columns:
@@ -17,7 +24,8 @@ preferences:
         - title
         - types
         - art
-      after_save: create_another
+        - tags
+      after_save: continue_editing
     art:
       columns:
         - image

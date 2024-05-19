@@ -7,8 +7,10 @@ type_1: rock
 type_2: ground
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716081869
+updated_at: 1716140479
 types:
   - rock
   - ground
+tags:
+  - stage-2
 ---

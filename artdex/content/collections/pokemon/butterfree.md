@@ -7,8 +7,10 @@ type_1: bug
 type_2: flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716081322
+updated_at: 1716138424
 types:
   - bug
   - flying
+tags:
+  - stage-2
 ---

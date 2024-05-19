@@ -62,6 +62,12 @@ tabs:
               type: template
               display: Template
               localizable: true
+          -
+            handle: formatted_number
+            field:
+              type: text
+              display: 'Formatted Number'
+              visibility: computed
   sidebar:
     display: Sidebar
     sections:

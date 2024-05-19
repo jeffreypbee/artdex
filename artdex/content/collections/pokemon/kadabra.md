@@ -6,7 +6,9 @@ title: Kadabra
 type_1: psychic
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716082036
+updated_at: 1716140255
 types:
   - psychic
+tags:
+  - stage-1
 ---

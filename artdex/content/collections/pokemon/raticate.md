@@ -6,7 +6,9 @@ title: Raticate
 type_1: normal
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716083482
+updated_at: 1716139574
 types:
   - normal
+tags:
+  - stage-1
 ---
