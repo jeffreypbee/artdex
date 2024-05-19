@@ -1,0 +1,17 @@
+{{ total_pokemon = 0}}
+{{ art_count = 0 }}
+{{ collection:pokemon as="pokemon" }}
+    {{ pokemon }}
+    {{ if art }}
+        {{ art_count += 1 }}
+    {{ /if }}
+    {{ /pokemon }}
+    {{ total_pokemon = pokemon | count}}
+{{ /collection:pokemon }}
+<div class="m-2">
+    <div class="flex justify-between">
+        <span>Pokemon Drawn</span>
+        <span>{{ art_count }} / {{ total_pokemon }}</span>
+    </div>
+    {{ partial:completion-bar :count="art_count" :total="total_pokemon" color="white"}}
+</div>
