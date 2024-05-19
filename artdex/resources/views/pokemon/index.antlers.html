@@ -4,8 +4,24 @@
     {{ /taxonomy:types }}
 </div>
 
-<div class="flex flex-wrap">
-    {{ collection:pokemon sort="number" }}
-        {{ partial:pokemon/pokemon-card }}
+<div>
+    {{ collection:pokemon sort="number" as="pokemon" paginate="50" }}
+        {{ if no_results }}
+            No results!
+        {{ /if }}
+
+        {{ paginate }}
+            {{ partial:pagination }}
+        {{ /paginate }}
+
+        <div class="flex flex-wrap">
+            {{ pokemon }}
+                {{ partial:pokemon/pokemon-card }}
+            {{ /pokemon }}
+        </div>
+
+        {{ paginate }}
+            {{ partial:pagination }}
+        {{ /paginate }}
     {{ /collection:pokemon }}
 </div>
