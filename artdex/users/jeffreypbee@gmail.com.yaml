@@ -17,6 +17,7 @@ preferences:
         - title
         - types
         - art
+      after_save: create_another
     art:
       columns:
         - image
