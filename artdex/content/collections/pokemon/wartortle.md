@@ -6,7 +6,9 @@ title: Wartortle
 type_1: water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716071732
+updated_at: 1716082797
 art:
   - 43c4cb33-207a-4424-9bc7-d4262bc62755
+types:
+  - water
 ---

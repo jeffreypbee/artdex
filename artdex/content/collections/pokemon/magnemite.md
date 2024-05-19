@@ -7,5 +7,8 @@ type_1: electric
 type_2: steel
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716077900
+updated_at: 1716082154
+types:
+  - electric
+  - steel
 ---

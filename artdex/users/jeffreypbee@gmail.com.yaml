@@ -15,10 +15,8 @@ preferences:
       columns:
         - number
         - title
-        - type_1
-        - type_2
+        - types
         - art
-      after_save: create_another
     art:
       columns:
         - image

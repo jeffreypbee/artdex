@@ -6,5 +6,7 @@ title: Charmeleon
 type_1: fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716061292
+updated_at: 1716081405
+types:
+  - fire
 ---

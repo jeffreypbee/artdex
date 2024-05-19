@@ -13,6 +13,7 @@ tabs:
               validate:
                 - required
                 - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'
+              width: 33
           -
             handle: title
             field:
@@ -20,24 +21,15 @@ tabs:
               required: true
               validate:
                 - required
+              width: 66
           -
-            handle: type_1
+            handle: types
             field:
-              max_items: 1
+              type: terms
               taxonomies:
                 - types
-              type: terms
-              display: 'Type 1'
-              width: 50
-          -
-            handle: type_2
-            field:
-              max_items: 1
-              taxonomies:
-                - types
-              type: terms
-              display: 'Type 2'
-              width: 50
+              display: Types
+              mode: select
       -
         display: Art
         fields:

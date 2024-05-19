@@ -1,6 +1,8 @@
 title: Pokemon
 template: pokemon/show
 layout: layout
+taxonomies:
+  - types
 revisions: false
 route: '/pokemon/{slug}'
 sort_dir: asc

@@ -1,7 +1,7 @@
-{{ if type_2 }}
-    {{ background = "linear-gradient(to right, " + type_1:color + ", " + type_2:color + ")"}}
+{{ if types | count > 1 }}
+    {{ background = "linear-gradient(to right, " + types:0:color + ", " + types:1:color + ")"}}
 {{ else }}
-    {{ background = type_1:color }}
+    {{ background = types:0:color }}
 {{ /if }}
 
 <a href="{{ url }}">
@@ -25,10 +25,9 @@
             <div>{{ number }}</div>
             <div>{{ title }}</div>
             <div>
-                <i class="fa-solid {{ type_1:icon }} p-1" style="color: {{ type_1:color }}"></i>
-                {{ if type_2 }}
-                    <i class="fa-solid {{ type_2:icon }} p-1" style="color: {{ type_2:color }}"></i>
-                {{ /if }}
+                {{ types }}
+                    <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
+                {{ /types }}
             </div>
         </div>
     </div>
