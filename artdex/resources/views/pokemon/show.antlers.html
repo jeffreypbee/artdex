@@ -3,7 +3,7 @@
         {{ collection:pokemon :number:lt="number" sort="number:desc" limit="1" }}
             <a href="{{ url }}">
                 {{ partial:prev-button }}
-                    < {{ number }} - {{ title }}
+                    < {{ formatted_number }} - {{ title }}
                 {{ /partial:prev-button }}
             </a>
         {{ /collection:pokemon }}
@@ -13,7 +13,7 @@
         {{ collection:pokemon :number:gt="number" sort="number:asc" limit="1" }}
             <a href="{{ url }}">
                 {{ partial:next-button }}
-                    {{ number }} - {{ title }} >
+                    {{ formatted_number }} - {{ title }} >
                 {{ /partial:next-button }}
             </a>
         {{ /collection:pokemon }}

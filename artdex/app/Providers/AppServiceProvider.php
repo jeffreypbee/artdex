@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
+use Statamic\Facades\Collection;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,16 @@ class AppServiceProvider extends ServiceProvider
         //     'resources/js/cp.js',
         //     'resources/css/cp.css',
         // ]);
+
+        Collection::computed('pokemon', 'formatted_number', function ($entry, $value) {
+            if ($entry->number < 10){
+                return '000' . $entry->number;
+            } else if ($entry->number < 100) {
+                return '00' . $entry->number;
+            } else if ($entry->number < 1000) {
+                return '0' . $entry->number;
+            }
+            return $entry->number;
+        });
     }
 }
