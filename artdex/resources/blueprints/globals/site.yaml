@@ -1,0 +1,25 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Logo
+          -
+            handle: banners
+            field:
+              mode: grid
+              container: assets
+              type: assets
+              display: Banners
