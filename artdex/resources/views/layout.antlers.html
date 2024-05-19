@@ -9,11 +9,11 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="https://kit.fontawesome.com/1b886f8acb.js" crossorigin="anonymous"></script>
     </head>
-    <body class="flex flex-col h-screen w-full bg-darkgray font-sans leading-normal text-white">
+    <body class="flex flex-col h-fit w-full bg-darkgray font-sans leading-normal text-white">
         <header class="w-full h-24 bg-slate-700">Artdex</header>
-        <div class="flex flex-grow w-full h-full">
+        <div class="flex w-full h-full gap-2">
             {{ partial:nav }}
-            <main>{{ template_content }}</main>
+            <main class="p-2 w-full">{{ template_content }}</main>
         </div>
         <footer class="flex justify-center items-center self-end w-full h-12 bg-black">Footer</footer>
     </body>
