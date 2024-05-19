@@ -1,5 +1,15 @@
 {{ taxonomy:types }}
     <div>
-        {{ title }} - {{ %collection:count in="pokemon" :type_1:is="slug" }}
+        {{ title }} -
+        {{ has_art = 0 }}
+        {{ collection:pokemon as="pokemon" :taxonomy:types="slug" }}
+            {{ pokemon }}
+                {{ if art }}
+                    {{ has_art += 1 }}
+                {{ /if }}
+            {{ /pokemon }}
+            {{ has_art }} /
+            {{ pokemon | count}}
+        {{ /collection:pokemon }}
     </div>
 {{ /taxonomy:types }}
