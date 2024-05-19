@@ -1,5 +1,6 @@
-<nav class="p-2 flex flex-col w-44 border-r-2 border-white">
+<nav class="sticky top-10 flex flex-col w-44 border-r-2 border-white">
     {{ nav from="pages" include_home="true" }}
-        <a href="{{ url }}">{{ title }}</a>
+        <a href="{{ url }}"
+            class="p-2 text-lg font-bold hover:bg-black">{{ title }}</a>
     {{ /nav }}
 </nav>
