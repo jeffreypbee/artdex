@@ -1,40 +1,43 @@
 {{ if types | count > 1 }}
-    {{ background = "linear-gradient(to right, " + types:0:color + ", " + types:1:color + ")"}}
+    {{ gradient = "linear-gradient(to right, " + types:0:color + ", " + types:1:color + ")"}}
 {{ else }}
-    {{ background = types:0:color }}
+    {{ gradient = types:0:color }}
 {{ /if }}
 
-<div class="h-96 w-3/5 rounded-lg relative bg-slate-800 shadow-md shadow-black"
+{{ if art | count > 0  }}
+    {{ image_url = art:0:image:url }}
+{{ else }}
+    {{ image_url = site:default_pokemon_image:url }}
+{{ /if }}
+<div class="h-96 w-3/5 relative bg-slate-800 rounded-t-2xl shadow-md shadow-black"
     x-data="{hovering: false}"
     @mouseenter="hovering=true"
     @mouseleave="hovering=false">
-    <div class="flex justify-center items-center h-1/6 rounded-t-lg border-b-2 border-white text-slate-800 font-bold text-2xl"
-        style="background: {{ background }}">
+    <div class="flex justify-center items-center h-1/6 rounded-t-2xl border-b-2 border-white text-darkgray font-bold text-2xl"
+        style="background: {{ gradient }}">
         {{ title | upper }}
     </div>
     <div>
-        {{ art }}
-            {{ if no_results }}
-                <img class="w-24 absolute top-1 left-2 opacity-50"
-                    src="{{ site:default_pokemon_image:url }}" alt="">
-            {{ else }}
-                <img class="absolute -bottom-16 -left-5 transition-all"
-                    src="{{ art:0:image:url }}" alt="">
-            {{ /if }}
-        {{ /art }}
+        {{ if art | count > 0  }}
+            <img class="w-64 lg:absolute lg:w-auto bg-slate-800 lg:bg-transparent z-10 -bottom-16 -left-5 transition-all"
+                src="{{ image_url }}" alt="">
+        {{ /if }}
     </div>
-    <div class="h-5/6 flex flex-col items-end justify-between p-2 leading-none text-lg">
-        <div><span class="opacity-50"># </span>{{ formatted_number }}</div>
-        <div>Tags</div>
-        <div class="flex gap-2">
-            {{ types }}
-                <div class="flex flex-col justify-center items-center p-2">
-                    <i class="fa-solid {{ icon }} fa-2xl p-1" style="color: {{ color }}"></i>
-                    <div class="p-4">
-                        {{ title }}
+    <div class="h-5/6 flex flex-col items-end justify-between leading-none text-lg"
+        style="background: url('{{ image_url }}') left/100% no-repeat; background-blend-mode: screen">
+        <div class="w-full h-full p-2 flex flex-col items-end justify-between leading-none text-lg backdrop-blur-md bg-slate-800 bg-opacity-60">
+            <div><span class="opacity-50"># </span>{{ formatted_number }}</div>
+            <div>Tags</div>
+            <div class="flex gap-2">
+                {{ types }}
+                    <div class="flex flex-col justify-center items-center p-2">
+                        <i class="fa-solid {{ icon }} fa-2xl p-1" style="color: {{ color }}"></i>
+                        <div class="p-4">
+                            {{ title }}
+                        </div>
                     </div>
-                </div>
-            {{ /types }}
+                {{ /types }}
+            </div>
         </div>
     </div>
 </div>
