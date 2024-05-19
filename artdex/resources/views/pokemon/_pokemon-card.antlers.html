@@ -4,8 +4,8 @@
     {{ background = types:0:color }}
 {{ /if }}
 
-<a href="{{ url }}">
-    <div class="m-4 h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800"
+<a href="{{ url }}" class="m-4 ">
+    <div class="h-24 w-48 rounded-lg relative hover:cursor-pointer bg-slate-800"
         x-data="{hovering: false}"
         @mouseenter="hovering=true"
         @mouseleave="hovering=false">
