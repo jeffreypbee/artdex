@@ -1,5 +1,13 @@
 <div class="flex justify-evenly">
-    <a href="{{ prev_page }}">< Previous</a>
+    <a href="{{ prev_page }}">
+        {{ partial:prev-button }}
+            < Previous
+        {{ /partial:prev-button }}
+    </a>
     Page {{ current_page }} of {{ total_pages }} ({{ total_items }} entries)
-    <a href="{{ next_page }}">Next ></a>
+    <a href="{{ next_page }}">
+        {{ partial:next-button }}
+            Next >
+        {{ /partial:next-button }}
+    </a>
 </div>

@@ -11,7 +11,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                darkgray : '#333333'
+                darkgray : '#00030d'
             },
         },
     },
