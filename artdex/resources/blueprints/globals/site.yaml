@@ -23,3 +23,11 @@ tabs:
               container: assets
               type: assets
               display: Banners
+          -
+            handle: default_pokemon_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Default Pokemon Image'
+              instructions: 'The image to be used when a Pokemon has no art.'

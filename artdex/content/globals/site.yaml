@@ -3,3 +3,4 @@ data:
   title: Artdex
   banners:
     - banner.jpg
+  default_pokemon_image: pokeball_gray.png
