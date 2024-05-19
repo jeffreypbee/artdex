@@ -7,7 +7,9 @@
                 {{ /partial:prev-button }}
             </a>
         {{ /collection:pokemon }}
-        <span class="text-xl font-bold">{{ title }}</span>
+
+            {{ partial:breadcrumbs }}
+
         {{ collection:pokemon :number:gt="number" sort="number:asc" limit="1" }}
             <a href="{{ url }}">
                 {{ partial:next-button }}

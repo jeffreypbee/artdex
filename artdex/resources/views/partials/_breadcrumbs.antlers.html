@@ -1,0 +1,6 @@
+<div>
+    {{ nav:breadcrumbs }}
+        <a href="{{ url }}">{{ title }}</a>
+        {{ unless is_current }} &rarr; {{ /unless }}
+    {{ /nav:breadcrumbs }}
+</div>
