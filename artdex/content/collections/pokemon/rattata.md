@@ -6,9 +6,11 @@ title: Rattata
 type_1: normal
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716139555
+updated_at: 1716151902
 types:
   - normal
 tags:
   - basic
+art:
+  - 5c724a3a-f196-4c56-8163-4e2078dbdb16
 ---

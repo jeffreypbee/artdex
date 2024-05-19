@@ -6,9 +6,11 @@ title: Ekans
 type_1: poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716139601
+updated_at: 1716152037
 types:
   - poison
 tags:
   - basic
+art:
+  - a7481db1-f0ec-4884-be7c-4af0cea61313
 ---

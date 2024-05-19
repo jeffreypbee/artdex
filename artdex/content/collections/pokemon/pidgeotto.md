@@ -7,10 +7,12 @@ type_1: normal
 type_2: flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716139511
+updated_at: 1716151847
 types:
   - normal
   - flying
 tags:
   - stage-1
+art:
+  - f7507aec-7c53-4ec2-8e9d-f30976a37459
 ---
