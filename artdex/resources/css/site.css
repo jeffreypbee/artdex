@@ -3,3 +3,7 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
+input {
+    background: black;
+    padding: 0.25;
+}
