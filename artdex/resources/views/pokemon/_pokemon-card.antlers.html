@@ -14,11 +14,14 @@
         </div>
         <div>
             {{ art }}
-                {{ unless no_results }}
+                {{ if no_results }}
+                    <img class="w-24 absolute top-1 left-2 opacity-50"
+                        src="{{ site:default_pokemon_image:url }}" alt="">
+                {{ else }}
                     <img class="w-32 absolute -bottom-2 -left-5 transition-all"
                         :class="hovering ? 'animate-bounce' : ''"
                         src="{{ art:0:image:url }}" alt="">
-                {{ /unless }}
+                {{ /if }}
             {{ /art }}
         </div>
         <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
