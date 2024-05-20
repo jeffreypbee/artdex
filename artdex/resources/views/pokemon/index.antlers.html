@@ -2,12 +2,13 @@
     {{ title }}
 {{ /partial:page-title }}
 
-<div class="m-10 rounded-lg flex flex-col gap-2 justify-center items-center p-4 sticky top-0 z-10 bg-slate-800 bg-opacity-60 backdrop-blur-sm">
-    <div>Filters</div>
-    <div><form action="{{ url }}"><input type="search" name="q" value="{{ get:q }}"></form></div>
+<div class="m-10 rounded-lg flex flex-col gap-2 justify-center items-center p-4 bg-slate-800 bg-opacity-60 backdrop-blur-sm">
+    <div>Search</div>
+    <div><form action="{{ current_full_url }}"><input type="search" name="q" value="{{ get:q }}"></form></div>
+    Type
     <div class="w-full flex flex-wrap justify-center">
         {{ taxonomy:types }}
-            <form action="{{ page:url }}">
+            <form action="{{ current_full_url }}">
                 <input type="hidden" name="type" value="{{ get:type==slug ? '' : slug }}">
                 <button class="rounded-xl p-1 hover:bg-black text-darkgray hover:text-white">
                     <i class="fa-solid {{ icon }} p-1"
@@ -16,11 +17,36 @@
             </form>
         {{ /taxonomy:types }}
     </div>
+    Generation
+    <div class="w-full flex flex-wrap justify-center">
+        {{ loop times="9" }}
+            <form action="{{ current_full_url }}">
+                <input type="hidden" name="gen" value="{{ get:gen==value ? '' : value }}">
+                <button class="font-bold text-lg rounded-xl p-1 px-2 hover:bg-black text-darkgray hover:text-white"
+                    {{ if get:gen=="{{ value }}" }} style="color: white" {{ /if }}>
+                    {{ value }}
+                </button>
+            </form>
+        {{ /loop }}
+    </div>
+    Tag
+    <div class="w-full flex flex-wrap justify-center">
+        {{ taxonomy:tags }}
+            <form action="{{ current_full_url }}">
+                <input type="hidden" name="tag" value="{{ get:tag==slug ? '' : slug }}">
+                <button class="rounded-xl p-1 hover:bg-black text-darkgray hover:text-white">
+                    <i class="fa-solid {{ icon }} p-1"
+                        {{ if get:tag=="{{ slug }}" }} style="color: {{ color }}" {{ /if }}></i>
+                </button>
+            </form>
+        {{ /taxonomy:tags }}
+    </div>
     <a href="{{ url }}">Reset</a>
 </div>
 
 <div>
-    {{ collection:pokemon sort="number" as="pokemon" paginate="50" :title:contains="get:q" :taxonomy:types="get:type" }}
+    {{gen = get:gen ?? ''}}
+    {{ collection:pokemon sort="number" as="pokemon" paginate="50" :title:contains="get:q" :taxonomy:types="get:type" :generation:is="gen" :taxonomy:tags="get:tag" }}
         {{ if no_results }}
             No results!
         {{ /if }}
