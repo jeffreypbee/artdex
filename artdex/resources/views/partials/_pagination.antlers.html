@@ -1,15 +1,29 @@
-<div class="flex justify-evenly">
-    <a href="{{ prev_page }}">
-        {{ partial:prev-button }}
-            < Previous
-        {{ /partial:prev-button }}
-    </a>
-    <div class="flex items-center p-2 rounded-lg bg-slate-800">
-        Page {{ current_page }} of {{ total_pages }} ({{ total_items }} entries)
+{{ if total_pages > 1 }}
+    <div class="flex justify-center">
+        <div class="w-3/4 self-center grid grid-cols-3 justify-center justify-items-center">
+            <div>
+                {{ unless current_page==1 }}
+                    <a href="{{ prev_page }}">
+                        {{ partial:prev-button }}
+                            < Previous
+                        {{ /partial:prev-button }}
+                    </a>
+                {{ /unless }}
+            </div>
+
+            <div class="flex items-center p-2 rounded-lg bg-slate-800">
+                Page {{ current_page }} of {{ total_pages }} ({{ total_items }} entries)
+            </div>
+
+            <div>
+                {{ unless current_page==total_pages }}
+                    <a href="{{ next_page }}">
+                        {{ partial:next-button }}
+                            Next >
+                        {{ /partial:next-button }}
+                    </a>
+                {{ /unless }}
+            </div>
+        </div>
     </div>
-    <a href="{{ next_page }}">
-        {{ partial:next-button }}
-            Next >
-        {{ /partial:next-button }}
-    </a>
-</div>
+{{ /if }}

@@ -46,7 +46,7 @@
 
 <div>
     {{gen = get:gen ?? ''}}
-    {{ collection:pokemon sort="number" as="pokemon" paginate="50" :title:contains="get:q" :taxonomy:types="get:type" :generation:is="gen" :taxonomy:tags="get:tag" }}
+    {{ collection:pokemon sort="number" as="pokemon" paginate="100" :title:contains="get:q" :taxonomy:types="get:type" :generation:is="gen" :taxonomy:tags="get:tag" }}
         {{ if no_results }}
             No results!
         {{ /if }}
@@ -55,7 +55,7 @@
             {{ partial:pagination }}
         {{ /paginate }}
 
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap justify-center">
             {{ pokemon }}
                 {{ partial:pokemon/pokemon-card }}
             {{ /pokemon }}
