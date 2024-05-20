@@ -7,14 +7,20 @@
     <div><form action="{{ url }}"><input type="search" name="q" value="{{ get:q }}"></form></div>
     <div class="w-full flex flex-wrap justify-center">
         {{ taxonomy:types }}
-            <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
+            <form action="{{ page:url }}">
+                <input type="hidden" name="type" value="{{ get:type==slug ? '' : slug }}">
+                <button class="rounded-xl p-1 hover:bg-black text-darkgray hover:text-white">
+                    <i class="fa-solid {{ icon }} p-1"
+                        {{ if get:type=="{{ slug }}" }} style="color: {{ color }}" {{ /if }}></i>
+                </button>
+            </form>
         {{ /taxonomy:types }}
     </div>
     <a href="{{ url }}">Reset</a>
 </div>
 
 <div>
-    {{ collection:pokemon sort="number" as="pokemon" paginate="50" :title:contains="get:q" }}
+    {{ collection:pokemon sort="number" as="pokemon" paginate="50" :title:contains="get:q" :taxonomy:types="get:type" }}
         {{ if no_results }}
             No results!
         {{ /if }}
