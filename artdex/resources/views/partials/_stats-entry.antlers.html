@@ -1,0 +1,21 @@
+{{ unless color }}
+    {{ color = "white"}}
+{{ /unless }}
+
+<div class="m-4">
+    <div class="grid grid-cols-3 justify-between">
+        <div class="px-1">
+            {{ if icon }}
+                <i class="fa-solid {{ icon }}" style="color: {{ color }}"></i>
+            {{ /if }}
+            {{ title }}
+        </div>
+        <div class="flex justify-center">
+            {{ has_art }} / {{ pokemon_count }}
+        </div>
+        <div class="flex justify-end">
+            {{ ( has_art * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+        </div>
+    </div>
+    {{ partial:completion-bar :count="has_art" :total="pokemon_count"}}
+</div>
