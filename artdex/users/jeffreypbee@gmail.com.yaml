@@ -22,7 +22,6 @@ preferences:
         - number
         - title
         - types
-        - art
         - tags
       after_save: continue_editing
     art:
