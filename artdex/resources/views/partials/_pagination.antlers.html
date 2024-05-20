@@ -4,7 +4,9 @@
             < Previous
         {{ /partial:prev-button }}
     </a>
-    Page {{ current_page }} of {{ total_pages }} ({{ total_items }} entries)
+    <div class="flex items-center p-2 rounded-lg bg-slate-800">
+        Page {{ current_page }} of {{ total_pages }} ({{ total_items }} entries)
+    </div>
     <a href="{{ next_page }}">
         {{ partial:next-button }}
             Next >
