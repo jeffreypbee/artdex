@@ -9,11 +9,11 @@
 {{ else }}
     {{ image_url = site:default_pokemon_image:url }}
 {{ /if }}
-<div class="h-96 w-3/5 relative bg-slate-800 rounded-t-2xl shadow-md shadow-black"
+<div class="h-96 w-2/5 relative bg-slate-800 rounded-2xl shadow-md shadow-black"
     x-data="{hovering: false}"
     @mouseenter="hovering=true"
     @mouseleave="hovering=false">
-    <div class="flex justify-center items-center h-1/6 rounded-t-2xl border-b-2 border-white text-darkgray font-bold text-2xl"
+    <div class="flex justify-end px-4 items-center h-1/6 rounded-t-2xl border-b-2 border-white text-darkgray font-bold text-2xl"
         style="background: {{ gradient }}">
         {{ title | upper }}
     </div>
@@ -25,7 +25,7 @@
     </div>
     <div class="h-5/6 flex flex-col items-end justify-between leading-none text-lg"
         style="background: url('{{ image_url }}') left/100% no-repeat; background-blend-mode: screen">
-        <div class="w-full h-full p-2 flex flex-col items-end justify-between leading-none text-lg backdrop-blur-md bg-slate-800 bg-opacity-60">
+        <div class="w-full h-full p-4 flex flex-col items-end justify-evenly leading-none text-lg backdrop-blur-md rounded-b-2xl bg-slate-800 bg-opacity-60">
             <div><span class="opacity-50"># </span>{{ formatted_number }}</div>
             <div>Generation {{ generation }}</div>
             <div>

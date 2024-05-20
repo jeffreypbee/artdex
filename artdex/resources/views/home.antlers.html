@@ -11,43 +11,47 @@
 
     <div class="flex gap-10">
         {{ collection:art sort="date:desc" limit="1"}}
-            <div class="relative rounded-xl bg-gradient-to-t from-slate-800">
-                <img src="{{ image:url }}" alt="{{ image:alt }}">
-                <div class="absolute bottom-10 right-10 flex flex-col items-end text-lg">
-                    <div>
-                        <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
-                    </div>
-                    <div>
-                        {{ pokemon:title }}
-                    </div>
-                    <div class="flex">
-                        {{ pokemon:types }}
-                            <i class="fa-solid {{ icon }} fa-lg p-2 py-4" style="color: {{ color }}"></i>
-                        {{ /pokemon:types }}
+            <a href="{{ pokemon:url }}">
+                <div class="relative rounded-xl bg-gradient-to-t from-slate-800 hover:scale-105 transition-all">
+                    <img src="{{ image:url }}" alt="{{ image:alt }}">
+                    <div class="absolute bottom-10 right-10 flex flex-col items-end text-lg">
+                        <div>
+                            <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
+                        </div>
+                        <div>
+                            {{ pokemon:title }}
+                        </div>
+                        <div class="flex">
+                            {{ pokemon:types }}
+                                <i class="fa-solid {{ icon }} fa-lg p-2 py-4" style="color: {{ color }}"></i>
+                            {{ /pokemon:types }}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         {{ /collection:art }}
 
         <div>
             {{ collection:art sort="date:desc" limit="6" }}
                 {{ unless first }}
-                    <div class="m-2 w-52 flex items-center rounded-xl bg-gradient-to-l from-slate-800">
-                        <img class="w-24" src="{{ image:url }}" alt="{{ image:alt }}">
-                        <div>
+                    <a href="{{ pokemon:url }}">
+                        <div class="m-2 w-52 flex items-center rounded-xl bg-gradient-to-l from-slate-800 hover:scale-105 transition-all">
+                            <img class="w-24" src="{{ image:url }}" alt="{{ image:alt }}">
                             <div>
-                                <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
-                            </div>
-                            <div>
-                                {{ pokemon:title }}
-                            </div>
-                            <div class="flex">
-                                {{ pokemon:types }}
-                                    <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
-                                {{ /pokemon:types }}
+                                <div>
+                                    <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
+                                </div>
+                                <div>
+                                    {{ pokemon:title }}
+                                </div>
+                                <div class="flex">
+                                    {{ pokemon:types }}
+                                        <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
+                                    {{ /pokemon:types }}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 {{ /unless }}
             {{ /collection:art }}
         </div>
