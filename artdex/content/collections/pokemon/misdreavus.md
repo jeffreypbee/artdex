@@ -7,7 +7,9 @@ types:
   - ghost
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716142903
+updated_at: 1716248564
 tags:
   - basic
+art:
+  - 9c5bb6cb-5e1c-46d1-9fe8-4dbbbd55c684
 ---
