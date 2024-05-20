@@ -68,6 +68,12 @@ tabs:
               type: text
               display: 'Formatted Number'
               visibility: computed
+          -
+            handle: generation
+            field:
+              type: integer
+              display: Generation
+              visibility: computed
   sidebar:
     display: Sidebar
     sections:
@@ -79,3 +85,11 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select

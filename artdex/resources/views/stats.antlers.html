@@ -20,14 +20,47 @@
                         {{ title }}
                     </span>
                     <span>
-
                         {{ has_art }} / {{ pokemon_count }}
+                    </span>
+                    <span>
+                        {{ has_art * 100 / (pokemon_count ?? 1) | round(2) }}%
                     </span>
                 </div>
 
                 {{ partial:completion-bar :count="has_art" :total="pokemon_count"}}
             </div>
         {{ /taxonomy:types }}
+    </div>
+
+    <div>
+        <span class="font-bold text-lg">Generations</span>
+        {{ loop times="9" }}
+            <div class="m-4">
+                {{ has_art = 0 }}
+                {{ pokemon_count = 0 }}
+                {{ collection:pokemon as="pokemon" :generation:is="value" }}
+                    {{ pokemon }}
+                        {{ if art }}
+                            {{ has_art += 1 }}
+                        {{ /if }}
+                    {{ /pokemon }}
+                    {{ pokemon_count = pokemon | count}}
+                {{ /collection:pokemon }}
+
+                <div class="flex justify-between">
+                    <span>
+                        Gen {{ value }}
+                    </span>
+                    <span>
+                        {{ has_art }} / {{ pokemon_count }}
+                    </span>
+                    <span>
+                        {{ has_art * 100 / (pokemon_count ?? 1) | round(2) }}%
+                    </span>
+                </div>
+                {{ partial:completion-bar :count="has_art" :total="pokemon_count" color="white"}}
+            </div>
+        {{ /loop }}
     </div>
 
     <div>
@@ -51,8 +84,10 @@
                     {{ title }}
                 </span>
                 <span>
-
                     {{ has_art }} / {{ pokemon_count }}
+                </span>
+                <span>
+                    {{ has_art * 100 / (pokemon_count ?? 1) | round(2) }}%
                 </span>
             </div>
 

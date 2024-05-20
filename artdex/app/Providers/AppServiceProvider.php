@@ -36,5 +36,26 @@ class AppServiceProvider extends ServiceProvider
             }
             return $entry->number;
         });
+
+        Collection::computed('pokemon', 'generation', function ($entry, $value) {
+            if ($entry->number <= 151) {
+                return 1;
+            } else if ($entry->number <= 251) {
+                return 2;
+            } else if ($entry->number <= 386) {
+                return 3;
+            } else if ($entry->number <= 493) {
+                return 4;
+            } else if ($entry->number <= 649) {
+                return 5;
+            } else if ($entry->number <= 721) {
+                return 6;
+            } else if ($entry->number <= 809) {
+                return 7;
+            } else if ($entry->number <= 905) {
+                return 8;
+            }
+            return 9;
+        });
     }
 }
