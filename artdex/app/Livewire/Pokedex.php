@@ -16,6 +16,9 @@ class Pokedex extends Component
     #[Url]
     public $search = '';
 
+    #[Url]
+    public $gen = 1;
+
     public $pokedex;
 
     public function mount() {
@@ -26,8 +29,14 @@ class Pokedex extends Component
         $this->pokedex = Entry::query()
         ->where('collection', 'pokemon')
         ->where('title', 'like', '%' . $this->search . '%')
+        ->where('generation', $this->gen)
         ->orderBy('number')
         ->get();
+    }
+
+    public function changeGen($gen) {
+        $this->gen = $gen;
+        $this->filterPokedex();
     }
 
     public function updatedSearch() {
