@@ -7,10 +7,12 @@
 
     <div class="pb-2 grid grid-cols-3 gap-4 border-b-2 border-white text-center">
         <div class="flex flex-col items-center">
-            Type
+            Type{{ if get:type }}: {{ get:type | title }} {{ /if }}
             <div class="w-full flex flex-wrap justify-center">
                 {{ taxonomy:types }}
                     <form action="{{ current_full_url }}">
+                        {{ if get:gen }}<input type="hidden" name="gen" value="{{ get:gen }}">{{ /if }}
+                        {{ if get:tag }}<input type="hidden" name="tag" value="{{ get:tag }}">{{ /if }}
                         <input type="hidden" name="type" value="{{ get:type==slug ? '' : slug }}">
                         <button class="rounded-xl p-1 hover:bg-black text-white text-opacity-40 hover:text-opacity-100">
                             <i class="fa-solid {{ icon }} p-1"
@@ -22,10 +24,12 @@
         </div>
 
         <div class="flex flex-col items-center">
-            Generation
+            Generation {{ if get:gen }} {{ get:gen }} {{ /if }}
             <div class="w-full flex flex-wrap justify-center">
                 {{ loop times="9" }}
                     <form action="{{ current_full_url }}">
+                        {{ if get:type }}<input type="hidden" name="type" value="{{ get:type }}">{{ /if }}
+                        {{ if get:tag }}<input type="hidden" name="tag" value="{{ get:tag }}">{{ /if }}
                         <input type="hidden" name="gen" value="{{ get:gen==value ? '' : value }}">
                         <button class="font-bold text-lg rounded-xl p-1 px-2 hover:bg-black text-white text-opacity-40 hover:text-opacity-100"
                             {{ if get:gen=="{{ value }}" }} style="color: white" {{ /if }}>
@@ -38,10 +42,12 @@
         </div>
 
         <div class="flex flex-col items-center">
-            Tag
+            Tag{{ if get:tag }}: {{ get:tag | title }} {{ /if }}
             <div class="w-full flex flex-wrap justify-center">
                 {{ taxonomy:tags }}
                     <form action="{{ current_full_url }}">
+                        {{ if get:gen }}<input type="hidden" name="gen" value="{{ get:gen }}">{{ /if }}
+                        {{ if get:type }}<input type="hidden" name="type" value="{{ get:type }}">{{ /if }}
                         <input type="hidden" name="tag" value="{{ get:tag==slug ? '' : slug }}">
                         <button class="rounded-xl p-1 hover:bg-black text-white text-opacity-40 hover:text-opacity-100">
                             <i class="fa-solid {{ icon }} p-1"
