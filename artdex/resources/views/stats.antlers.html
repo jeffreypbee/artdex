@@ -4,7 +4,7 @@
 
 {{ gen_total = 9}}
 
-<div class="flex flex-wrap justify-evenly">
+{{# <div class="flex flex-wrap justify-evenly">
     <div>
         <span class="font-bold text-lg">Types</span>
         {{ taxonomy:types }}
@@ -56,7 +56,7 @@
             {{ partial:stats-entry }}
         {{ /taxonomy:tags }}
     </div>
-</div>
+</div> #}}
 
 <div class="w-3/4">
     <table class="w-full">
@@ -70,7 +70,7 @@
         {{ taxonomy:types }}
             {{ total_pokemon = 0}}
             {{ total_art = 0}}
-            <tr style="background: linear-gradient(to bottom, transparent, {{ color }}44); border-bottom: 0.25rem solid {{ color }}">
+            <tr style="background: linear-gradient(to bottom, transparent, {{ color }}44);">
                 <th class="pt-4">
                     <i class="fa-solid {{ icon }}" style="color: {{ color }}"></i><br>
                     {{ title }}
@@ -96,6 +96,12 @@
                 <td class="text-right pr-2">
                     {{ total_art }} / {{ total_pokemon }} <br>
                     {{ ( total_art * 100 / (total_pokemon ?? 1) ) | round(2) }}%
+                </td>
+            </tr>
+            <tr>
+                <td colspan="{{ gen_total + 2 }}" class="h-4 bg-black">
+                    {{ width = ( total_art * 100 / ( total_pokemon ?? 1 )) }}
+                    <div class="h-full" style="background: {{ color }}; width: {{ width }}%"></div>
                 </td>
             </tr>
         {{ /taxonomy:types }}
