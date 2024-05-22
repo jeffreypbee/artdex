@@ -2,7 +2,6 @@
 
 namespace App\Livewire;
 
-use Jonassiewertsen\Livewire\WithPagination;
 use Livewire\Component;
 use Statamic\Facades\Term;
 use Statamic\Facades\Entry;
@@ -11,23 +10,25 @@ use Statamic\Entries\EntryCollection;
 
 class Pokedex extends Component
 {
-    use WithPagination;
-
     #[Url]
     public $search = '';
 
-    public $pokedex;
+    public EntryCollection $pokedex;
 
     public function mount() {
-        $this->filterPokedex();
+        $this->pokedex = $this->filterQuery();
     }
 
-    public function filterPokedex() {
-        $this->pokedex = Entry::query()
+    public function filterQuery() {
+        return Entry::query()
         ->where('collection', 'pokemon')
         ->where('title', 'like', '%' . $this->search . '%')
         ->orderBy('number')
         ->get();
+    }
+
+    public function filterPokedex() {
+        $this->pokedex = $this->filterQuery();
     }
 
     public function updatedSearch() {
