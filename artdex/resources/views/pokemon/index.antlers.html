@@ -44,7 +44,9 @@
     <a href="{{ url }}">Reset</a>
 </div>
 
-<div>
+{{ livewire:pokedex }}
+
+{{# <div>
     {{gen = get:gen ?? ''}}
     {{ collection:pokemon sort="number" as="pokemon" paginate="100" :title:contains="get:q" :taxonomy:types="get:type" :generation:is="gen" :taxonomy:tags="get:tag" }}
         {{ if no_results }}
@@ -65,4 +67,4 @@
             {{ partial:pagination }}
         {{ /paginate }}
     {{ /collection:pokemon }}
-</div>
+</div> #}}
