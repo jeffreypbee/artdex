@@ -22,8 +22,7 @@
         <div>
             Generations
             {{ gens }}
-                <button class="rounded-xl p-1 px-2 hover:bg-black text-slate-800 hover:text-white" value="{{ value }}"
-                    wire:click="changeGen(value)">
+                <button class="rounded-xl p-1 px-2 hover:bg-black text-slate-800 hover:text-white">
                     {{ value }}
                 </button>
             {{ /gens }}
