@@ -2,6 +2,8 @@
     {{ title }}
 {{ /partial:page-title }}
 
+{{ gen_total = 9}}
+
 <div class="flex flex-wrap justify-evenly">
     <div>
         <span class="font-bold text-lg">Types</span>
@@ -23,7 +25,7 @@
 
     <div>
         <span class="font-bold text-lg">Generations</span>
-        {{ loop times="9" }}
+        {{ loop :times="gen_total" }}
             {{ has_art = 0 }}
             {{ pokemon_count = 0 }}
             {{ collection:pokemon as="pokemon" :generation:is="value" }}
@@ -56,5 +58,47 @@
     </div>
 </div>
 
-
+<div class="w-3/4">
+    <table class="w-full">
+        <tr>
+            <th></th>
+            {{ loop :times="gen_total" }}
+                <th class="text-right">Gen {{ value }}</th>
+            {{ /loop }}
+            <th class="text-right pr-2">Total</th>
+        </tr>
+        {{ taxonomy:types }}
+            {{ total_pokemon = 0}}
+            {{ total_art = 0}}
+            <tr style="background: linear-gradient(to bottom, transparent, {{ color }}44); border-bottom: 0.25rem solid {{ color }}">
+                <th class="pt-4">
+                    <i class="fa-solid {{ icon }}" style="color: {{ color }}"></i><br>
+                    {{ title }}
+                </th>
+                {{ loop :times="gen_total"}}
+                    {{ has_art = 0 }}
+                    {{ pokemon_count = 0 }}
+                    <td class="text-right">
+                        {{ collection:pokemon as="pokemon" :generation:is="value" :taxonomy:types="slug" }}
+                            {{ pokemon }}
+                                {{ if art }}
+                                    {{ has_art += 1 }}
+                                {{ /if }}
+                            {{ /pokemon }}
+                            {{ pokemon_count = pokemon | count}}
+                            {{ total_pokemon += pokemon_count }}
+                            {{ total_art += has_art }}
+                        {{ /collection:pokemon }}
+                        {{ has_art }} / {{ pokemon_count }} <br>
+                        {{ ( has_art * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+                    </td>
+                {{ /loop }}
+                <td class="text-right pr-2">
+                    {{ total_art }} / {{ total_pokemon }} <br>
+                    {{ ( total_art * 100 / (total_pokemon ?? 1) ) | round(2) }}%
+                </td>
+            </tr>
+        {{ /taxonomy:types }}
+    </table>
+</div>
 
