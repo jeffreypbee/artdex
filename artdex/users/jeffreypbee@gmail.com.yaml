@@ -10,6 +10,7 @@ preferences:
         - color
         - icon
         - slug
+      after_save: continue_editing
     tags:
       columns:
         - title
