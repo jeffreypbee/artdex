@@ -24,7 +24,7 @@ preferences:
         - title
         - types
         - tags
-      after_save: create_another
+      after_save: continue_editing
     art:
       columns:
         - image

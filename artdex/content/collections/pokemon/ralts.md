@@ -6,9 +6,11 @@ title: Ralts
 types:
   - psychic
   - fairy
+art:
+  - f07cffb2-7513-40fb-915d-f57bb73bfde5
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716435349
+updated_at: 1716491343
 ---
