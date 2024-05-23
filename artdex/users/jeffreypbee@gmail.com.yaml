@@ -23,7 +23,6 @@ preferences:
         - title
         - types
         - tags
-      after_save: create_another
     art:
       columns:
         - image
