@@ -6,9 +6,11 @@ title: Sableye
 types:
   - dark
   - ghost
+art:
+  - 0ca316f8-26b4-419c-9789-d9e4aca531ee
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716481269
+updated_at: 1716491894
 ---

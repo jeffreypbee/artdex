@@ -6,10 +6,12 @@ title: Cradily
 types:
   - rock
   - grass
+art:
+  - a9e7ecba-28b1-41f2-a434-2b671ddcd025
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - stage-1
   - fossil
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716482211
+updated_at: 1716493445
 ---
