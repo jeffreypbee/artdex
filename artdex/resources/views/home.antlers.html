@@ -4,75 +4,89 @@
 
 {{ partial:total-completion }}
 
-<section class="my-10">
-    <div class="text-lg font-bold border-b-2 border-white">
-        Latest Art
-    </div>
-
-    <div class="md:flex gap-10 items-center">
-        {{ collection:art sort="date:desc" limit="1"}}
-            <a href="{{ pokemon:url }}">
-                <div class="relative flex flex-col justify-between rounded-xl bg-gradient-to-t from-slate-800 hover:scale-105 transition-all">
-                    <img src="{{ image:url }}" alt="{{ image:alt }}">
-                    <div class="absolute bottom-12 right-5 flex flex-col items-end text-lg">
-                        <div>
-                            <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
-                        </div>
-                        <div>
-                            {{ pokemon:title }}
-                        </div>
-                        <div class="flex">
-                            {{ pokemon:types }}
-                                <i class="fa-solid {{ icon }} fa-lg p-2 py-4" style="color: {{ color }}"></i>
-                            {{ /pokemon:types }}
-                        </div>
-                    </div>
-                    {{ gradient = 'white' }}
-                    {{ if pokemon:types | count == 1 }}
-                        {{ gradient = pokemon:types:0:color }}
-                    {{ else }}
-                        {{ gradient = 'linear-gradient(to right, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
-                    {{ /if }}
-                    <div class="rounded-b-xl h-5" style="background: {{ gradient }}"></div>
-                </div>
-            </a>
-        {{ /collection:art }}
-
-        <div>
-            {{ collection:art sort="date:desc" limit="6" }}
-                {{ unless first }}
-                    <a href="{{ pokemon:url }}">
-                        <div class="m-2 w-52 h-full flex justify-between items-center rounded-xl bg-gradient-to-l from-slate-800 hover:scale-105 transition-all">
-                            <img class="w-24" src="{{ image:url }}" alt="{{ image:alt }}">
-                            <div>
-                                <div>
-                                    <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
-                                </div>
-                                <div>
-                                    {{ pokemon:title }}
-                                </div>
-                                <div class="flex">
-                                    {{ pokemon:types }}
-                                        <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
-                                    {{ /pokemon:types }}
-                                </div>
-                            </div>
-                            {{ gradient = 'white' }}
-                            {{ if pokemon:types | count == 1 }}
-                                {{ gradient = pokemon:types:0:color }}
-                            {{ else }}
-                                {{ gradient = 'linear-gradient(to bottom, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
-                            {{ /if }}
-                            <div class="rounded-r-xl w-3 h-24" style="background: {{ gradient }}">&nbsp;</div>
-                        </div>
-                    </a>
-                {{ /unless }}
-            {{ /collection:art }}
+<div class="lg:flex gap-10">
+    <section class="my-10">
+        <div class="text-lg font-bold border-b-2 border-white">
+            Latest Art
         </div>
-    </div>
-</section>
+
+        <div class="md:flex gap-10 items-center">
+            {{ collection:art sort="date:desc" limit="1"}}
+                <a href="{{ pokemon:url }}">
+                    <div class="relative flex flex-col justify-between rounded-xl bg-gradient-to-t from-slate-800 hover:scale-105 transition-all">
+                        <img src="{{ image:url }}" alt="{{ image:alt }}">
+                        <div class="absolute bottom-10 right-5 flex flex-col items-end text-lg">
+                            <div>
+                                <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
+                            </div>
+                            <div>
+                                {{ pokemon:title }}
+                            </div>
+                            <div class="flex">
+                                {{ pokemon:types }}
+                                    <i class="fa-solid {{ icon }} fa-lg p-2 py-4" style="color: {{ color }}"></i>
+                                {{ /pokemon:types }}
+                            </div>
+                            <div>
+                                {{ date }}
+                            </div>
+                        </div>
+                        {{ gradient = 'white' }}
+                        {{ if pokemon:types | count == 1 }}
+                            {{ gradient = pokemon:types:0:color }}
+                        {{ else }}
+                            {{ gradient = 'linear-gradient(to right, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
+                        {{ /if }}
+                        <div class="rounded-b-xl h-5" style="background: {{ gradient }}"></div>
+                    </div>
+                </a>
+            {{ /collection:art }}
+
+            <div>
+                {{ collection:art sort="date:desc" limit="6" }}
+                    {{ unless first }}
+                        <a href="{{ pokemon:url }}">
+                            <div class="m-2 w-52 h-full flex justify-between items-center rounded-xl bg-gradient-to-l from-slate-800 hover:scale-105 transition-all">
+                                <img class="w-24" src="{{ image:url }}" alt="{{ image:alt }}">
+                                <div class="flex flex-col items-end">
+                                    <div>
+                                        <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
+                                    </div>
+                                    <div>
+                                        {{ pokemon:title }}
+                                    </div>
+                                    <div class="flex">
+                                        {{ pokemon:types }}
+                                            <i class="fa-solid {{ icon }} p-1" style="color: {{ color }}"></i>
+                                        {{ /pokemon:types }}
+                                    </div>
+                                </div>
+                                {{ gradient = 'white' }}
+                                {{ if pokemon:types | count == 1 }}
+                                    {{ gradient = pokemon:types:0:color }}
+                                {{ else }}
+                                    {{ gradient = 'linear-gradient(to bottom, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
+                                {{ /if }}
+                                <div class="rounded-r-xl w-3 h-24" style="background: {{ gradient }}">&nbsp;</div>
+                            </div>
+                        </a>
+                    {{ /unless }}
+                {{ /collection:art }}
+            </div>
+        </div>
+    </section>
 
 
+    <section class="my-10">
+        <div class="text-lg font-bold border-b-2 border-white">
+            Coming Soon
+        </div>
 
-
-
+        {{ collection:art sort="date:asc" status:is="scheduled" limit="1" }}
+        <div class="relative flex justify-center">
+            <img src="{{ image:url }}" alt="{{ image:alt }}" style="filter: brightness(0) invert(1)">
+            <div class="absolute z-10 top-1/2 right-1/2 text-black"><i class="fa-solid fa-question fa-2xl"></i></div>
+        </div>
+        {{ /collection:art }}
+    </section>
+</div>
