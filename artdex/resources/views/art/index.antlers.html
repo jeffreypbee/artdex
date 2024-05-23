@@ -1,0 +1,26 @@
+{{ partial:page-title }}{{ title }}{{ /partial:page-title }}
+
+<div>
+    {{ collection:art as="art" sort="date:desc" paginate="100" }}
+
+        {{ paginate }}
+            {{ partial:pagination }}
+        {{ /paginate }}
+
+        <div class="flex flex-wrap justify-center">
+            {{ art }}
+                <div class="m-4 flex flex-col items-center bg-gradient-to-t from-slate-800 rounded-xl">
+                    <a href="{{ pokemon:url }}">
+                        <img class="w-48 hover:scale-105 transition-all" src="{{ image:url }}" alt="{{ image:alt }}">
+                    </a>
+                    {{ date }}
+                </div>
+            {{ /art }}
+        </div>
+
+        {{ paginate }}
+            {{ partial:pagination }}
+        {{ /paginate }}
+
+    {{ /collection:art }}
+</div>
