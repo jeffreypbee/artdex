@@ -6,9 +6,11 @@ title: Rapidash
 type_1: fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140521
+updated_at: 1716475616
 types:
   - fire
 tags:
   - stage-1
+art:
+  - ada78f1d-7342-490d-a50f-e24726130566
 ---

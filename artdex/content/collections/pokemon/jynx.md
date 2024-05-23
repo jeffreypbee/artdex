@@ -8,7 +8,9 @@ types:
   - psychic
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716141673
+updated_at: 1716477078
 tags:
   - basic
+art:
+  - b63add50-47a7-40e6-bf03-9c89d135f4a6
 ---

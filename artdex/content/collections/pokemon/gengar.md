@@ -7,10 +7,12 @@ type_1: ghost
 type_2: poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140733
+updated_at: 1716476017
 types:
   - ghost
   - poison
 tags:
   - stage-2
+art:
+  - 530dfd9b-2f26-4bda-b353-e11b401d706f
 ---

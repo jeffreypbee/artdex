@@ -13,6 +13,8 @@ tabs:
                 - pokemon
               type: entries
               display: Pokemon
+              validate:
+                - required
           -
             handle: title
             field:
@@ -27,11 +29,13 @@ tabs:
               container: assets
               type: assets
               display: Image
+      -
+        fields:
           -
-            handle: content
+            handle: template
             field:
-              type: markdown
-              display: Content
+              type: template
+              display: Template
               localizable: true
           -
             handle: author
@@ -42,10 +46,10 @@ tabs:
               localizable: true
               max_items: 1
           -
-            handle: template
+            handle: content
             field:
-              type: template
-              display: Template
+              type: markdown
+              display: Content
               localizable: true
   sidebar:
     display: Sidebar

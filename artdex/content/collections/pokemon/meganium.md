@@ -7,8 +7,10 @@ types:
   - grass
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716142188
+updated_at: 1716477871
 tags:
   - starter
   - stage-2
+art:
+  - 28fce0b0-1073-4628-af90-b84c725929e5
 ---

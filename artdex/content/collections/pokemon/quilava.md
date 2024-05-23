@@ -7,8 +7,10 @@ types:
   - fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716142224
+updated_at: 1716477945
 tags:
   - starter
   - stage-1
+art:
+  - 7da2fd01-0891-4a90-83a6-4c654c626db7
 ---

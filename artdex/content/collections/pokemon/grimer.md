@@ -6,9 +6,11 @@ title: Grimer
 type_1: poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140665
+updated_at: 1716475942
 types:
   - poison
 tags:
   - basic
+art:
+  - 110b2e2a-1528-4f28-9c54-ac6f861eb44e
 ---

@@ -8,7 +8,9 @@ types:
   - fairy
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716138208
+updated_at: 1716478596
 tags:
   - stage-1
+art:
+  - a8390161-78c9-4edf-b07c-c3eabe591b2f
 ---

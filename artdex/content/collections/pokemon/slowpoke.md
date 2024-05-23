@@ -7,10 +7,12 @@ type_1: water
 type_2: psychic
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140538
+updated_at: 1716475684
 types:
   - water
   - psychic
 tags:
   - basic
+art:
+  - 15bad57d-ab08-4cd2-9f69-5471079e2276
 ---

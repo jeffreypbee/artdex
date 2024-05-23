@@ -7,10 +7,12 @@ type_1: electric
 type_2: steel
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140602
+updated_at: 1716475755
 types:
   - electric
   - steel
 tags:
   - stage-1
+art:
+  - 170e308d-95b8-4024-b85c-e11ad021850e
 ---

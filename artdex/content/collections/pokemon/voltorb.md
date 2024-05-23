@@ -7,7 +7,9 @@ types:
   - electric
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140825
+updated_at: 1716476191
 tags:
   - basic
+art:
+  - 3c349d0c-355c-4dee-b3ec-17a97e6c56e0
 ---
