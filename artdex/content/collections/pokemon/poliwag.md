@@ -6,9 +6,11 @@ title: Poliwag
 type_1: water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716140205
+updated_at: 1716434348
 types:
   - water
 tags:
   - basic
+art:
+  - d21f6279-8c45-4d41-badc-d3b49fdf10fa
 ---
