@@ -9,12 +9,12 @@
         Latest Art
     </div>
 
-    <div class="flex gap-10">
+    <div class="md:flex gap-10 items-center">
         {{ collection:art sort="date:desc" limit="1"}}
             <a href="{{ pokemon:url }}">
-                <div class="relative rounded-xl bg-gradient-to-t from-slate-800 hover:scale-105 transition-all">
+                <div class="relative flex flex-col justify-between rounded-xl bg-gradient-to-t from-slate-800 hover:scale-105 transition-all">
                     <img src="{{ image:url }}" alt="{{ image:alt }}">
-                    <div class="absolute bottom-10 right-10 flex flex-col items-end text-lg">
+                    <div class="absolute bottom-12 right-5 flex flex-col items-end text-lg">
                         <div>
                             <span class="opacity-50">#</span> {{ pokemon:formatted_number }}
                         </div>
@@ -27,6 +27,13 @@
                             {{ /pokemon:types }}
                         </div>
                     </div>
+                    {{ gradient = 'white' }}
+                    {{ if pokemon:types | count == 1 }}
+                        {{ gradient = pokemon:types:0:color }}
+                    {{ else }}
+                        {{ gradient = 'linear-gradient(to right, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
+                    {{ /if }}
+                    <div class="rounded-b-xl h-5" style="background: {{ gradient }}"></div>
                 </div>
             </a>
         {{ /collection:art }}
@@ -35,7 +42,7 @@
             {{ collection:art sort="date:desc" limit="6" }}
                 {{ unless first }}
                     <a href="{{ pokemon:url }}">
-                        <div class="m-2 w-52 flex items-center rounded-xl bg-gradient-to-l from-slate-800 hover:scale-105 transition-all">
+                        <div class="m-2 w-52 h-full flex justify-between items-center rounded-xl bg-gradient-to-l from-slate-800 hover:scale-105 transition-all">
                             <img class="w-24" src="{{ image:url }}" alt="{{ image:alt }}">
                             <div>
                                 <div>
@@ -50,6 +57,13 @@
                                     {{ /pokemon:types }}
                                 </div>
                             </div>
+                            {{ gradient = 'white' }}
+                            {{ if pokemon:types | count == 1 }}
+                                {{ gradient = pokemon:types:0:color }}
+                            {{ else }}
+                                {{ gradient = 'linear-gradient(to bottom, ' + pokemon:types:0:color + ', ' + pokemon:types:1:color + ')'}}
+                            {{ /if }}
+                            <div class="rounded-r-xl w-3 h-24" style="background: {{ gradient }}">&nbsp;</div>
                         </div>
                     </a>
                 {{ /unless }}
