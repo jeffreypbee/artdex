@@ -1,0 +1,59 @@
+{{ partial:stats/nav }}
+
+<div class="text-lg"></div>
+
+{{ gen_total = 9}}
+
+<div class="flex flex-wrap justify-evenly">
+    <div>
+        <span class="font-bold text-lg">Types</span>
+        {{ taxonomy:types }}
+            {{ has_art = 0 }}
+            {{ pokemon_count = 0 }}
+            {{ collection:pokemon as="pokemon" :taxonomy:types="slug" }}
+                {{ pokemon }}
+                    {{ if art }}
+                        {{ has_art += 1 }}
+                    {{ /if }}
+                {{ /pokemon }}
+                {{ pokemon_count = pokemon | count}}
+
+            {{ /collection:pokemon }}
+            {{ partial:stats-entry }}
+        {{ /taxonomy:types }}
+    </div>
+
+    <div>
+        <span class="font-bold text-lg">Generations</span>
+        {{ loop :times="gen_total" }}
+            {{ has_art = 0 }}
+            {{ pokemon_count = 0 }}
+            {{ collection:pokemon as="pokemon" :generation:is="value" }}
+                {{ pokemon }}
+                    {{ if art }}
+                        {{ has_art += 1 }}
+                    {{ /if }}
+                {{ /pokemon }}
+                {{ pokemon_count = pokemon | count}}
+            {{ /collection:pokemon }}
+            {{ partial:stats-entry :title="value" }}
+        {{ /loop }}
+    </div>
+
+    <div>
+        <span class="font-bold text-lg">Tags</span>
+        {{ taxonomy:tags }}
+            {{ has_art = 0 }}
+            {{ pokemon_count = 0 }}
+            {{ collection:pokemon as="pokemon" :taxonomy:tags="slug" }}
+                {{ pokemon }}
+                    {{ if art }}
+                        {{ has_art += 1 }}
+                    {{ /if }}
+                {{ /pokemon }}
+                {{ pokemon_count = pokemon | count}}
+            {{ /collection:pokemon }}
+            {{ partial:stats-entry }}
+        {{ /taxonomy:tags }}
+    </div>
+</div>
