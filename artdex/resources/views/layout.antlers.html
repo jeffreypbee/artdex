@@ -17,20 +17,6 @@
             <div class="w-1 bg-gradient-to-b from-white"></div>
             <main class="p-2 w-full flex flex-col justify-center items-center">{{ template_content }}</main>
         </div>
-        <footer class="b-0 flex flex-col items-center self-end w-full h-12 bg-black text-gray-500">
-            <div class="w-full p-4 flex justify-center">
-                {{ nav from="pages" include_home="true" select="title|url" }}
-                    <div class="m-2">
-                        <a href="{{ url }}" class="hover:text-white">{{ title }}</a>
-                    </div>
-                    {{ unless last }}
-                        <div class="m-2"> | </div>
-                    {{ /unless }}
-                {{ /nav }}
-            </div>
-            <div>
-                Copyright &copy; 2024 Jeffrey Bee
-            </div>
-        </footer>
+        {{ partial:footer }}
     </body>
 </html>

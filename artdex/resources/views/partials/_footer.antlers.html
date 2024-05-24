@@ -1,0 +1,17 @@
+<footer class="b-0 flex flex-col items-center self-end w-full h-12 bg-black text-gray-500">
+    <div class="w-full p-4 flex justify-center">
+        {{ cache for="20 minutes" }}
+            {{ nav from="pages" include_home="true" select="title|url" }}
+                <div class="m-2">
+                    <a href="{{ url }}" class="hover:text-white">{{ title }}</a>
+                </div>
+                {{ unless last }}
+                    <div class="m-2"> | </div>
+                {{ /unless }}
+            {{ /nav }}
+        {{ /cache }}
+    </div>
+    <div>
+        Copyright &copy; 2024 Jeffrey Bee
+    </div>
+</footer>
