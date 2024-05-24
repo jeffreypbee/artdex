@@ -29,6 +29,3 @@ preferences:
         - title
         - date
   theme: dark
-  assets:
-    assets:
-      mode: grid
