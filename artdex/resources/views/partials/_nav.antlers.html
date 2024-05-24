@@ -1,5 +1,5 @@
 <nav class="sticky top-10 flex flex-col w-44">
-    {{ nav from="pages" include_home="true" }}
+    {{ nav from="pages" include_home="true" max_depth="1" select="title|url" }}
         <a href="{{ url }}"
             class="p-2 text-lg font-bold flex justify-start hover:bg-slate-800 transition-all"
             {{ if is_current || is_parent }} style="background: linear-gradient(to right, transparent, #1e293b)" {{ /if }}>{{ title }}</a>
