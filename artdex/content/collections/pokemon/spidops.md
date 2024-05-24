@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 826b5b9a-bee7-4339-8ef5-a03ae8627a41
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 918
+title: Spidops
 types:
-  - grass
+  - bug
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716572386
 ---

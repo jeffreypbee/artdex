@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 48fa6c9e-d30b-4e76-9fb4-42b8905f87df
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 943
+title: Mabostiff
 types:
-  - grass
+  - dark
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716572779
 ---

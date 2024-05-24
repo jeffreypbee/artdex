@@ -1,13 +1,15 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: d9abc0dc-4f1b-41d4-9ad1-77e389c47919
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 1006
+title: 'Iron Valiant'
 types:
-  - grass
+  - fairy
+  - fighting
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - paradox
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716574286
 ---

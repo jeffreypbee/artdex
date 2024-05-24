@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 12fc4c6a-6511-4cc5-8ca7-62fbb7f272cf
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 808
+title: Meltan
 types:
-  - grass
+  - steel
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - mythical
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716569844
 ---

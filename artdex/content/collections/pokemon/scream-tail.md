@@ -1,13 +1,15 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: e277a2f5-5423-4e15-9d45-6eb774ce8be4
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 985
+title: 'Scream Tail'
 types:
-  - grass
+  - fairy
+  - psychic
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - paradox
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716573778
 ---

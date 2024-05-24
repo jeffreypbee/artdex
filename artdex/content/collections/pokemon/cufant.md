@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 497cf9d5-b204-48f7-9ae0-8a8541907a51
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 878
+title: Cufant
 types:
-  - grass
+  - steel
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716571513
 ---

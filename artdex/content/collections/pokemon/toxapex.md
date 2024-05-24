@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 962b66ed-9529-4932-b974-cfcc002ea051
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 748
+title: Toxapex
 types:
-  - grass
+  - poison
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568302
 ---

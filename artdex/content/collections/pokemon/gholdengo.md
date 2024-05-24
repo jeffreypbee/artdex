@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 3c96a0d9-7687-495f-904d-92c51b8f2f36
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 1000
+title: Gholdengo
 types:
-  - grass
+  - steel
+  - ghost
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716574164
 ---

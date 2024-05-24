@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 6349d559-479c-44f8-8494-b7d3fc8b3142
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 757
+title: Salandit
 types:
-  - grass
+  - poison
+  - fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568469
 ---

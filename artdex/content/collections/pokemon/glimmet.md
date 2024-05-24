@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: dc03a129-ae68-45c7-94fe-f74608ca4023
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 969
+title: Glimmet
 types:
-  - grass
+  - rock
+  - poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716573189
 ---

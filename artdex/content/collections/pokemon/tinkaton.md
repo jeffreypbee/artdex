@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: a8a77398-e8ac-4496-84c8-f7f359789169
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 959
+title: Tinkaton
 types:
-  - grass
+  - fairy
+  - steel
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-2
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716573044
 ---

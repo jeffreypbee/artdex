@@ -22,6 +22,7 @@ preferences:
       columns:
         - number
         - title
+      after_save: create_another
     art:
       columns:
         - image

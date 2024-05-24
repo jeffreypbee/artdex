@@ -1,13 +1,15 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 54d8b743-d730-42ce-afd9-3885e3849027
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 787
+title: 'Tapu Bulu'
 types:
   - grass
+  - fairy
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - legendary
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716569026
 ---

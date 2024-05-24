@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: da748a36-f4e3-4969-b403-20b0812d71fe
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 932
+title: Nacli
 types:
-  - grass
+  - rock
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716572602
 ---

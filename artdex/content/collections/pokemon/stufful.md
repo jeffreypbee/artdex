@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: b1f985d2-753c-4b9a-afe9-d0f8c18ab2f5
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 759
+title: Stufful
 types:
-  - grass
+  - normal
+  - fighting
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568511
 ---

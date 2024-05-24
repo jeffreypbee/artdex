@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: af1f9ce9-116b-4f37-8618-8177d20fceec
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 913
+title: Quaxwell
 types:
-  - grass
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
+  - starter
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716572312
 ---

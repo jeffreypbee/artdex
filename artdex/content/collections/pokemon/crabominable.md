@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: caf069d6-3c5f-43ef-897f-1a3c6d187584
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 740
+title: Crabominable
 types:
-  - grass
+  - fighting
+  - ice
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568167
 ---

@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: afc54e6f-ef62-4108-98e4-bbfedadd7c4d
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 848
+title: Toxel
 types:
-  - grass
+  - electric
+  - poison
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - baby
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716570732
 ---

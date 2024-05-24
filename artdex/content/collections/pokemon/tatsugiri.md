@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 0882b60f-9851-44a1-aac2-1cd41dc55d87
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 978
+title: Tatsugiri
 types:
-  - grass
+  - dragon
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716573333
 ---

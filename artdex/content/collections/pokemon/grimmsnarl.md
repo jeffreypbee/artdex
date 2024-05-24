@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: b1b44ab0-c7d4-4612-bfdb-22bc8872500f
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 861
+title: Grimmsnarl
 types:
-  - grass
+  - dark
+  - fairy
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-2
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716571225
 ---

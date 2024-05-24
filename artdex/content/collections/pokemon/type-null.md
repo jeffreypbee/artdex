@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 5555cc7f-d6b5-4386-9c06-ec859eccca8e
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 772
+title: 'Type: Null'
 types:
-  - grass
+  - normal
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568730
 ---

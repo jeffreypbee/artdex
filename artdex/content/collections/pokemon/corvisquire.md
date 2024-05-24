@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: ce5d2cf6-6ee3-4e91-aae3-0b1b56e72308
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 822
+title: Corvisquire
 types:
-  - grass
+  - flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - basic
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716570327
 ---

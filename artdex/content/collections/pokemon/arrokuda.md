@@ -1,13 +1,13 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 2b3a299f-e94a-476a-acc1-5453b89e6552
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 846
+title: Arrokuda
 types:
-  - grass
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716570699
 ---

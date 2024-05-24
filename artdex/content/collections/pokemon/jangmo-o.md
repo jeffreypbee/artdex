@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 8695e4ff-5203-4f44-a5ed-118212dcb595
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 782
+title: Jangmo-o
 types:
-  - grass
+  - dragon
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - pseudo
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716568922
 ---

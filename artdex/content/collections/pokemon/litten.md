@@ -1,13 +1,14 @@
 ---
-id: 419d23dc-4d39-4bdf-bcbb-37a96cd14a8e
+id: 86b818f1-27bf-46c3-b091-d06c978e5f92
 blueprint: pokemon
-number: 285
-title: Shroomish
+number: 725
+title: Litten
 types:
-  - grass
+  - fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
+  - starter
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716570039
+updated_at: 1716567854
 ---
