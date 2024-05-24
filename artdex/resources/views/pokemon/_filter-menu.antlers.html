@@ -1,0 +1,66 @@
+<div class="m-10 w-3/4 rounded-lg flex flex-col gap-2 justify-center items-center p-4 bg-slate-800 bg-opacity-60 backdrop-blur-sm">
+    {{ selected_type = get:type }}
+    {{ selected_gen = get:gent }}
+    {{ selected_tag = get:tag }}
+
+    {{ cache for="20 minutes" }}
+    <div class="w-full text-lg -mt-2 border-b-2 border-white text-center">Filter</div>
+
+    <div class="pb-2 grid grid-cols-3 gap-4 border-b-2 border-white text-center">
+        <div class="flex flex-col items-center">
+            Type{{ if get:type }}: {{ get:type | title }} {{ /if }}
+            <div class="w-full flex flex-wrap justify-center">
+                {{ taxonomy:types }}
+                    <form action="{{ current_full_url }}">
+                        {{ if get:gen }}<input type="hidden" name="gen" value="{{ get:gen }}">{{ /if }}
+                        {{ if get:tag }}<input type="hidden" name="tag" value="{{ get:tag }}">{{ /if }}
+                        <input type="hidden" name="type" value="{{ get:type==slug ? '' : slug }}">
+                        <button class="rounded-xl p-1 hover:bg-black text-white text-opacity-40 hover:text-opacity-100">
+                            <i class="fa-solid {{ icon }} p-1"
+                                {{ if get:type=="{{ slug }}" }} style="color: {{ color }}" {{ /if }}></i>
+                        </button>
+                    </form>
+                {{ /taxonomy:types }}
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+            Generation {{ if get:gen }} {{ get:gen }} {{ /if }}
+            <div class="w-full flex flex-wrap justify-center">
+                {{ loop times="9" }}
+                    <form action="{{ current_full_url }}">
+                        {{ if get:type }}<input type="hidden" name="type" value="{{ get:type }}">{{ /if }}
+                        {{ if get:tag }}<input type="hidden" name="tag" value="{{ get:tag }}">{{ /if }}
+                        <input type="hidden" name="gen" value="{{ get:gen==value ? '' : value }}">
+                        <button class="font-bold text-lg rounded-xl p-1 px-2 hover:bg-black text-white text-opacity-40 hover:text-opacity-100"
+                            {{ if get:gen=="{{ value }}" }} style="color: white" {{ /if }}>
+                            {{ value }}
+                        </button>
+                    </form>
+                {{ /loop }}
+            </div>
+            <div><form action="{{ current_full_url }}"><input type="search" name="q" value="{{ get:q }}" placeholder="Search"></form></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+            Tag{{ if get:tag }}: {{ get:tag | title }} {{ /if }}
+            <div class="w-full flex flex-wrap justify-center">
+                {{ taxonomy:tags }}
+                    <form action="{{ current_full_url }}">
+                        {{ if get:gen }}<input type="hidden" name="gen" value="{{ get:gen }}">{{ /if }}
+                        {{ if get:type }}<input type="hidden" name="type" value="{{ get:type }}">{{ /if }}
+                        <input type="hidden" name="tag" value="{{ get:tag==slug ? '' : slug }}">
+                        <button class="rounded-xl p-1 hover:bg-black text-white text-opacity-40 hover:text-opacity-100">
+                            <i class="fa-solid {{ icon }} p-1"
+                                {{ if get:tag=="{{ slug }}" }} style="color: {{ color }}" {{ /if }}></i>
+                        </button>
+                    </form>
+                {{ /taxonomy:tags }}
+            </div>
+        </div>
+    </div>
+
+    {{ /cache }}
+
+    <a href="{{ url }}">Reset</a>
+</div>
