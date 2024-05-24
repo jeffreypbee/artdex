@@ -22,8 +22,6 @@ preferences:
       columns:
         - number
         - title
-        - types
-        - tags
     art:
       columns:
         - image
@@ -31,3 +29,6 @@ preferences:
         - title
         - date
   theme: dark
+  assets:
+    assets:
+      mode: grid
