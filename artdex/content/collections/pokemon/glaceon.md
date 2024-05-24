@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 97cc51b2-6bfd-4002-94bc-931022005456
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 471
+title: Glaceon
 types:
-  - normal
-  - flying
+  - ice
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716504593
 ---

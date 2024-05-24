@@ -1,14 +1,15 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: d286c3f5-4795-4a50-b92c-a794ed641fe7
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 443
+title: Gible
 types:
-  - normal
-  - flying
+  - dragon
+  - ground
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
+  - pseudo
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716503898
 ---

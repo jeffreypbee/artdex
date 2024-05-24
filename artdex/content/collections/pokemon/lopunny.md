@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: ce7b4e5d-19d0-4b73-b23b-1f6bb8221b46
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 428
+title: Lopunny
 types:
   - normal
-  - flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716503595
 ---

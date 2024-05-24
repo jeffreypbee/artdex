@@ -1,14 +1,15 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 6e61f648-7643-48c7-ac57-9add3677d828
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 500
+title: Emboar
 types:
-  - normal
-  - flying
+  - fire
+  - fighting
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - stage-2
+  - starter
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716505297
 ---

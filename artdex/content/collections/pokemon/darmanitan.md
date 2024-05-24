@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: e34ad310-6f58-45c4-9461-88e19727cd0a
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 555
+title: Darmanitan
 types:
-  - normal
-  - flying
+  - fire
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716507744
 ---

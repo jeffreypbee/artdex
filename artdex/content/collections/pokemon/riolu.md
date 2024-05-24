@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: fff700f0-dfc2-451a-b1f0-eb5af5b08806
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 447
+title: Riolu
 types:
-  - normal
-  - flying
+  - fighting
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - baby
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716503989
 ---

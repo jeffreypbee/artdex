@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: eee1f754-d8d0-43af-bd06-febfeb9f76d7
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 594
+title: Alomomola
 types:
-  - normal
-  - flying
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716508534
 ---

@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 359f8683-0ee1-41d1-b55d-87d659837a32
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 559
+title: Scraggy
 types:
-  - normal
-  - flying
+  - dark
+  - fighting
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716507819
 ---

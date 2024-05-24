@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 1e25afb1-e88d-4d1f-934a-e8e4ffe8c5d4
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 461
+title: Weavile
 types:
-  - normal
-  - flying
+  - dark
+  - ice
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716504418
 ---

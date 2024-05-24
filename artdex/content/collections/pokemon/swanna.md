@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 8de1906d-effd-4be6-adf7-3d371235df26
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 581
+title: Swanna
 types:
-  - normal
+  - water
   - flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716508298
 ---

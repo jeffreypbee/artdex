@@ -1,8 +1,8 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 89cf1d8e-6372-4080-9f64-c53933292633
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 521
+title: Unfezant
 types:
   - normal
   - flying
@@ -10,5 +10,5 @@ author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - stage-2
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716506944
 ---

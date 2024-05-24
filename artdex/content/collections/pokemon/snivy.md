@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 871e4dee-d0cf-4ab7-a176-7190a80f2ed2
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 495
+title: Snivy
 types:
-  - normal
-  - flying
+  - grass
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
+  - starter
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716505157
 ---

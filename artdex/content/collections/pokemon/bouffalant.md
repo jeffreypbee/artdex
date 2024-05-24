@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: d6a7fbcd-5dca-4fee-8d6d-3f6bedae1220
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 626
+title: Bouffalant
 types:
   - normal
-  - flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716511550
 ---

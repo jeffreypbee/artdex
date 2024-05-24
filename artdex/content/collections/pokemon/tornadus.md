@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: b9da72da-8983-4f95-8573-d0f0d569354b
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 641
+title: Tornadus
 types:
-  - normal
   - flying
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
+  - legendary
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716511840
 ---

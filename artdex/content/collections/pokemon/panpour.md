@@ -1,14 +1,13 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 2de89b89-cb53-4e62-8e1d-7753d0dc2eb9
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 515
+title: Panpour
 types:
-  - normal
-  - flying
+  - water
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716506810
 ---

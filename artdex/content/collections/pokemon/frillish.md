@@ -1,14 +1,14 @@
 ---
-id: f6a39a6d-9362-4b49-9911-c4270111c903
+id: 6cc9ceb6-ed0c-45af-ad7f-bff66db44dda
 blueprint: pokemon
-number: 398
-title: Staraptor
+number: 592
+title: Frillish
 types:
-  - normal
-  - flying
+  - water
+  - ghost
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
-  - stage-2
+  - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716512473
+updated_at: 1716508501
 ---
