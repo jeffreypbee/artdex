@@ -2,7 +2,7 @@
 
 {{ gen_total = 9}}
 
-
+{{ cache for="20 minutes "}}
 <div class="my-4 text-xl">Types Per Generation</div>
 <div class="w-3/4">
     <table class="w-full">
@@ -55,6 +55,8 @@
         {{ /taxonomy:types }}
     </table>
 </div>
+{{ /cache }}
+
 {{#
 <div class="my-4 text-xl">Tags Per Generation</div>
 <div class="w-3/4">
