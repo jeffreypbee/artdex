@@ -1,3 +1,5 @@
+
+{{ cache for="20 minutes" }}
 {{ total_pokemon = 0}}
 {{ art_count = 0 }}
 {{ collection:pokemon as="pokemon" }}
@@ -15,3 +17,4 @@
     </div>
     {{ partial:completion-bar :count="art_count" :total="total_pokemon" color="white"}}
 </div>
+{{ /cache }}
