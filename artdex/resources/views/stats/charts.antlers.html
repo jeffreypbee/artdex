@@ -22,22 +22,22 @@
                     {{ title }}
                 </th>
                 {{ loop :times="gen_total"}}
-                    {{ has_art = 0 }}
+                    {{ art_count = 0 }}
                     {{ pokemon_count = 0 }}
                     <td class="text-right">
-                        {{ collection:pokemon as="pokemon" :generation:is="value" :taxonomy:types="slug" }}
+                        {{ collection:pokemon as="pokemon" select="art" :generation:is="value" :taxonomy:types="slug" }}
                             {{ pokemon }}
                                 {{ if art }}
-                                    {{ has_art += 1 }}
+                                    {{ art_count += 1 }}
                                 {{ /if }}
                             {{ /pokemon }}
                             {{ pokemon_count = pokemon | count}}
                             {{ total_pokemon += pokemon_count }}
-                            {{ total_art += has_art }}
+                            {{ total_art += art_count }}
                         {{ /collection:pokemon }}
                         {{ unless pokemon_count == 0 }}
-                            {{ has_art }} / {{ pokemon_count }} <br>
-                            {{ ( has_art * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+                            {{ art_count }} / {{ pokemon_count }} <br>
+                            {{ ( art_count * 100 / (pokemon_count ?? 1) ) | round(2) }}%
                         {{ /unless }}
                     </td>
                 {{ /loop }}
@@ -55,7 +55,7 @@
         {{ /taxonomy:types }}
     </table>
 </div>
-
+{{#
 <div class="my-4 text-xl">Tags Per Generation</div>
 <div class="w-3/4">
     <table class="w-full">
@@ -75,22 +75,22 @@
                     {{ title }}
                 </th>
                 {{ loop :times="gen_total"}}
-                    {{ has_art = 0 }}
+                    {{ art_count = 0 }}
                     {{ pokemon_count = 0 }}
                     <td class="text-right">
                         {{ collection:pokemon as="pokemon" :generation:is="value" :taxonomy:tags="slug" }}
                             {{ pokemon }}
                                 {{ if art }}
-                                    {{ has_art += 1 }}
+                                    {{ art_count += 1 }}
                                 {{ /if }}
                             {{ /pokemon }}
                             {{ pokemon_count = pokemon | count}}
                             {{ total_pokemon += pokemon_count }}
-                            {{ total_art += has_art }}
+                            {{ total_art += art_count }}
                         {{ /collection:pokemon }}
                         {{ unless pokemon_count == 0 }}
-                            {{ has_art }} / {{ pokemon_count }} <br>
-                            {{ ( has_art * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+                            {{ art_count }} / {{ pokemon_count }} <br>
+                            {{ ( art_count * 100 / (pokemon_count ?? 1) ) | round(2) }}%
                         {{ /unless }}
                     </td>
                 {{ /loop }}
@@ -107,4 +107,4 @@
             </tr>
         {{ /taxonomy:tags }}
     </table>
-</div>
+</div> #}}
