@@ -5,9 +5,11 @@ number: 764
 title: Comfey
 types:
   - fairy
+art:
+  - ac0fd8eb-a321-41ac-b735-4e47a0526eb8
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716568603
+updated_at: 1716643431
 ---
