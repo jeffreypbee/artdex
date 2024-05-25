@@ -5,10 +5,12 @@ number: 961
 title: Wugtrio
 types:
   - water
+art:
+  - 5b6e3022-732c-4b64-9052-7dd876708cc7
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - stage-1
   - convergent
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716573074
+updated_at: 1716676476
 ---

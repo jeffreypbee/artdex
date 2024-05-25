@@ -5,9 +5,11 @@ number: 915
 title: Lechonk
 types:
   - normal
+art:
+  - 71fe18e3-5b93-44c5-834f-c12d12fcdae2
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716572346
+updated_at: 1716679087
 ---

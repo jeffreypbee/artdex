@@ -5,9 +5,11 @@ number: 863
 title: Perrserker
 types:
   - steel
+art:
+  - c2a7ee78-6b7b-4a64-a109-8e78543f607b
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - stage-1
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716571255
+updated_at: 1716677909
 ---

@@ -6,10 +6,12 @@ title: Chi-Yu
 types:
   - dark
   - fire
+art:
+  - 9cf1bb73-0f4c-43e0-ab41-fcf81f98d30b
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
   - legendary
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716574247
+updated_at: 1716677994
 ---
