@@ -77,16 +77,20 @@
     </section>
 
 
+    {{ collection:art sort="date:asc" as="coming_soon" status:is="scheduled" limit="1" }}
+    {{ unless no_results }}
     <section class="my-10">
         <div class="text-lg font-bold border-b-2 border-white">
             Coming Soon
         </div>
 
-        {{ collection:art sort="date:asc" status:is="scheduled" limit="1" }}
+        {{ coming_soon }}
         <div class="relative flex justify-center">
             <img src="{{ image:url }}" alt="{{ image:alt }}" style="filter: brightness(0) invert(1)">
             <div class="absolute z-10 top-1/2 right-1/2 text-black"><i class="fa-solid fa-question fa-2xl"></i></div>
         </div>
-        {{ /collection:art }}
+        {{ /coming_soon }}
     </section>
+    {{ /unless }}
+    {{ /collection:art }}
 </div>
