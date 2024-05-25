@@ -6,7 +6,7 @@ title: Pikachu
 type_1: electric
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716152090
+updated_at: 1716579809
 types:
   - electric
 tags:

@@ -6,9 +6,11 @@ title: Bruxish
 types:
   - water
   - psychic
+art:
+  - 8762cfd3-7782-45e1-9f67-59650f298014
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716568844
+updated_at: 1716596701
 ---

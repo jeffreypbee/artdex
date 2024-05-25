@@ -10,5 +10,7 @@ tags:
   - basic
   - legendary
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716504844
+updated_at: 1716593637
+art:
+  - 9e4602c8-2f3a-436f-9a57-5a6cd5c98ac3
 ---

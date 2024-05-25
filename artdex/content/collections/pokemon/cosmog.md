@@ -5,10 +5,12 @@ number: 789
 title: Cosmog
 types:
   - psychic
+art:
+  - ed02afe0-f1fc-4ea9-bac1-c236eb0758b2
 author: 4d8d6ede-5963-429f-9c2f-74b897007e0c
 tags:
   - basic
   - legendary
 updated_by: 4d8d6ede-5963-429f-9c2f-74b897007e0c
-updated_at: 1716569457
+updated_at: 1716595825
 ---
