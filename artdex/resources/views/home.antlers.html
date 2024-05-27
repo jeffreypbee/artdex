@@ -1,8 +1,19 @@
-{{ partial:page-title }}
-    Artdex
-{{ /partial:page-title }}
 
-{{ partial:total-completion }}
+
+<div class="relative">
+    <img src="{{ site:banners:0:url }}" alt="" class="rounded-2xl" style="filter: grayscale">
+    <div class="absolute z-10 top-1/3 w-full flex flex-col items-center bg-darkgray">
+        {{ partial:page-title }}
+            Welcome!
+        {{ /partial:page-title }}
+        <p>
+            {{ site:welcome_message }}
+        </p>
+        {{ partial:total-completion }}
+    </div>
+</div>
+
+
 
 <div class="lg:flex gap-10">
     <section class="my-10">

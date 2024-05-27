@@ -31,3 +31,8 @@ tabs:
               type: assets
               display: 'Default Pokemon Image'
               instructions: 'The image to be used when a Pokemon has no art.'
+          -
+            handle: welcome_message
+            field:
+              type: textarea
+              display: 'Welcome Message'

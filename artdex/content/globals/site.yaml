@@ -4,3 +4,4 @@ data:
   banners:
     - banner.jpg
   default_pokemon_image: pokeball_gray.png
+  welcome_message: "Hi, my name's Jeff, and I like to draw Pokémon!"
