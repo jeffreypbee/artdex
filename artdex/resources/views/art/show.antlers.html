@@ -2,6 +2,30 @@
     {{ title }}
 {{ /partial:page-title }}
 
+<div class="w-3/4 self-center grid grid-cols-3 justify-center justify-items-center">
+    {{ collection:previous in="art" limit="1" sort="date:desc" }}
+        {{ unless no_results }}
+            <a href="{{ url }}">
+                {{ partial:prev-button }}{{ title }}{{ /partial:prev-button }}
+            </a>
+        {{ /unless }}
+    {{ /collection:previous }}
+
+    {{ partial:breadcrumbs }}
+
+    {{ collection:next in="art" limit="1" sort="date:desc" }}
+        {{ unless no_results }}
+            <a href="{{ url }}">
+                {{ partial:next-button }}{{ title }}{{ /partial:next-button }}
+            </a>
+        {{ /unless }}
+    {{ /collection:next }}
+</div>
+
 <img src="{{ image:url }}" alt="{{ image:alt }}">
 
-<a href="{{ pokemon:url }}">Go to Pok&eacute;mon Page &rarr;</a>
+{{ date }}
+
+<a href="{{ pokemon:url }}">
+    {{ partial:next-button }}Go to Pok&eacute;mon Page &rarr;{{ /partial:next-button }}
+</a>
