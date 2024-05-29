@@ -18,8 +18,12 @@
             {{ total_art = 0}}
             <tr style="background: linear-gradient(to bottom, transparent, {{ color }}44);">
                 <th class="pt-4">
-                    <i class="fa-solid {{ icon }}" style="color: {{ color }}"></i><br>
-                    {{ title }}
+                    <a href="/pokemon?type={{ slug }}">
+                        <button class="transition-all hover:scale-105">
+                            <i class="fa-solid {{ icon }}" style="color: {{ color }}"></i><br>
+                            {{ title }}
+                        </button>
+                    </a>
                 </th>
                 {{ loop :times="gen_total"}}
                     {{ art_count = 0 }}
@@ -36,14 +40,22 @@
                             {{ total_art += art_count }}
                         {{ /collection:pokemon }}
                         {{ unless pokemon_count == 0 }}
-                            {{ art_count }} / {{ pokemon_count }} <br>
-                            {{ ( art_count * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+                            <a href="/pokemon?type={{ slug }}&gen={{ value }}">
+                                <button class="transition-all hover:scale-105">
+                                    {{ art_count }} / {{ pokemon_count }} <br>
+                                    {{ ( art_count * 100 / (pokemon_count ?? 1) ) | round(2) }}%
+                                </button>
+                            </a>
                         {{ /unless }}
                     </td>
                 {{ /loop }}
                 <td class="text-right pr-2">
-                    {{ total_art }} / {{ total_pokemon }} <br>
-                    {{ ( total_art * 100 / (total_pokemon ?? 1) ) | round(2) }}%
+                    <a href="/pokemon?type={{ slug }}">
+                        <button class="transition-all hover:scale-105">
+                            {{ total_art }} / {{ total_pokemon }} <br>
+                            {{ ( total_art * 100 / (total_pokemon ?? 1) ) | round(2) }}%
+                        </button>
+                    </a>
                 </td>
             </tr>
             <tr>
