@@ -1,0 +1,8 @@
+title: 'Pokemon Forms'
+taxonomies:
+  - types
+  - tags
+revisions: false
+date_behavior:
+  past: public
+  future: private
