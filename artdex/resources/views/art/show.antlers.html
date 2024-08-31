@@ -4,21 +4,25 @@
 
 <div class="w-3/4 self-center grid grid-cols-3 justify-center justify-items-center">
     {{ collection:previous in="art" limit="1" sort="date:desc" }}
-        {{ unless no_results }}
-            <a href="{{ url }}">
-                {{ partial:prev-button }}{{ title }}{{ /partial:prev-button }}
-            </a>
-        {{ /unless }}
+        <div>
+            {{ unless no_results }}
+                <a href="{{ url }}">
+                    {{ partial:prev-button }}{{ title }}{{ /partial:prev-button }}
+                </a>
+            {{ /unless }}
+        </div>
     {{ /collection:previous }}
 
     {{ partial:breadcrumbs }}
 
     {{ collection:next in="art" limit="1" sort="date:desc" }}
-        {{ unless no_results }}
-            <a href="{{ url }}">
-                {{ partial:next-button }}{{ title }}{{ /partial:next-button }}
-            </a>
-        {{ /unless }}
+        <div>
+            {{ unless no_results }}
+                <a href="{{ url }}">
+                    {{ partial:next-button }}{{ title }}{{ /partial:next-button }}
+                </a>
+            {{ /unless }}
+        </div>
     {{ /collection:next }}
 </div>
 
