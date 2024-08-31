@@ -6,12 +6,37 @@ tabs:
       -
         fields:
           -
+            handle: pokemon
+            field:
+              max_items: 1
+              collections:
+                - pokemon
+              type: entries
+              display: Pokemon
+              validate:
+                - required
+          -
+            handle: form_name
+            field:
+              type: text
+              display: 'Form Name'
+              validate:
+                - required
+          -
             handle: title
             field:
               type: text
               required: true
               validate:
                 - required
+          -
+            handle: types
+            field:
+              type: terms
+              taxonomies:
+                - types
+              display: Types
+              mode: select
       -
         display: 'New Section'
         fields:
@@ -46,3 +71,11 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
