@@ -74,6 +74,12 @@ tabs:
               type: integer
               display: Generation
               visibility: computed
+          -
+            handle: drawn
+            field:
+              type: toggle
+              display: Drawn
+              visibility: computed
   sidebar:
     display: Sidebar
     sections:

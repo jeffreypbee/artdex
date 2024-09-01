@@ -57,5 +57,9 @@ class AppServiceProvider extends ServiceProvider
             }
             return 9;
         });
+
+        Collection::computed('pokemon', 'drawn', function ($entry, $value) {
+            return count($entry->art) > 0;
+        });
     }
 }
