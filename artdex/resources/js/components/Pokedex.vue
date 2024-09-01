@@ -1,11 +1,18 @@
 <template>
-  Pokedex here
+    <div v-if="loaded">
+        <div v-for="pokemon in pokedex" :key="pokemon.id">* {{ title }}</div>
+    </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { onMounted } from 'vue'
+defineProps(['pokedex'])
+let loaded = false
 
-}
+onMounted(() => {
+    loaded=true
+    console.log('Mounted!')
+})
 </script>
 
 <style>

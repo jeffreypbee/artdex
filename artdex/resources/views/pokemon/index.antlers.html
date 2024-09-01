@@ -3,10 +3,12 @@
 {{ /partial:page-title }}
 
 <div id="app">
-    <pokedex />
+    <pokedex
+        :pokedex="{{ collection:pokemon as='entry' }}{{ entry | to_json | entities }}{{ /collection:pokemon }}"
+    />
 </div>
 
-{{ partial:pokemon/filter-menu }}
+{{# {{ partial:pokemon/filter-menu }}
 
 <div>
     {{gen = get:gen ?? ''}}
@@ -29,4 +31,4 @@
             {{ partial:pagination }}
         {{ /paginate }}
     {{ /collection:pokemon }}
-</div>
+</div> #}}
