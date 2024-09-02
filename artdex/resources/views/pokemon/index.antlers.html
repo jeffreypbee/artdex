@@ -2,15 +2,15 @@
     {{ title }}
 {{ /partial:page-title }}
 
-<div id="app">
+{{# <div id="app">
     <pokedex
         :pokedex="{{ collection:pokemon as='entry' }}{{ entry | to_json | entities }}{{ /collection:pokemon }}"
-        :types="{{ taxonomy:types as 'entry'}}{{ entry | to_json | entities }}{{ /taxonomy:types }}"
-        :tags="{{ taxonomy:tags as 'entry'}}{{ entry | to_json | entities }}{{ /taxonomy:tags }}"
+        :types="{{ taxonomy:types as 'entry' }}{{ entry | to_json | entities }}{{ /taxonomy:types }}"
+        :tags="{{ taxonomy:tags as 'entry' }}{{ entry | to_json | entities }}{{ /taxonomy:tags }}"
     />
-</div>
+</div> #}}
 
-{{# {{ partial:pokemon/filter-menu }}
+{{ partial:pokemon/filter-menu }}
 
 <div>
     {{gen = get:gen ?? ''}}
@@ -33,4 +33,4 @@
             {{ partial:pagination }}
         {{ /paginate }}
     {{ /collection:pokemon }}
-</div> #}}
+</div>

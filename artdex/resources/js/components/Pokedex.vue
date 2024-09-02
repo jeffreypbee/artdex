@@ -36,6 +36,20 @@ export default {
             // pokedex: null
         }
     },
+    methods: {
+        getTypes(pokemon) {
+            let types = null;
+            pokemon.types.forEach(element => {
+                types.push(this.types.find(type => {
+                    element.slug == type.slug;
+                }));
+            });
+            return types;
+        }
+    },
+    mounted() {
+        console.log(this.types);
+    }
     // async created() {
     //     try {
     //         const res = await fetch('/api/taxonomies/types/terms');

@@ -11,7 +11,7 @@
                 <div><span class="opacity-50"># </span>{{ pokemon.formatted_number }}</div>
                 <div>{{ pokemon.title }}</div>
                 <div>
-                    <i v-for="type in pokemon.types" :key="pokemon.id + '-' + type.id" :class="'fa-solid' + type-icon + 'p-1'" :style="{ color: type.color }"></i>
+                    <!-- <i v-for="type in pokemon.types" :key="pokemon.id + '-' + type.id" :class="'fa-solid' + type-icon + 'p-1'" :style="{ color: type.color }"></i> -->
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    props: ['pokemon'],
+    props: ['pokemon', 'types'],
     data() {
         return {
 
