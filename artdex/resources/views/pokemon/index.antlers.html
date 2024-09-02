@@ -3,7 +3,11 @@
 {{ /partial:page-title }}
 
 <div id="app">
-    <pokedex />
+    <pokedex
+        :pokedex="{{ collection:pokemon as='entry' }}{{ entry | to_json | entities }}{{ /collection:pokemon }}"
+        :types="{{ taxonomy:types as 'entry'}}{{ entry | to_json | entities }}{{ /taxonomy:types }}"
+        :tags="{{ taxonomy:tags as 'entry'}}{{ entry | to_json | entities }}{{ /taxonomy:tags }}"
+    />
 </div>
 
 {{# {{ partial:pokemon/filter-menu }}
