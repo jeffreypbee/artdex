@@ -1,0 +1,29 @@
+<template>
+    <a :href="pokemon.url" class="m-4">
+        <div class="h-28 w-52 rounded-lg relative hover:cursor-pointer bg-slate-800 shadow-md shadow-black">
+            <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{ background }}">
+
+            </div>
+            <div>
+
+            </div>
+            <div class="h-3/4 flex flex-col items-end justify-around pb-1 pr-2 leading-none">
+                <div><span class="opacity-50"># </span>{{ pokemon.formatted_number }}</div>
+                <div>{{ pokemon.title }}</div>
+                <div>
+                    <i v-for="type in pokemon.types" :key="pokemon.id + '-' + type.id" :class="'fa-solid' + type-icon + 'p-1'" :style="{ color: type.color }"></i>
+                </div>
+            </div>
+        </div>
+    </a>
+</template>
+
+<script>
+export default {
+    props: ['pokemon']
+}
+</script>
+
+<style>
+
+</style>

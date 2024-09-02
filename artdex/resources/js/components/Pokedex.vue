@@ -3,12 +3,20 @@
         Loading
     </div>
     <div v-else>
-        <div v-for="pokemon in pokedex" :key="pokemon.id">{{ pokemon.title }}</div>
+        <div class="flex flex-wrap justify-center">
+            <PokemonCard v-for="pokemon in pokedex" :key="pokemon.id" :pokemon="pokemon" />
+        </div>
+
     </div>
 </template>
 
 <script>
+import PokemonCard from './PokemonCard.vue'
+
 export default {
+    components: {
+        PokemonCard
+    },
     data() {
         return {
             loadingPokedex: true,
