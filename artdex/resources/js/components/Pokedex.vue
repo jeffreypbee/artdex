@@ -41,7 +41,6 @@ export default {
             const { data } = await res.json();
             this.types = data;
             this.loadingFilters = false;
-            console.log(this.types);
         } catch(e) {
             console.log(e);
         }

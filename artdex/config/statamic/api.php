@@ -20,7 +20,14 @@ return [
     'resources' => [
         'collections' => true,
         'navs' => false,
-        'taxonomies' => true,
+        'taxonomies' => [
+            'types' => [
+                'allowed_filters' => ['slug']
+            ],
+            'tags' => [
+                'allowed_filters' => ['slug']
+            ]
+        ],
         'assets' => true,
         'globals' => false,
         'forms' => false,
