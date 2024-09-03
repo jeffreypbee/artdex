@@ -24,23 +24,21 @@
         @endphp
 
         <a href="/pokemon/{{$newestArt->artable->name}}" class="flex flex-col items-center">
-        <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray">
-
-
-            <img src="/storage/{{$newestArt->image}}" alt="">
-            <div class="text-lg">
-                #{{$newestArt->artable->getNumber()}} -
-                {{$newestArt->artable->getName()}}
+            <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray">
+                <img src="/storage/{{$newestArt->image}}" alt="">
+                <div class="text-lg">
+                    #{{$newestArt->artable->getNumber()}} -
+                    {{$newestArt->artable->getName()}}
+                </div>
+                <div class="flex gap-5">
+                    @foreach ($newestArt->artable->getTypes() as $type)
+                        <x-type-pill :type="$type" />
+                    @endforeach
+                </div>
+                <div>
+                    {{Carbon\Carbon::parse($newestArt->publish_date)->diffForHumans()}}
+                </div>
             </div>
-            <div class="flex gap-5">
-                @foreach ($newestArt->artable->getTypes() as $type)
-                    <x-type-pill :type="$type" />
-                @endforeach
-            </div>
-            <div>
-                {{Carbon\Carbon::parse($newestArt->publish_date)->diffForHumans()}}
-            </div>
-        </div>
         </a>
         <div class="flex flex-wrap items-center m-5 gap-2">
             @foreach ($latestArt as $art)
