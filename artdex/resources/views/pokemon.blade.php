@@ -28,7 +28,7 @@
     <div class="flex flex-col items-center">
         <div class="h-96 w-2/5 rounded-2xl relative shadow-md shadow-black"
             style="background: rgb(40, 52, 90)">
-            <div class="flex justify-end px-4 items-center h-1/6 rounded-t-2xl border-b-2 border-white text-darkgray font-bold text-2xl"
+            <div class="flex justify-end px-4 items-center h-1/6 rounded-t-2xl border-b-2 border-white text-slate-900 font-bold text-2xl"
                 style="background: {{$background}}">
                 {{$pokemon->name}}
             </div>
