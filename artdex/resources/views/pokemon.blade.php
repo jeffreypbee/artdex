@@ -1,5 +1,11 @@
 <x-app-layout>
     <x-page-title>#{{$pokemon->getNumber()}} - {{$pokemon->name}}</x-page-title>
+
+    <div class="my-4 w-full flex justify-center gap-4">
+        <a href="#forms">Forms</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+
     <div class="w-full relative">
         @php
             $prev = $pokemon->previous();
@@ -39,7 +45,7 @@
                 @endif
             </div>
             <div class="h-5/6 flex flex-col items-end justify-between leading-none text-lg">
-                <div class="w-full h-full p-4 flex flex-col items-end justify-evenly leading-none rounded-b-2xl"
+                <div class="w-full h-full p-4 flex flex-col items-end justify-end gap-4 leading-none rounded-b-2xl"
                     style="background: rgb(40, 52, 90)">
                     <div><span class="opacity-50"># </span>{{$pokemon->getNumber()}}</div>
 
@@ -55,12 +61,21 @@
             </div>
         </div>
 
-        Art
-        @foreach ($pokemon->art as $art)
-            @if ($art->isPublished())
-                <img src="/storage/{{$art->image}}" alt="">
-            @endif
-        @endforeach
+        <section class="w-full m-10">
+            <a id="forms"></a>
+            <x-page-title>Forms</x-page-title>
+        </section>
+
+        <section class="w-full">
+            <a id="gallery"></a>
+            <x-page-title>Gallery</x-page-title>
+            @foreach ($pokemon->art as $art)
+                @if ($art->isPublished())
+                    <img src="/storage/{{$art->image}}" alt="">
+                @endif
+            @endforeach
+        </section>
+
     </div>
 
 
