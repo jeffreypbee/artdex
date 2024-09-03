@@ -4,7 +4,7 @@
 <div x-data="{hovering: false}"
     @mouseenter="hovering=true"
     @mouseleave="hovering=false"
-    class="rounded-lg relative hover:cursor-pointer"
+    class="rounded-lg relative hover:cursor-pointer shadow-md shadow-black"
     style="height: 120px; width: 200px; background: rgb(40, 52, 90)">
     <div class="h-1/4 rounded-t-lg border-b-2 border-white" style="background: {{$background}}">
 
