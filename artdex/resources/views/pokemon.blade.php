@@ -32,7 +32,7 @@
     @endphp
 
     <div class="flex flex-col items-center">
-        <div class="h-96 w-2/5 rounded-2xl relative shadow-md shadow-black"
+        <div class="my-4 h-96 w-2/5 rounded-2xl relative shadow-md shadow-black"
             style="background: rgb(40, 52, 90)">
             <div class="flex justify-end px-4 items-center h-1/6 rounded-t-2xl border-b-2 border-white text-slate-900 font-bold text-2xl"
                 style="background: {{$background}}">
@@ -40,7 +40,7 @@
             </div>
             <div>
                 @if ($pokemon->hasArt())
-                    <img class="w-64 lg:absolute lg:w-auto z-10 -bottom-16 -left-5 transition-all"
+                    <img class="w-64 lg:absolute lg:w-auto z-10 -top-10 -left-6 transition-all"
                     src="/storage/{{$pokemon->art[0]->image}}" alt="">
                 @endif
             </div>
