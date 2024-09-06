@@ -25,10 +25,16 @@
     </div>
 
     @php
-        $background = 'linear-gradient(to right';
-        foreach ($pokemon->getColors() as $color) {
-            $background .= ', ' . $color;
+        $colors = $pokemon->getColors();
+        if (count($colors) > 1) {
+            $background = 'linear-gradient(to right';
+            foreach ($pokemon->getColors() as $color) {
+                $background .= ', ' . $color;
+            }
+        } else {
+            $background = $colors[0];
         }
+
     @endphp
 
     <div class="flex flex-col items-center">
@@ -39,6 +45,7 @@
                 {{$pokemon->name}}
             </div>
             <div>
+                <img src="/images/pokeball_gray.png" alt="" class="w-72 absolute left-30 bottom-5 opacity-50 blur-md">
                 @if ($pokemon->hasArt())
                     <img class="w-64 lg:absolute lg:w-auto z-10 -top-10 -left-6 transition-all"
                     src="/storage/{{$pokemon->art[0]->image}}" alt="">
