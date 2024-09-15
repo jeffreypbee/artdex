@@ -11,6 +11,6 @@ class Generation extends Model
     use HasFactory;
 
     public function pokemon(): HasMany {
-        return $this->hasMany(Pokemon::class);
+        return $this->hasMany(Pokemon::class)->orderBy('number');
     }
 }
