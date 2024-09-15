@@ -66,7 +66,9 @@
                 </main>
 
                 <aside class="w-60">
-                    <livewire:completion-matrix />
+                    <div class="sticky top-2">
+                        <livewire:completion-matrix />
+                    </div>
                 </aside>
             </div>
 
