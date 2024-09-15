@@ -64,6 +64,10 @@
                 <main class="p-5 w-full">
                     {{ $slot }}
                 </main>
+
+                <aside class="w-60">
+
+                </aside>
             </div>
 
             <footer class="w-full flex justify-end p-5 text-slate-600">Copyright &copy; {{date('Y')}} Jeffrey Bee</footer>
