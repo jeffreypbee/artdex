@@ -72,7 +72,23 @@
                 </aside>
             </div>
 
-            <footer class="w-full flex justify-end p-5 text-slate-600">Copyright &copy; {{date('Y')}} Jeffrey Bee</footer>
+            <footer class="w-full h-72 flex flex-col justify-end items-center p-5 bg-gradient-to-b from-transparent to-black">
+                <div class="flex">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
+                        {{ __('HOME') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" wire:navigate>
+                        {{ __('GALLERY') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dex')" :active="request()->routeIs('dex')" wire:navigate>
+                        {{ __('DEX') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('stats')" :active="request()->routeIs('stats')" wire:navigate>
+                        {{ __('STATS') }}
+                    </x-nav-link>
+                </div>
+                Copyright &copy; {{date('Y')}} Jeffrey Bee
+            </footer>
         </div>
     </body>
 </html>
