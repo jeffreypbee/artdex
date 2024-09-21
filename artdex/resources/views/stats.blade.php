@@ -12,10 +12,9 @@
                                 $artCount++;
                             }
                         }
-                        $fraction = $artCount / count($type->getPokemon())
                     @endphp
                     <a href="/dex?type={{$type->name}}">
-                        <x-completion-bar :title="$type->name" :icon="$type->icon" :color="$type->color" :fraction="$fraction" />
+                        <x-completion-bar :title="$type->name" :icon="$type->icon" :color="$type->color" :number="$artCount" :total="count($type->getPokemon())"/>
                     </a>
                 @endforeach
             </div>
@@ -31,10 +30,9 @@
                                 $artCount++;
                             }
                         }
-                        $fraction = $artCount / count($generation->pokemon)
                     @endphp
                     <a href="/dex?gen={{$generation->generation}}">
-                        <x-completion-bar :title="'Generation ' . $generation->generation" :icon="$generation->icon" :color="$generation->color" :fraction="$fraction" />
+                        <x-completion-bar :title="'Generation ' . $generation->generation" :icon="$generation->icon" :color="$generation->color" :number="$artCount" :total="count($generation->pokemon)" />
                     </a>
                 @endforeach
             </div>

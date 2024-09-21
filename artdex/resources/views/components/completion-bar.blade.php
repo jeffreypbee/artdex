@@ -1,20 +1,22 @@
-@props(['title', 'icon', 'color', 'fraction'])
+@props(['title', 'icon', 'color', 'number', 'total'])
+@php
+    $fraction = $number / $total
+@endphp
 
-<div class="m-2 md:flex justify-between items-center gap-2 border-b-2 border-transparent hover:border-gray-400 hover:cursor-pointer transition-all ease-in-out">
-    <div class="md:w-1/4">
-        <i class="fa-solid {{$icon ?? 'fa-circle'}} fa-fw" style="color: {{$color ?? 'white'}}"></i>
-        {{$title ?? ''}}
-    </div>
-
-    <div class="w-1/4">
-        <div class="rounded h-2 bg-black"
-            style="width: 200px">
-            <div class="rounded h-2"
-                style="width: {{floor(200 * $fraction)}}px; background: {{$color ?? 'white'}}"></div>
+<div class="m-2 my-4 p-2 flex flex-col rounded hover:bg-slate-800">
+    <div class="grid grid-cols-3">
+        <div>
+            <i class="fa-solid {{$icon ?? 'fa-circle'}} fa-fw" style="color: {{$color ?? 'white'}}"></i>
+            {{$title ?? ''}}
+        </div>
+        <div class="flex justify-center">
+            {{$number}} / {{$total}}
+        </div>
+        <div class="flex justify-end">
+            {{floor($fraction * 100)}}%
         </div>
     </div>
-
-    <div class="w-1/4">
-        {{floor($fraction * 100)}}%
+    <div class="w-100 rounded h-2 bg-black">
+        <div class="rounded h-2" style="width: {{floor($fraction * 100)}}%; background: {{$color ?? 'white'}}"></div>
     </div>
 </div>
