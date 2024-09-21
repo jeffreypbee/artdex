@@ -87,6 +87,16 @@ class Pokemon extends Model
         return false;
     }
 
+    static public function countArt(): int {
+        $count = 0;
+        foreach(Pokemon::all() as $pokemon) {
+            if ($pokemon->hasArt()) {
+                $count++;
+            }
+        }
+        return $count;
+    }
+
     public function next() {
         $max = Pokemon::all()->max('number');
         for ($n = $this->number + 1; $n <= $max; $n++) {
