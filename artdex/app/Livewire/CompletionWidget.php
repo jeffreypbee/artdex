@@ -10,14 +10,8 @@ class CompletionWidget extends Component
     public $fraction;
 
     public function mount() {
-        $artCount = 0;
-        foreach(Pokemon::all() as $pokemon) {
-            if ($pokemon->hasArt()) {
-                $artCount++;
-            }
-        }
         $pkmnCount = Pokemon::count();
-        $this->fraction = $artCount / $pkmnCount;
+        $this->fraction = Pokemon::countArt() / $pkmnCount;
     }
 
     public function render()
