@@ -5,7 +5,7 @@
         <div class="text-2xl font-extrabold" @mouseenter="hovering=true" @mouseleave="hovering=false">
             <a href="/">{{config('app.name')}}</a>
         </div>
-        <livewire:completion-widget />
+
     </div>
 </div>
 
