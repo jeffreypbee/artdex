@@ -8,7 +8,7 @@
                     </a>
                 @else
                     <a href="/pokemon/{{$pokemon->name}}">
-                        <div class="bg-gray-600 h-2 w-2 hover:cursor-pointer" title="{{$pokemon->getNumber()}} - {{$pokemon->name}}">&nbsp;</div>
+                        <div class="bg-blue-gray h-2 w-2 hover:cursor-pointer" title="{{$pokemon->getNumber()}} - {{$pokemon->name}}">&nbsp;</div>
                     </a>
                 @endif
             @endforeach
