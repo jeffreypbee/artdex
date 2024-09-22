@@ -47,13 +47,13 @@
             <div>
                 <img src="/images/pokeball_gray.png" alt="" class="w-72 absolute left-30 bottom-5 opacity-50 blur-md">
                 @if ($pokemon->hasArt())
-                    <img class="w-64 lg:absolute lg:w-auto z-10 -top-10 -left-6 transition-all"
+                    <img class="w-64 lg:absolute lg:w-auto z-10 -top-10 -left-24 transition-all"
                     src="/storage/{{$pokemon->art[0]->image}}" alt="">
                 @endif
             </div>
             <div class="h-5/6 flex flex-col items-end justify-between leading-none text-lg">
-                <div class="w-full h-full p-4 flex flex-col items-end justify-end gap-4 leading-none rounded-b-2xl"
-                    style="background: rgb(40, 52, 90)">
+                <div class="relative z-20 w-full h-full p-4 flex flex-col items-end justify-end gap-4 leading-none rounded-b-2xl"
+                    >
                     <div><span class="opacity-50"># </span>{{$pokemon->getNumber()}}</div>
 
                     <x-generation-pill :generation="$pokemon->generation" />
