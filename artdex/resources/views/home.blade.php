@@ -22,8 +22,8 @@
             $newestArt = $latestArt->shift();
         @endphp
 
-        <div class="md:flex">
-            <a href="/pokemon/{{$newestArt->artable->name}}" class="flex flex-col items-center">
+        <div class="md:flex justify-center">
+            <a href="/pokemon/{{$newestArt->artable->name}}" class="shrink-0 flex flex-col items-center">
                 @php
                     $colors = $newestArt->artable->getColors();
                     $background = 'white';
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </a>
-            <div class="flex flex-col items-center">
+            <div class="w-1/2 flex flex-col items-center">
                 <div class="flex flex-wrap items-center m-5 gap-2">
                     @foreach ($latestArt as $art)
                         @php
