@@ -2,7 +2,7 @@
 
     <section class="flex flex-col justify-center items-center">
 
-        <div class="w-3/4 h-64 flex flex-col justify-center items-center"
+        <div class="w-3/4 h-40 flex flex-col justify-center items-center"
             style="background: linear-gradient(to right, rgb(15 23 42), transparent, rgb(15 23 42)), center no-repeat url('/images/banner.png')">
             <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-transparent via-blue-gray">
                 <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
@@ -34,7 +34,7 @@
                     }
                 @endphp
                 <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray hover:scale-105 transition-all">
-                    <div class="w-full flex justify-end px-2 rounded-t-xl text-lg border-b-2 border-white text-slate-900" style="background: {{$background}}">
+                    <div class="w-full flex justify-end px-2 rounded-t-xl text-2xl border-b-2 border-white text-slate-900" style="background: {{$background}}">
                         <span class="text-blue-gray">{{$newestArt->artable->getNumber()}}</span>&nbsp;
                         <span class="font-bold">{{$newestArt->artable->getName()}}</span>
                     </div>
@@ -50,7 +50,7 @@
                 </div>
             </a>
             <div class="w-1/2 flex flex-col items-center">
-                <div class="flex flex-wrap items-center m-5 gap-2">
+                <div class="flex flex-wrap justify-center items-center m-5 gap-2">
                     @foreach ($latestArt as $art)
                         @php
                             $colors = $art->artable->getColors();
