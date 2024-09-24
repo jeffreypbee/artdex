@@ -22,27 +22,10 @@
             $newestArt = $latestArt->shift();
         @endphp
 
-        <a href="/pokemon/{{$newestArt->artable->name}}" class="flex flex-col items-center">
-            <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray">
-                <img src="/storage/{{$newestArt->image}}" alt="">
-                <div class="text-lg">
-                    #{{$newestArt->artable->getNumber()}} -
-                    {{$newestArt->artable->getName()}}
-                </div>
-                <div class="flex gap-5">
-                    @foreach ($newestArt->artable->getTypes() as $type)
-                        <x-type-pill :type="$type" />
-                    @endforeach
-                </div>
-                <div>
-                    {{Carbon\Carbon::parse($newestArt->publish_date)->diffForHumans()}}
-                </div>
-            </div>
-        </a>
-        <div class="flex flex-wrap items-center m-5 gap-2">
-            @foreach ($latestArt as $art)
+        <div class="md:flex">
+            <a href="/pokemon/{{$newestArt->artable->name}}" class="flex flex-col items-center">
                 @php
-                    $colors = $art->artable->getColors();
+                    $colors = $newestArt->artable->getColors();
                     $background = 'white';
                     if (count($colors) === 1) {
                         $background = $colors[0];
@@ -50,28 +33,67 @@
                         $background = 'linear-gradient(to right, ' . implode(', ', $colors) . ')';
                     }
                 @endphp
-                <a href="/pokemon/{{$art->artable->name}}">
-                <div class="flex flex-col items-center rounded-xl"
-                    style="background: {{$background}};">
-                    <img src="/storage/{{$art->image}}" alt="" class="transition ease-in-out hover:animate-bounce"
-                        style="width: 100px;">
-                    <div class="w-full p-2 align-middle text-sm border-t-2 border-white rounded-b-lg bg-blue-gray">
-                        {{date('M d, Y', strtotime($art->publish_date))}}
+                <div class="flex flex-col items-center pb-5 rounded-xl bg-gradient-to-t from-transparent to-blue-gray hover:scale-105 transition-all">
+                    <div class="w-full flex justify-end px-2 rounded-t-xl text-lg border-b-2 border-white text-slate-900" style="background: {{$background}}">
+                        <span class="text-blue-gray">{{$newestArt->artable->getNumber()}}</span>&nbsp;
+                        <span class="font-bold">{{$newestArt->artable->getName()}}</span>
+                    </div>
+                    <img src="/storage/{{$newestArt->image}}" alt="">
+                    <div class="flex gap-5">
+                        @foreach ($newestArt->artable->getTypes() as $type)
+                            <x-type-pill :type="$type" />
+                        @endforeach
+                    </div>
+                    <div>
+                        {{Carbon\Carbon::parse($newestArt->publish_date)->diffForHumans()}}
                     </div>
                 </div>
-                </a>
+            </a>
+            <div class="flex flex-col items-center">
+                <div class="flex flex-wrap items-center m-5 gap-2">
+                    @foreach ($latestArt as $art)
+                        @php
+                            $colors = $art->artable->getColors();
+                            $background = 'white';
+                            if (count($colors) === 1) {
+                                $background = $colors[0];
+                            } else {
+                                $background = 'linear-gradient(to right, ' . implode(', ', $colors) . ')';
+                            }
+                        @endphp
+                        <a href="/pokemon/{{$art->artable->name}}">
+                            <div x-data="{hovering: false}"
+                                class="flex flex-col items-center rounded-xl shadow-md shadow-black"
+                                style="background: {{$background}};"
+                                @mouseenter="hovering=true"
+                                @mouseleave="hovering=false">
+                                <div>
 
-            @endforeach
+                                </div>
+                                <img src="/storage/{{$art->image}}" alt="" class="transition ease-in-out" :class="hovering ? 'animate-bounce' : ''"
+                                    style="width: 100px;">
+                                <div class="w-full p-2 align-middle text-sm border-t-2 border-white rounded-b-lg bg-blue-gray">
+                                    <div>{{$art->artable->getName()}}</div>
+                                    <div>{{date('M d, Y', strtotime($art->publish_date))}}</div>
+                                </div>
+                            </div>
+                        </a>
+
+                    @endforeach
+
+                </div>
+                <a href="/gallery">
+                    <div class="w-96 p-2 flex flex-col items-center rounded-lg bg-blue-gray hover:bg-white hover:text-slate-900 transition-all">
+                        <div>
+                            <i class="fa-solid fa-palette fa-xl"></i>
+                        </div>
+                        <div>More Art</div>
+                    </div>
+                </a>
+            </div>
 
         </div>
-        <a href="/gallery" class="w-3/4">
-            <div class="p-2 flex flex-col items-center rounded-lg bg-blue-gray">
-                <div>
-                    <i class="fa-solid fa-palette fa-xl"></i>
-                </div>
-                <div>More Art</div>
-            </div>
-        </a>
+
     </section>
 
 
