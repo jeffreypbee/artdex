@@ -2,7 +2,7 @@
     <x-page-title>#{{$pokemon->getNumber()}} - {{$pokemon->name}}</x-page-title>
 
     <div class="my-4 w-full flex justify-center gap-4">
-        <a href="#forms"><button class="p-2 rounded-xl hover:bg-blue-gray">Forms</button></a>
+        {{-- <a href="#forms"><button class="p-2 rounded-xl hover:bg-blue-gray">Forms</button></a> --}}
         <a href="#gallery"><button class="p-2 rounded-xl hover:bg-blue-gray">Gallery</button></a>
     </div>
 
@@ -67,19 +67,22 @@
         </section>
 
 
-        <section class="w-full m-10">
+        {{-- <section class="w-full m-10">
             <a id="forms"></a>
             <x-page-title>Forms</x-page-title>
-        </section>
+        </section> --}}
 
         <section class="w-full">
             <a id="gallery"></a>
             <x-page-title>Gallery</x-page-title>
-            @foreach ($pokemon->art as $art)
-                @if ($art->isPublished())
-                    <img src="/storage/{{$art->image}}" alt="">
-                @endif
-            @endforeach
+            <div class="flex flex-wrap justify-center">
+                @foreach ($pokemon->art as $art)
+                    @if ($art->isPublished())
+                        <livewire:gallery-entry :art="$art" />
+                    @endif
+                @endforeach
+            </div>
+
         </section>
 
     </div>
