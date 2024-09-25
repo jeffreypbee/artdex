@@ -1,8 +1,8 @@
 <div>
     <div class="mb-4 flex justify-center gap-2">
-        <button class="p-2 rounded hover:bg-blue-gray {{$this->sort === 'new' ? 'bg-white text-slate-900' : ''}}"
+        <button class="p-2 rounded {{$this->sort === 'new' ? 'bg-white text-slate-900' : 'hover:bg-blue-gray'}}"
             wire:click='sortBy("new")'>Newest</button>
-        <button class="p-2 rounded hover:bg-blue-gray {{$this->sort === 'old' ? 'bg-white text-slate-900' : ''}}"
+        <button class="p-2 rounded {{$this->sort === 'old' ? 'bg-white text-slate-900' : 'hover:bg-blue-gray'}}"
             wire:click='sortBy("old")'>Oldest</button>
     </div>
 
