@@ -3,7 +3,7 @@
     $fraction = $number / $total
 @endphp
 
-<div class="m-2 my-4 p-2 flex flex-col rounded hover:bg-slate-800">
+<div class="m-2 my-4 p-2 flex flex-col rounded-lg hover:bg-blue-gray">
     <div class="grid grid-cols-3">
         <div>
             <i class="fa-solid {{$icon ?? 'fa-circle'}} fa-fw" style="color: {{$color ?? 'white'}}"></i>
