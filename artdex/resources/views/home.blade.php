@@ -3,12 +3,17 @@
     <section class="flex flex-col justify-center items-center">
 
         <div class="w-3/4 h-40 flex flex-col justify-center items-center"
-            style="background: linear-gradient(to right, rgb(15 23 42), transparent, rgb(15 23 42)), center no-repeat url('/images/banner.png')">
-            <div class="w-full flex flex-col justify-center items-center bg-gradient-to-r from-transparent via-blue-gray">
-                <div class="text-3xl font-extrabold leading-none">ARTDEX</div>
-                <div class="text-gray-400">by Jeffrey Bee</div>
-            </div>
-
+            style="background: center no-repeat url('/images/banner.png');">
+                <div class="w-full h-full flex flex-col justify-center items-center text-slate-900 bg-gradient-to-r from-slate-900 via-transparent to-slate-900 backdrop-blur-sm">
+                    <div class="text-9xl font-extrabold leading-none"
+                        style="text-shadow:
+                        -1px -1px 0 #fff,
+                        1px -1px 0 #fff,
+                        -1px 1px 0 #fff,
+                        1px 1px 0 #fff;"
+                        >ARTDEX</div>
+                    <div class="text-2xl font-bold text-white">Gotta Draw 'em All!</div>
+                </div>
         </div>
 
 
