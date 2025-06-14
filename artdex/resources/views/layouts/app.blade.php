@@ -15,8 +15,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://kit.fontawesome.com/1b886f8acb.js" crossorigin="anonymous"></script>
     </head>
-    <body class="font-sans antialiased bg-slate-900 text-white">
-        <div class="min-h-screen flex flex-col">
+    <body class="h-full flex flex-col justify-between font-sans antialiased bg-slate-900 text-white">
+        <div class="h-full flex flex-col">
             {{-- <livewire:layout.navigation /> --}}
 
             {{-- <!-- Page Heading -->
@@ -72,7 +72,9 @@
                 </aside>
             </div>
 
-            <footer class="w-full h-72 flex flex-col justify-end items-center p-5 bg-gradient-to-b from-transparent to-black">
+
+        </div>
+        <footer class="w-full h-72 flex flex-col justify-end items-center p-5 bg-gradient-to-b from-transparent to-black">
                 <div class="flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
                         {{ __('HOME') }}
@@ -89,6 +91,5 @@
                 </div>
                 Copyright &copy; {{date('Y')}} Jeffrey Bee
             </footer>
-        </div>
     </body>
 </html>
